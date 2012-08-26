@@ -1,0 +1,95 @@
+<?php
+
+/**
+ * Contains various tweaks for UI purposes
+ *
+ * @since Ilmenite 1.0
+ * @author Erik Bernskiold
+ * @version 1.0
+ * @package Ilmenite Framework
+ **/
+
+/**
+ * Adds custom logo to the dashboard, if the image file is uploaded.
+ *
+ * @since Ilmenite 1.0
+ **/
+
+function ilmenite_custom_logo() {
+	
+	$custom_logo = THEME_IMAGES.'/admin/header_logo.jpg'; // Defines logo file
+	if(file_exists($custom_logo)) { // Checks whether logo file exists
+		// Prints the style required to override the default logo
+		echo '
+			<style type="text/css">
+				#header-logo { background-image: url('.$custom_logo.') !important; }
+			</style>
+		';
+	}
+}
+
+add_action('admin_head', 'ilmenite_custom_logo'); // Adds the logo
+
+/**
+ * Changed Admin Panel Footer
+ *
+ * @since Ilmenite 1.0
+ **/
+
+function ilmenite_change_admin_footer() {
+	
+	// Prints the new footer code.
+	echo '
+		<p>Powered by <a href="http://www.wordpress.org" target="_blank">WordPress</a> | Designed by <a href="http://www.xldstudios.com" target="_blank">XLD Studios</a></p>
+	';
+}
+
+add_filter('admin_footer_text', 'ilmenite_change_admin_footer');
+
+/**
+ * Add custom logo to the WordPress login screen
+ *
+ * @since Ilmenite 1.0
+ **/
+
+function ilmenite_custom_login_logo() {
+
+	$custom_logo = THEME_IMAGES.'/admin/login_logo.jpg';
+	if(file_exists($custom_logo)) {
+		echo '
+			<style type="text/css">
+    		    h1 a { background-image:url('.$custom_logo.') !important; }
+    		</style>
+		';
+	}
+}
+
+add_action('login_head', 'custom_login_logo');
+
+/**
+ * Generates Pagination
+ *
+ * @since Ilmenite 1.0
+ **/
+
+function ilmenite_pagination() {
+	// get total number of pages
+	global $wp_query;
+	$total = $wp_query->max_num_pages;
+	// only bother with the rest if we have more than 1 page!
+	if ( $total > 1 )  {
+	     // get the current page
+	     if ( !$current_page = get_query_var('paged') )
+	          $current_page = 1;
+	     // structure of “format” depends on whether we’re using pretty permalinks
+	     $format = empty( get_option('permalink_structure') ) ? '&page=%#%' : 'page/%#%/';
+	     echo paginate_links(array(
+	          'base' => get_pagenum_link(1) . '%_%',
+	          'format' => $format,
+	          'current' => $current_page,
+	          'total' => $total,
+	          'mid_size' => 4,
+	          'type' => 'list'
+	     ));
+	}
+}

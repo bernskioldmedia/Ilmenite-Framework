@@ -1,0 +1,52 @@
+<?php
+
+/**
+ * Enqueue and add items to the wp_head(); function
+ *
+ * @since Ilmenite 1.0
+ * @author Erik Bernskiold
+ * @version 1.1
+ * @package Ilmenite Framework
+ **/
+
+/**
+ * Enqueue Javascripts & Styles
+ *
+ * @since Ilmenite 1.0
+ **/
+function ilmenite_enqueue_scripts() {
+
+	// Styles
+	wp_enqueue_style('screen-css', THEME_CSS.'/screen.css', false, false, 'all'); // Add screen.css file
+	wp_enqueue_style('forms-css', THEME_CSS.'/forms.css', false, false, 'all'); // Add forms.css file
+	wp_enqueue_style('typography-css', THEME_CSS.'/typography.css', false, false, 'all'); // Add typography.css file
+	wp_enqueue_style('print-css', THEME_CSS.'/print.css', false, false, 'print'); // Add print.css file
+
+	// Scripts
+	wp_enqueue_script('jquery-tools', THEME_JS.'/jquerytools.js', array('jquery'), false, false); // Add jQuery Tools
+	
+	if ( is_singular() ){
+		wp_enqueue_script( 'comment-reply' );
+	}
+}
+
+// Register Scripts with WordPress
+add_action('wp_enqueue_scripts', 'ilmenite_enqueue_scripts');
+
+/**
+ * Adds a favicon to the site
+ *
+ * Will load any favicon that is added into the
+ * theme image directory.
+ *
+ * @since Ilmenite 1.0
+ **/
+function ilmenite_favicon() {
+	if(of_get_option('ilmenite_favicon' != "")) :
+		echo '<link rel="Shortcut Icon" type="image/x-icon" href="'. of_get_option('ilmenite_favicon'); '" />'
+	else :
+		echo '<link rel="Shortcut Icon" type="image/x-icon" href="'. THEME_IMAGES .'/favicon.ico" />';
+	endif;
+}
+
+add_action('wp_head', 'ilmenite_favicon'); // Adds the favicon
