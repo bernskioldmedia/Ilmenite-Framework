@@ -11,7 +11,7 @@
  *
  * @since Ilmenite Framework 1.0
  * @author XLD Studios
- * @version 1.1
+ * @version 1.2
  * @package Ilmenite Framework
  **/
 
@@ -120,6 +120,9 @@ class Ilmenite_Framework {
 			
 			// Add support for custom editor style
 			add_editor_style();
+
+			// Adds support for post formats
+			// add_theme_support( 'post-formats', array( 'aside' ) ); // aside, gallery, link, image, quote, status, video, audio, chat
 		}
 		
 		if(function_exists('register_sidebar')) {
@@ -128,10 +131,10 @@ class Ilmenite_Framework {
 			register_sidebar(array(
 				'id' => 'sidebar',
 				'name' => __('Sidebar', 'TEXTDOMAINTHEMENAME'),
-			    'before_widget' => '<div class="sidebar-widget">',
-			    'after_widget' => '</div>',
-			    'before_title' => '<h5 class="widget-title">',
-			    'after_title' => '</h5>',
+				'before_widget' => '<div class="sidebar-widget">',
+			 	'after_widget' => '</div>',
+			 	'before_title' => '<h5 class="widget-title">',
+			 	'after_title' => '</h5>',
 			));
 			
 			// More sidebars can be added here!
@@ -145,10 +148,10 @@ class Ilmenite_Framework {
 	 * @since Ilmenite Framework 1.0
 	 **/
 	function functions() {
-		require_once(THEME_FUNCTIONS . '/common.php');
-		require_once(THEME_FUNCTIONS . '/ui.php');
-		require_once(THEME_FUNCTIONS . '/head.php');
-		require_once(THEME_FUNCTIONS . '/admin.php');
+		require_once(THEME_FUNCTIONS . '/common.php'); // Helper functions.
+		require_once(THEME_FUNCTIONS . '/ui.php'); // Functions that print UI elements
+		require_once(THEME_FUNCTIONS . '/head.php'); // Scripts, styles, favicon. Inserts into wp_head.
+		// require_once(THEME_FUNCTIONS . '/admin.php'); // Functions affecting the admin panel.
 	}
 	
 	/**
