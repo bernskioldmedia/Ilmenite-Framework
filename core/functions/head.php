@@ -1,10 +1,10 @@
 <?php
 /**
- * Add items to the <head> section of WordPress for public
+ * Add items to the <head> section of WordPress for public and admin
  *
  * @since Ilmenite Framework 1.0
  * @author XLD Studios
- * @version 1.1
+ * @version 1.2
  * @package Ilmenite Framework
  **/
 
@@ -17,7 +17,9 @@ function ilmenite_enqueue_styles() {
 
 	// Register
 	// wp_register_style( $handle, $src, $deps, $ver, $media );
-	wp_register_style( 'main-style', THEME_CSS . '/main-min.css', false, THEME_VERSION, 'all' );
+	wp_register_style( 'base', THEME_CSS . '/base.css', false, THEME_VERSION, 'all' );
+	wp_register_style( 'layout', THEME_CSS . '/layout.css', array('base'), THEME_VERSION, 'all' );
+
 	wp_register_style( 'style', get_stylesheet_uri(), false, THEME_VERSION, 'all' );
 
 	// Enqueue
@@ -40,10 +42,12 @@ function ilmenite_enqueue_scripts() {
 	
 	// Register
 	// wp_register_script( $handle, $src, $deps, $ver, $in_footer );
-	wp_register_script( 'scripts', THEME_JS . '/scripts-min.js', array('jquery'), THEME_VERSION, false );
+	wp_register_script( 'foundation-framework', THEME_JS . '/framework.min.js', array('jquery'), THEME_VERSION, false );
+	wp_register_script( 'modernizr', THEME_JS . '/foundation/modernizr.foundation.js', false, '2.6.2', false );
 	
 	// Enqueue
-	wp_enqueue_script( 'scripts' );
+	wp_enqueue_script( 'modernizr' );
+	wp_enqueue_script( 'foundation-framework' );
 	
 	if ( is_singular() )
 		wp_enqueue_script( 'comment-reply' );
@@ -63,13 +67,9 @@ add_action('wp_enqueue_scripts', 'ilmenite_enqueue_scripts');
  **/
 function ilmenite_favicon() {
 	
-	if( file_exists( THEME_IMAGES . '/favicon.ico' ) ) {
-	
-		echo '<!-- Favicon -->';
-		echo '<link rel="Shortcut Icon" type="image/x-icon" href="' . THEME_IMAGES . '/favicon.ico">';
-	
-	}
+	echo '<link rel="Shortcut Icon" type="image/x-icon" href="' . THEME_IMAGES . '/favicon.ico">';
 
 }
 
-add_action('wp_head', 'ilmenite_favicon'); // Adds the favicon
+add_action('wp_head', 'ilmenite_favicon'); // Adds the favicon to frontend
+add_action('admin_head', 'ilmenite_favicon'); // Adds the favicon to backend

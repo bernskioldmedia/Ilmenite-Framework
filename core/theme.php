@@ -90,8 +90,8 @@ class Ilmenite_Framework {
 		// Theme Style Constants
 		define('THEME_INCLUDES', THEME_URI . '/inc'); // URI to theme inc folder
 		define('THEME_IMAGES', THEME_URI . '/images'); // URI to theme images folder
-		define('THEME_CSS', THEME_URI . '/css'); // URI to css folder
-		define('THEME_JS', THEME_URI . '/js'); // URI to javascripts folder
+		define('THEME_CSS', THEME_URI . '/stylesheets'); // URI to css folder
+		define('THEME_JS', THEME_URI . '/javascripts'); // URI to javascripts folder
 	}
 	
 	/**
@@ -131,9 +131,9 @@ class Ilmenite_Framework {
 			register_sidebar(array(
 				'id' => 'sidebar',
 				'name' => __('Sidebar', 'TEXTDOMAINTHEMENAME'),
-				'before_widget' => '<div class="sidebar-widget">',
+				'before_widget' => '<div class="sidebar-block">',
 			 	'after_widget' => '</div>',
-			 	'before_title' => '<h5 class="widget-title">',
+			 	'before_title' => '<h5 class="sidebar-block-title">',
 			 	'after_title' => '</h5>',
 			));
 			
