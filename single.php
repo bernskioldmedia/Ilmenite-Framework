@@ -8,21 +8,19 @@
  * @package Ilmenite Framework
  **/
 
-get_header();
-
-?>
+get_header(); ?>
 		
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	
-	    <?php get_template_part('content', 'single'); ?>
+		<?php get_template_part('content', 'single'); ?>
 	    
-	    <?php get_comments_template(); ?>
+		<?php comments_template(); ?>
 	    
 	<?php endwhile; ?>
 	
 	<?php else : ?>
 	
-	    <?php get_template_part('content', '404'); ?>
+		<?php get_template_part('content', '404'); ?>
 	
 	<?php endif; ?>
 	    	
