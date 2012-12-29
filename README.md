@@ -12,4 +12,4 @@ WordPress
 - Clean up code formatting in files.
 
 General
-- Switch to Foundation framework
+- Switch to Foundation framework (completed)
