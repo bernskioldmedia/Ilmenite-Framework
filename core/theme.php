@@ -148,10 +148,18 @@ class Ilmenite_Framework {
 	 * @since Ilmenite Framework 1.0
 	 **/
 	function functions() {
-		require_once(THEME_FUNCTIONS . '/common.php'); // Helper functions.
-		require_once(THEME_FUNCTIONS . '/ui.php'); // Functions that print UI elements
-		require_once(THEME_FUNCTIONS . '/head.php'); // Scripts, styles, favicon. Inserts into wp_head.
-		// require_once(THEME_FUNCTIONS . '/admin.php'); // Functions affecting the admin panel.
+
+		// Helpers functions
+		require_once( THEME_FUNCTIONS . '/common.php' );
+
+		// Functions that print UI elements
+		require_once( THEME_FUNCTIONS . '/ui.php' );
+
+		// Scripts, styles, favicon etc. that generally hooks into wp_head
+		require_once( THEME_FUNCTIONS . '/head.php' );
+
+		// Functions affecting the admin panel.
+		// require_once(THEME_FUNCTIONS . '/admin.php');
 	}
 
 	/**
