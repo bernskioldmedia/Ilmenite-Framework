@@ -120,9 +120,6 @@ class Ilmenite_Framework {
 
 			// Add support for custom editor style
 			add_editor_style();
-
-			// Adds support for post formats
-			// add_theme_support( 'post-formats', array( 'aside' ) ); // aside, gallery, link, image, quote, status, video, audio, chat
 		}
 
 		if(function_exists('register_sidebar')) {
