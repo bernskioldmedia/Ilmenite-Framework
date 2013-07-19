@@ -4,7 +4,7 @@
  *
  * @since Ilmenite Framework 1.0
  * @author XLD Studios
- * @version 1.2
+ * @version 1.0
  * @package Ilmenite Framework
  **/
 
@@ -27,7 +27,7 @@ function ilmenite_enqueue_styles() {
 
 	if( get_stylesheet_directory() != get_template_directory() )
 		wp_enqueue_style( 'style' );
-	
+
 }
 
 // Register Styles with WordPress
@@ -39,19 +39,19 @@ add_action( 'wp_enqueue_scripts', 'ilmenite_enqueue_styles' );
  * @since Ilmenite Framework 1.1
  **/
 function ilmenite_enqueue_scripts() {
-	
+
 	// Register
 	// wp_register_script( $handle, $src, $deps, $ver, $in_footer );
 	wp_register_script( 'foundation-framework', THEME_JS . '/framework.min.js', array('jquery'), THEME_VERSION, false );
 	wp_register_script( 'modernizr', THEME_JS . '/foundation/modernizr.foundation.js', false, '2.6.2', false );
-	
+
 	// Enqueue
 	wp_enqueue_script( 'modernizr' );
 	wp_enqueue_script( 'foundation-framework' );
-	
+
 	if ( is_singular() )
 		wp_enqueue_script( 'comment-reply' );
-	
+
 }
 
 // Register Scripts with WordPress
@@ -66,7 +66,7 @@ add_action('wp_enqueue_scripts', 'ilmenite_enqueue_scripts');
  * @since Ilmenite Framework 1.0
  **/
 function ilmenite_favicon() {
-	
+
 	echo '<link rel="Shortcut Icon" type="image/x-icon" href="' . THEME_IMAGES . '/favicon.ico">';
 
 }

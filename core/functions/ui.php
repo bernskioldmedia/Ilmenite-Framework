@@ -5,7 +5,7 @@
  *
  * @since Ilmenite Framework 1.0
  * @author XLD Studios
- * @version 1.1
+ * @version 1.0
  * @package Ilmenite Framework
  **/
 
@@ -15,8 +15,8 @@
  * @since Ilmenite Framework 1.0
  **/
 
-function ilmenite_pagination($pages = '', $range = 2) {  
-     $showitems = ($range * 2)+1;  
+function ilmenite_pagination($pages = '', $range = 2) {
+     $showitems = ($range * 2)+1;
 
      global $paged;
      if(empty($paged)) $paged = 1;
@@ -29,7 +29,7 @@ function ilmenite_pagination($pages = '', $range = 2) {
          {
              $pages = 1;
          }
-     }   
+     }
 
      if(1 != $pages)
      {
@@ -45,7 +45,7 @@ function ilmenite_pagination($pages = '', $range = 2) {
              }
          }
 
-         if ($paged < $pages && $showitems < $pages) echo "<a href='".get_pagenum_link($paged + 1)."'>&rsaquo;</a>";  
+         if ($paged < $pages && $showitems < $pages) echo "<a href='".get_pagenum_link($paged + 1)."'>&rsaquo;</a>";
          if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) echo "<a href='".get_pagenum_link($pages)."'>&raquo;</a>";
          echo "</div>\n";
      }

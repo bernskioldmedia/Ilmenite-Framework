@@ -6,7 +6,7 @@
  *
  * @since Ilmenite Framework 1.0
  * @author XLD Studios
- * @version 1.1
+ * @version 1.0
  * @package Ilmenite Framework
  **/
 
@@ -14,7 +14,7 @@
 /**
  * Include and Set Up Ilmenite Framework Class
  ***********************************************/
- 
+
 require_once( get_template_directory() . '/core/theme.php'); // Includes Ilmenite Framework
 
 $ilmenite = new Ilmenite_Framework();

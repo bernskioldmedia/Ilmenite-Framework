@@ -5,7 +5,7 @@
  *
  * @since Ilmenite Framework 1.0
  * @author XLD Studios
- * @version 1.1
+ * @version 1.0
  * @package Ilmenite Framework
  **/
 
@@ -27,7 +27,7 @@ function ilmenite_dashboard_widget_blog_output() {
           'items' => 2,
           'show_summary' => 1,
           'show_author' => 0,
-          'show_date' => 1 
+          'show_date' => 1
      ));
      echo "</div>";
 }

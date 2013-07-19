@@ -4,7 +4,7 @@
  *
  * @since Ilmenite Framework 1.0
  * @author XLD Studios
- * @version 1.2
+ * @version 1.0
  * @package Ilmenite Framework
  **/
 ?>
@@ -20,13 +20,13 @@
 
 		<!-- Set the viewport width to device width for mobile -->
        		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		
+
 		<!-- Page Title  -->
 		<title><?php wp_title(''); ?></title>
-		
+
 		<?php wp_head(); ?>
-		
+
 	</head>
 	<body <?php body_class(); ?>>
-				
+
 		<?php wp_nav_menu(array('theme_location' => 'primary-menu', 'container' => 'nav', 'container_id' => 'primary-navigation')); ?>

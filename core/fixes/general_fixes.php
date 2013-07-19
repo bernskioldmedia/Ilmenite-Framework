@@ -5,7 +5,7 @@
  *
  * @since Ilmenite Framework 1.0
  * @author XLD Studios
- * @version 1.1
+ * @version 1.0
  * @package Ilmenite Framework
  **/
 
@@ -13,7 +13,7 @@
  * Disables wpautop and wptexturize filters for shortcodes
  *
  * @since Ilmenite Framework 1.0
- * 
+ *
  **/
 function webtreats_formatter($content) {
 	$new_content = '';
