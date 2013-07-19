@@ -49,12 +49,17 @@ function ilmenite_enqueue_scripts() {
 
 	// Register
 	// wp_register_script( $handle, $src, $deps, $ver, $in_footer );
-	wp_register_script( 'foundation', THEME_JS . '/foundation/foundation.min.js', array('jquery'), THEME_VERSION, false );
+	wp_register_script( 'foundation', THEME_JS . '/foundation/foundation.min.js', array( 'jquery' ), THEME_VERSION, false );
+	wp_register_script( 'zepto', THEME_JS . '/vendor/zepto.js', false, '1.0.1', false );
 	wp_register_script( 'modernizr', THEME_JS . '/vendor/custom.modernizr.js', false, '2.6.2', false );
+	wp_register_script( 'scripts', THEME_JS . '/scripts.min.js', array( 'jquery', 'foundation' ), '2.6.2', false );
+
 
 	// Enqueue
 	wp_enqueue_script( 'modernizr' );
 	wp_enqueue_script( 'foundation' );
+	wp_enqueue_script( 'zepto' );
+	wp_enqueue_script( 'scripts' );
 
 	if ( is_singular() )
 		wp_enqueue_script( 'comment-reply' );
