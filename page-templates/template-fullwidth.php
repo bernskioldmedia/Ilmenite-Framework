@@ -1,6 +1,8 @@
 <?php
 /**
- * Displays Blog Articles from XLD Studios
+ * Page Template: Fullwidth Page
+ *
+ * Fullwidth page template to create pages that does not include the sidebar.
  *
  * @since Ilmenite Framework 1.0
  * @author XLD Studios
