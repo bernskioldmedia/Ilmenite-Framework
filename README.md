@@ -18,6 +18,9 @@ You will not find references to these version numbers within the code as everyth
 * Changed the files included via head.php to suit our updated workflow.
 + Added scripts.js file that initializes foundation.
 + Added "Open External Links in new Window" jQuery script in scripts.js
+* Moved page templates to page-templates/ folder.
++ Added frontpage base page template.
++ Added editor-style.css styles to load from layout.css
 
 **Version 1.0**
 First framework release.
