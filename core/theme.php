@@ -158,6 +158,9 @@ class Ilmenite_Framework {
 		// Scripts, styles, favicon etc. that generally hooks into wp_head
 		require_once( THEME_FUNCTIONS . '/head.php' );
 
+		// Items that display in the footer and hook into wp_footer
+		require_once( THEME_FUNCTIONS . '/footer.php' );
+
 		// Functions affecting the admin panel.
 		// require_once(THEME_FUNCTIONS . '/admin.php');
 	}
