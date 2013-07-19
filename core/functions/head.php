@@ -1,6 +1,9 @@
 <?php
 /**
- * Add items to the <head> section of WordPress for public and admin
+ * Header Functions
+ *
+ * Contains functions that hook into wp_head and/or output their content
+ * to wp_head via other actions/hooks such as scripts and stylesheets.
  *
  * @since Ilmenite Framework 1.0
  * @author XLD Studios
@@ -9,24 +12,28 @@
  **/
 
 /**
- * Enqueue Styles on public side
+ * Stylesheets
  *
- * @since Ilmenite Framework 1.1
+ * Registeres and enqueues theme stylesheets.
+ *
+ * @since 1.0
  **/
 function ilmenite_enqueue_styles() {
 
 	// Register
 	// wp_register_style( $handle, $src, $deps, $ver, $media );
-	wp_register_style( 'base', THEME_CSS . '/base.css', false, THEME_VERSION, 'all' );
-	wp_register_style( 'layout', THEME_CSS . '/layout.css', array('base'), THEME_VERSION, 'all' );
-
-	wp_register_style( 'style', get_stylesheet_uri(), false, THEME_VERSION, 'all' );
+	wp_register_style( 'base', THEME_CSS . '/layout.css', false, THEME_VERSION, 'all' );
 
 	// Enqueue
-	wp_enqueue_style( 'main-style' );
+	wp_enqueue_style( 'base' );
 
-	if( get_stylesheet_directory() != get_template_directory() )
-		wp_enqueue_style( 'style' );
+	// If we have a custom.css stylesheet, include that too. This makes it easier for
+	// clients to modify the CSS quickly without having to know and use SASS.
+	if( file_exists( THEME_CSS . '/custom.css' ) ) {
+		wp_register_style( 'custom', THEME_CSS . '/custom.css', false, THEME_VERSION, 'all' );
+
+		wp_enqueue_style( 'custom' );
+	}
 
 }
 
@@ -36,18 +43,18 @@ add_action( 'wp_enqueue_scripts', 'ilmenite_enqueue_styles' );
 /**
  * Enqueue Scripts on public side
  *
- * @since Ilmenite Framework 1.1
+ * @since Ilmenite Framework 1.0
  **/
 function ilmenite_enqueue_scripts() {
 
 	// Register
 	// wp_register_script( $handle, $src, $deps, $ver, $in_footer );
-	wp_register_script( 'foundation-framework', THEME_JS . '/framework.min.js', array('jquery'), THEME_VERSION, false );
-	wp_register_script( 'modernizr', THEME_JS . '/foundation/modernizr.foundation.js', false, '2.6.2', false );
+	wp_register_script( 'foundation', THEME_JS . '/foundation/foundation.min.js', array('jquery'), THEME_VERSION, false );
+	wp_register_script( 'modernizr', THEME_JS . '/vendor/custom.modernizr.js', false, '2.6.2', false );
 
 	// Enqueue
 	wp_enqueue_script( 'modernizr' );
-	wp_enqueue_script( 'foundation-framework' );
+	wp_enqueue_script( 'foundation' );
 
 	if ( is_singular() )
 		wp_enqueue_script( 'comment-reply' );
