@@ -22,7 +22,7 @@ function ilmenite_dashboard_widget_blog() {
 function ilmenite_dashboard_widget_blog_output() {
      echo '<div class="rss-widget">';
      wp_widget_rss_output(array(
-          'url' => 'http://www.xldstudios.com/feed',
+          'url' => __( 'http://www.xldstudios.com/feed', 'TEXTDOMAINTHEMENAME' ),
           'title' => __('The Latest from XLD Studios', 'TEXTDOMAINTHEMENAME'),
           'items' => 2,
           'show_summary' => 1,
