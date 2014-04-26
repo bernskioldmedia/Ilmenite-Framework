@@ -1,2 +1,15 @@
+### SVN ###
+.svn/
+
+
+### Sass ###
 .sass-cache
+
+
+### Windows ###
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+### OSX ###
 .DS_Store
