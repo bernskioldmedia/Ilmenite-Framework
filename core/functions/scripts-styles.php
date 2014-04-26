@@ -1,39 +1,24 @@
 <?php
 /**
- * Header Functions
+ * Script and Style Functions
  *
- * Contains functions that hook into wp_head and/or output their content
- * to wp_head via other actions/hooks such as scripts and stylesheets.
- *
- * @since Ilmenite Framework 1.0
- * @author XLD Studios
- * @version 1.0
- * @package Ilmenite Framework
+ * Handles the loading of scripts and styles for the
+ * theme through the proper enqueuing methods.
  **/
 
 /**
  * Stylesheets
  *
- * Registeres and enqueues theme stylesheets.
- *
- * @since 1.0
+ * Registers and enqueues theme stylesheets.
  **/
 function ilmenite_enqueue_styles() {
 
 	// Register
 	// wp_register_style( $handle, $src, $deps, $ver, $media );
-	wp_register_style( 'base', THEME_CSS . '/layout.css', false, THEME_VERSION, 'all' );
+	wp_register_style( 'layout', THEME_CSS . '/layout.css', false, THEME_VERSION, 'all' );
 
 	// Enqueue
-	wp_enqueue_style( 'base' );
-
-	// If we have a custom.css stylesheet, include that too. This makes it easier for
-	// clients to modify the CSS quickly without having to know and use SASS.
-	if( file_exists( THEME_CSS . '/custom.css' ) ) {
-		wp_register_style( 'custom', THEME_CSS . '/custom.css', false, THEME_VERSION, 'all' );
-
-		wp_enqueue_style( 'custom' );
-	}
+	wp_enqueue_style( 'layout' );
 
 }
 
