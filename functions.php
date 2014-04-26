@@ -1,38 +1,20 @@
 <?php
-
 /**
  * Default WordPress functions.php file
  * Loads and configures the theme.
- *
- * @since Ilmenite Framework 1.0
- * @author XLD Studios
- * @version 1.0
- * @package Ilmenite Framework
  **/
 
-
 /**
- * Include and Set Up Ilmenite Framework Class
+ * Include and Set Up Framework
  ***********************************************/
 
-require_once( get_template_directory() . '/core/theme.php'); // Includes Ilmenite Framework
+require_once locate_template( '/core/theme.php' );
 
-$ilmenite = new Ilmenite_Framework();
-
-$ilmenite->init(array(
-	'theme_name' => 'YOUR THEME NAME', // Change this to the name of the theme.
-	'theme_slug' => 'YOUR THEME SLUG', // Create a custom slug for the theme.
-	'theme_version' => '1.0'
-));
-
-/**
- * Add Theme-Specific Stuff Below Here
- *****************************************/
+$theme = new Ilmenite_Framework();
 
 /**
  * Defines content width
  **/
 
-if (!isset($content_width)) {
-	$content_width = 900; // Let this to the proper content width
-}
+if ( ! isset($content_width ) )
+	$content_width = 640; // Let this to the proper content width
