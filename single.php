@@ -1,22 +1,17 @@
 <?php
 /**
  * Displays Single Post
- *
- * @since Ilmenite Framework 1.0
- * @author XLD Studios
- * @version 1.0
- * @package Ilmenite Framework
  **/
 
 get_header(); ?>
 
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-		<?php get_template_part('content', 'single'); ?>
+			<?php get_template_part('content', 'single'); ?>
 
-		<?php comments_template(); ?>
+			<?php comments_template(); ?>
 
-	<?php endwhile; ?>
+		<?php endwhile; ?>
 
 	<?php else : ?>
 
