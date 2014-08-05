@@ -10,6 +10,14 @@ The framework is currently made to be used with Foundation 5 (CSS Framework) and
 ## Changelog ##
 You will not find references to these version numbers within the code as everything will be versioned 1.0 to make theme development faster.
 
+**Version 1.4**
+* Added Gruntfile and package.json to add Grunt support
+* Introduced and changed default variables in _settings.scss
+* Updated Font Awesome to 4.1.0
+* Changed sass folder name to scss
+* Updated .gitignore
+* Updated Foundation
+
 **Version 1.3**
 * Changed file structure for cleaner theme
 * Added Foundation 5
