@@ -66,3 +66,68 @@
 /**
  * Begin Layout Stylesheet
  */
+
+/**
+ * Gravity Forms
+ */
+.gform_body {
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+    li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+}
+
+.gfield {
+  margin: 0 0 1em 0 !important;
+  clear: both;
+}
+
+.gfield_required {
+  color: red;
+  margin-left: 0.2em;
+}
+
+.gfield_checkbox {
+
+  label {
+    display: inline;
+    margin-left: 1em;
+  }
+}
+
+ .ginput_left,
+ .ginput_right,
+ .gf_left_half,
+ .gf_right_half {
+  width: 48%;
+  clear: none;
+
+  input {
+    margin: 0;
+  }
+ }
+
+.ginput_left,
+.gf_left_half {
+  float: left;
+}
+
+.ginput_right,
+.gf_right_half {
+  float: right;
+}
+
+textarea.medium {
+  height: 100px;
+}
+
+textarea.large {
+  height: 150px;
+}
