@@ -25,7 +25,7 @@ module.exports = function(grunt) {
 					sourcemap: true,
 				},
 				files: {
-					'assets/css/layout.css': 'assets/sass/layout.scss'
+					'assets/css/layout.css': 'assets/scss/layout.scss'
 				}
 			}
 		},
@@ -43,7 +43,7 @@ module.exports = function(grunt) {
 			},
 			css: {
 				files: [
-					'assets/sass/*.scss',
+					'assets/scss/*.scss',
 				],
 				tasks: [ 'sass', 'autoprefixer' ],
 				options : {
