@@ -75,7 +75,7 @@ if ( ! function_exists( 'ilmenite_nice_search_url' ) ) :
 
 endif;
 
-if ( ! function_exists( 'ilmnenite_blank_search_fix' ) ) :
+if ( ! function_exists( 'ilmenite_blank_search_fix' ) ) :
 
 	/**
 	 * Fix for empty search queries redirecting to home page
@@ -84,7 +84,7 @@ if ( ! function_exists( 'ilmnenite_blank_search_fix' ) ) :
 	 * @link http://core.trac.wordpress.org/ticket/11330
 	 * @link https://github.com/roots/roots/blob/master/lib/cleanup.php
 	 */
-	function ilmnenite_blank_search_fix( $query_vars ) {
+	function ilmenite_blank_search_fix( $query_vars ) {
 
 		if ( isset($_GET['s'] ) && empty( $_GET['s'] ) && ! is_admin() ) {
 			$query_vars['s'] = ' ';
@@ -93,6 +93,6 @@ if ( ! function_exists( 'ilmnenite_blank_search_fix' ) ) :
 		return $query_vars;
 	}
 
-	add_filter( 'request', 'ilmnenite_blank_search_fix' );
+	add_filter( 'request', 'ilmenite_blank_search_fix' );
 
 endif;
