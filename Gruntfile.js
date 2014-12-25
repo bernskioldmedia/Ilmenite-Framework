@@ -121,6 +121,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-pot');
+	grunt.loadNpmTasks('grunt-po2mo');
+	grunt.loadNpmTasks('grunt-checktextdomain');
 
 	// Run!
 	grunt.registerTask('default', ['sass', 'uglify', 'watch']);
