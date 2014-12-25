@@ -40,7 +40,7 @@ if ( ! class_exists( 'Ilmenite_Framework' ) ) :
 			// Theme Constants
 			define( 'THEME_NAME', 'THEMENAMEHERE' ); // Name of the theme
 			define( 'THEME_SLUG', 'THEMESLUGHERE' ); // Slug of the theme
-			define( 'THEME_VERSION', '1.0.0' ); // Version of the theme
+			define( 'THEME_VERSION', '1.5.0' ); // Version of the theme
 
 			// Theme Main Directory Constants
 			define( 'THEME_DIR', get_template_directory() ); // Path to theme directory
