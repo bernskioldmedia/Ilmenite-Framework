@@ -20,6 +20,7 @@ You will not find references to these version numbers within the code as everyth
 * Add imagemin grunt task
 * Add newer grunt task
 * Update to Foundation 4.2.0
+* Bug fixes and tweaks
 
 **Version 1.4**
 * Added Gruntfile and package.json to add Grunt support
