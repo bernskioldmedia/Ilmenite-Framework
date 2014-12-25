@@ -64,6 +64,21 @@ module.exports = function(grunt) {
 			}
 		},
 
+		imagemin: {
+         dist: {
+            options: {
+               optimizationLevel: 7,
+               progressive: true
+            },
+            files: [{
+               expand: true,
+               cwd: 'assets/images/',
+               src: '**/*',
+               dest: 'assets/images/'
+            }]
+         }
+      },
+
 		checktextdomain: {
 		   options:{
 		      text_domain: 'TEXTDOMAINTHEMENAME',
@@ -116,6 +131,7 @@ module.exports = function(grunt) {
 	});
 
 	// Load Plugins
+	grunt.loadNpmTasks('grunt-newer');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-sass');
@@ -123,8 +139,11 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-pot');
 	grunt.loadNpmTasks('grunt-po2mo');
 	grunt.loadNpmTasks('grunt-checktextdomain');
+	grunt.loadNpmTasks('grunt-contrib-imagemin');
 
 	// Run!
-	grunt.registerTask('default', ['sass', 'uglify', 'watch']);
+	grunt.registerTask( 'default', ['sass', 'uglify', 'watch'] );
+	grunt.registerTask( 'test', [ 'checktextdomain' ] );
+	grunt.registerTask( 'build', [ 'test', 'uglify', 'sass', 'pot', 'newer:po2mo', 'newer:imagemin' ] );
 
 }
