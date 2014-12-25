@@ -10,6 +10,17 @@ The framework is currently made to be used with Foundation 5 (CSS Framework) and
 ## Changelog ##
 You will not find references to these version numbers within the code as everything will be versioned 1.0 to make theme development faster.
 
+**Version 1.5**
+* Updated Foundation
+* Updated package.json
+* Update Node JS modules
+* Added grunt pot generation
+* Add po2mo grunt task
+* Add textdomain check task
+* Add imagemin grunt task
+* Add newer grunt task
+* Update to Foundation 4.2.0
+
 **Version 1.4**
 * Added Gruntfile and package.json to add Grunt support
 * Introduced and changed default variables in _settings.scss
