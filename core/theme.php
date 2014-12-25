@@ -80,11 +80,6 @@ if ( ! class_exists( 'Ilmenite_Framework' ) ) :
 				// Add HTML5 support
 				add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption'  ) );
 
-				// Register one default navigation menu
-				register_nav_menus(array(
-					'primary-menu' => __('Main Navigation', 'TEXTDOMAINTHEMENAME')
-				));
-
 			}
 
 		}
