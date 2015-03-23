@@ -12,122 +12,59 @@
 // Make sure the charset is set appropriately
 @charset "UTF-8";
 
+// Normalize
+@import "libs/_normalize.scss";
+
 // Import the foundation settings
-@import "foundation/_settings.scss";
+@import "libs/foundation/_settings.scss";
 
 // Make sure the charset is set appropriately
 
 // Behold, here are all the Foundation components.
-@import 'foundation/components/grid';
-// @import 'foundation/components/accordion';
-@import 'foundation/components/alert-boxes';
-@import 'foundation/components/block-grid';
-// @import 'foundation/components/breadcrumbs';
-// @import 'foundation/components/button-groups';
-@import 'foundation/components/buttons';
-@import 'foundation/components/clearing';
-// @import 'foundation/components/dropdown';
-// @import 'foundation/components/dropdown-buttons';
-@import 'foundation/components/flex-video';
-@import 'foundation/components/forms';
-// @import 'foundation/components/icon-bar';
-// @import 'foundation/components/inline-lists';
-// @import 'foundation/components/joyride';
-// @import 'foundation/components/keystrokes';
-// @import 'foundation/components/labels';
-@import 'foundation/components/magellan';
-// @import 'foundation/components/orbit';
-@import 'foundation/components/pagination';
-// @import 'foundation/components/panels';
-// @import 'foundation/components/pricing-tables';
-// @import 'foundation/components/progress-bars';
-// @import 'foundation/components/range-slider';
-// @import 'foundation/components/reveal';
-// @import 'foundation/components/side-nav';
-// @import 'foundation/components/split-buttons';
-// @import 'foundation/components/sub-nav';
-// @import 'foundation/components/switches';
-@import 'foundation/components/tables';
-// @import 'foundation/components/tabs';
-// @import 'foundation/components/thumbs';
-// @import 'foundation/components/tooltips';
-// @import 'foundation/components/top-bar';
-@import 'foundation/components/type';
-// @import 'foundation/components/offcanvas';
-// @import 'foundation/components/visibility';
-
-/**
- * Other Imports
- */
-
-// Import Font Awesome
-@import "_font-awesome.scss";
+@import 'libs/foundation/components/grid';
+// @import 'libs/foundation/components/accordion';
+@import 'libs/foundation/components/alert-boxes';
+@import 'libs/foundation/components/block-grid';
+// @import 'libs/foundation/components/breadcrumbs';
+// @import 'libs/foundation/components/button-groups';
+@import 'libs/foundation/components/buttons';
+@import 'libs/foundation/components/clearing';
+// @import 'libs/foundation/components/dropdown';
+// @import 'libs/foundation/components/dropdown-buttons';
+@import 'libs/foundation/components/flex-video';
+@import 'libs/foundation/components/forms';
+// @import 'libs/foundation/components/icon-bar';
+// @import 'libs/foundation/components/inline-lists';
+// @import 'libs/foundation/components/joyride';
+// @import 'libs/foundation/components/keystrokes';
+// @import 'libs/foundation/components/labels';
+@import 'libs/foundation/components/magellan';
+// @import 'libs/foundation/components/orbit';
+@import 'libs/foundation/components/pagination';
+// @import 'libs/foundation/components/panels';
+// @import 'libs/foundation/components/pricing-tables';
+// @import 'libs/foundation/components/progress-bars';
+// @import 'libs/foundation/components/range-slider';
+// @import 'libs/foundation/components/reveal';
+// @import 'libs/foundation/components/side-nav';
+// @import 'libs/foundation/components/split-buttons';
+// @import 'libs/foundation/components/sub-nav';
+// @import 'libs/foundation/components/switches';
+@import 'libs/foundation/components/tables';
+// @import 'libs/foundation/components/tabs';
+// @import 'libs/foundation/components/thumbs';
+// @import 'libs/foundation/components/tooltips';
+// @import 'libs/foundation/components/top-bar';
+@import 'libs/foundation/components/type';
+// @import 'libs/foundation/components/offcanvas';
+// @import 'libs/foundation/components/visibility';
 
 /**
  * Begin Layout Stylesheet
  */
 
 /**
- * Gravity Forms
+ * Imports
  */
-.gform_body {
-
-  ul {
-    margin: 0;
-    padding: 0;
-  }
-
-    li {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-}
-
-.gfield {
-  margin: 0 0 1em 0 !important;
-  clear: both;
-}
-
-.gfield_required {
-  color: red;
-  margin-left: 0.2em;
-}
-
-.gfield_checkbox {
-
-  label {
-    display: inline;
-    margin-left: 1em;
-  }
-}
-
- .ginput_left,
- .ginput_right,
- .gf_left_half,
- .gf_right_half {
-  width: 48%;
-  clear: none;
-
-  input {
-    margin: 0;
-  }
- }
-
-.ginput_left,
-.gf_left_half {
-  float: left;
-}
-
-.ginput_right,
-.gf_right_half {
-  float: right;
-}
-
-textarea.medium {
-  height: 100px;
-}
-
-textarea.large {
-  height: 150px;
-}
+@import "_template-modules.scss";
+@import "_forms.scss";

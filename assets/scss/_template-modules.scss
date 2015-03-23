@@ -1,0 +1,183 @@
+/**
+ * General Modules, Typography Classes etc.
+ */
+
+.page-section { padding: 2em 0 2em 0; }
+.page-section-3x { padding: 3em 0 3em 0; }
+.page-section-4x { padding: 4em 0 4em 0; }
+
+.hidden {
+  display: none;
+}
+
+// Borders
+.border-left {
+  border-left: 1px solid $border-color;
+}
+
+.border-top {
+  border-top: 1px solid $border-color;
+}
+
+.border-bottom {
+  border-bottom: 1px solid $border-color;
+}
+
+// Floating
+.clear {
+  clear: both;
+}
+
+// Text
+.intro {
+  font-size: 1.2em;
+}
+
+.intro2 {
+  font-size: 1.4rem;
+}
+
+// Links
+.no-link {
+  color: inherit;
+
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.underlined-link {
+  text-decoration: underline;
+}
+
+// Font Heading
+.font-heading {
+  font-family: $header-font-family;
+}
+
+// Spacings
+.pt0 { padding-top: 0rem; }
+.pt1 { padding-top: 1rem; }
+.pt2 { padding-top: 2rem; }
+.pt3 { padding-top: 3rem; }
+.pt4 { padding-top: 4rem; }
+
+.pb0 { padding-bottom: 0rem; }
+.pb1 { padding-bottom: 1rem; }
+.pb2 { padding-bottom: 2rem; }
+.pb3 { padding-bottom: 3rem; }
+.pb4 { padding-bottom: 4rem; }
+
+.mt0 { margin-top: 0rem; }
+.mt1 { margin-top: 1rem; }
+.mt2 { margin-top: 2rem; }
+.mt3 { margin-top: 3rem; }
+.mt4 { margin-top: 4rem; }
+
+.mb0 { margin-bottom: 0rem; }
+.mb1 { margin-bottom: 1rem; }
+.mb2 { margin-bottom: 2rem; }
+.mb3 { margin-bottom: 3rem; }
+.mb4 { margin-bottom: 4rem; }
+
+// Backgrounds
+.bg-primary { background: $primary-color; }
+.bg-secondary { background: $secondary-color; }
+
+// Images
+.image-rounded {
+  border-radius: 50%;
+}
+
+// Lists
+.inline-block-list {
+  list-style: none;
+  margin: 0;
+
+  li {
+    display: inline-block;
+    max-width: 100%;
+  }
+}
+
+.separated-list {
+
+  li {
+    margin-right: 0.2rem;
+  }
+
+  li:after {
+    content: ' | ';
+    opacity: 0.8;
+    font-size: 90%;
+    margin-left: 0.1rem;
+  }
+
+  li:last-child:after {
+    content: '';
+  }
+}
+
+.no-bullets {
+  list-style: none;
+  margin: 0;
+
+  ul {
+    list-style: none;
+  }
+}
+
+// Alignment
+.alignleft {
+  float: left;
+}
+
+.alignright {
+  float: right;
+}
+
+.aligncenter {
+  margin: 0 auto 0 auto;
+  text-align: center;
+  display: block;
+}
+
+// Icons
+.icon-margin-right {
+  margin-right: 0.4rem;
+}
+
+// Text
+.uppercase { text-transform: uppercase; }
+
+.text-white { color: white; }
+
+.text-light { font-weight: 300; }
+.text-bold { font-weight: 700; }
+
+// Buttons
+a.button {
+  border-radius: $global-radius;
+}
+
+.alt-button {
+  background: transparent;
+  border: 2px solid $body-font-color;
+  color: $body-font-color;
+
+  &:hover {
+    background: $body-font-color;
+    color: white;
+  }
+}
+
+.alt-button.white {
+  border-color: white;
+  color: white;
+
+  &:hover {
+    background: white;
+    color: black;
+  }
+}

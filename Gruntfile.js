@@ -51,6 +51,7 @@ module.exports = function(grunt) {
 					sourcemap: true,
 				},
 				files: {
+					'assets/css/editor-style.css': 'assets/scss/editor-style.scss',
 					'assets/css/layout.css': 'assets/scss/layout.scss'
 				}
 			}
