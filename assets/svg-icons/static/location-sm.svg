@@ -1,0 +1,8 @@
+<svg data-icon="location" version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="iconic iconic-location iconic-size-sm" viewBox="0 0 16 16">
+  <g class="iconic-metadata">
+    <title>Location</title>
+  </g>
+  <g data-width="16" data-height="16" class="iconic-container">
+    <path class="iconic-property-fill" d="M16 0l-16 8 6 2 2 6z" />
+  </g>
+</svg>

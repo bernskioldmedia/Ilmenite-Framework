@@ -40,7 +40,7 @@ if ( ! class_exists( 'Ilmenite_Framework' ) ) :
 			// Theme Constants
 			define( 'THEME_NAME', 'THEMENAMEHERE' ); // Name of the theme
 			define( 'THEME_SLUG', 'THEMESLUGHERE' ); // Slug of the theme
-			define( 'THEME_VERSION', '1.5.0' ); // Version of the theme
+			define( 'THEME_VERSION', '1.6.0' ); // Version of the theme
 
 			// Theme Main Directory Constants
 			define( 'THEME_DIR', get_template_directory() ); // Path to theme directory
@@ -58,6 +58,7 @@ if ( ! class_exists( 'Ilmenite_Framework' ) ) :
 			define( 'THEME_IMAGES_URI', THEME_ASSETS_URI . '/images'); // URI to theme images folder
 			define( 'THEME_CSS_URI', THEME_ASSETS_URI . '/css'); // URI to css folder
 			define( 'THEME_JS_URI', THEME_ASSETS_URI . '/js'); // URI to javascripts folder
+			define( 'THEME_ICONS', THEME_ASSETS_URI . '/svg-icons'); // URI to theme svg icons folder
 		}
 
 		/**

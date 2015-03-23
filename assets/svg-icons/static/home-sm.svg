@@ -1,0 +1,8 @@
+<svg data-icon="home" version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="iconic iconic-home iconic-size-sm" viewBox="0 0 16 16">
+  <g class="iconic-metadata">
+    <title>Home</title>
+  </g>
+  <g data-width="16" data-height="15" class="iconic-container">
+    <path class="iconic-home-wall iconic-property-fill" d="M8 0l-8 7h2v8h5v-3h2v3h5v-8h2z" />
+  </g>
+</svg>

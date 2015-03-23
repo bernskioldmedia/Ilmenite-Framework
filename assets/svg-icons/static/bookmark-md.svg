@@ -1,0 +1,8 @@
+<svg data-icon="bookmark" version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="iconic iconic-bookmark iconic-size-md" viewBox="0 0 32 32">
+  <g class="iconic-metadata">
+    <title>Bookmark</title>
+  </g>
+  <g data-width="14" data-height="32" class="iconic-container" transform="translate(9)">
+    <path d="M0 .5v31c0 .276.182.37.407.209l6.186-4.419c.225-.161.589-.161.814 0l6.186 4.419c.225.161.407.067.407-.209v-31c0-.276-.224-.5-.5-.5h-13c-.276 0-.5.224-.5.5z" class="iconic-property-fill" />
+  </g>
+</svg>
