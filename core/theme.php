@@ -79,7 +79,10 @@ if ( ! class_exists( 'Ilmenite_Framework' ) ) :
 				add_editor_style( '/assets/css/editor-style.css' );
 
 				// Add HTML5 support
-				add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption'  ) );
+				add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'widgets' ) );
+
+				// Add Title Tag Support
+				add_theme_support( 'title-tag' );
 
 			}
 
