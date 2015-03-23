@@ -38,7 +38,7 @@ if ( ! function_exists( 'ilmenite_enqueue_scripts' ) ) :
 		// Register
 		// wp_register_script( $handle, $src, $deps, $ver, $in_footer );
 		wp_register_script( 'foundation', THEME_JS_URI . '/plugins/foundation/foundation.js', array( 'jquery' ), THEME_VERSION, true );
-		wp_register_script( 'modernizr', THEME_JS_URI . '/vendor/modernizr-2.7.2.min.js', false, '2.7.2', false );
+		wp_register_script( 'modernizr', THEME_JS_URI . '/vendor/modernizr.min.js', false, '2.8.3', false );
 		wp_register_script( 'main-scripts', THEME_JS_URI . '/scripts.min.js', array( 'jquery', 'foundation' ), THEME_VERSION, true );
 
 		// Enqueue
