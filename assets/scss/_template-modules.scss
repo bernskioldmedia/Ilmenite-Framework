@@ -2,33 +2,43 @@
  * General Modules, Typography Classes etc.
  */
 
-.page-section { padding: 2em 0 2em 0; }
+/**
+ * Page Section Modules
+ */
+.page-section    { padding: 2em 0 2em 0; }
 .page-section-3x { padding: 3em 0 3em 0; }
 .page-section-4x { padding: 4em 0 4em 0; }
 
+// Hide Class
 .hidden {
   display: none;
 }
 
-// Borders
-.border-left {
-  border-left: 1px solid $border-color;
+/**
+ * Border Modules
+ */
+.border-top    { border-top: 1px solid $border-color; }
+.border-right  { border-right: 1px solid $border-color; }
+.border-bottom { border-bottom: 1px solid $border-color; }
+.border-left   { border-left: 1px solid $border-color; }
+
+/**
+ * Clearings
+ */
+.clear:before,
+.clear:after {
+  content: "";
+  display: table;
 }
 
-.border-top {
-  border-top: 1px solid $border-color;
-}
-
-.border-bottom {
-  border-bottom: 1px solid $border-color;
-}
-
-// Floating
-.clear {
+.clear:after {
   clear: both;
 }
 
-// Text
+/**
+ * Some Basic Typography Extensions
+ */
+
 .intro {
   font-size: 1.2em;
 }
@@ -37,7 +47,19 @@
   font-size: 1.4rem;
 }
 
-// Links
+// Font Heading
+.font-heading {
+  font-family: $header-font-family;
+}
+
+// Font Body
+.font-body {
+  font-family: $body-font-family;
+}
+
+/**
+ * Links
+ */
 .no-link {
   color: inherit;
 
@@ -51,12 +73,9 @@
   text-decoration: underline;
 }
 
-// Font Heading
-.font-heading {
-  font-family: $header-font-family;
-}
-
-// Spacings
+/**
+ * Spacing Classes
+ */
 .pt0 { padding-top: 0rem; }
 .pt1 { padding-top: 1rem; }
 .pt2 { padding-top: 2rem; }
@@ -81,16 +100,22 @@
 .mb3 { margin-bottom: 3rem; }
 .mb4 { margin-bottom: 4rem; }
 
-// Backgrounds
-.bg-primary { background: $primary-color; }
+/**
+ * Background Modules
+ */
+.bg-primary   { background: $primary-color; }
 .bg-secondary { background: $secondary-color; }
 
-// Images
+/**
+ * Image Tweaks
+ */
 .image-rounded {
   border-radius: 50%;
 }
 
-// Lists
+/**
+ * List Modules
+ */
 .inline-block-list {
   list-style: none;
   margin: 0;
@@ -128,35 +153,26 @@
   }
 }
 
-// Alignment
-.alignleft {
-  float: left;
-}
-
-.alignright {
-  float: right;
-}
-
-.aligncenter {
-  margin: 0 auto 0 auto;
-  text-align: center;
-  display: block;
-}
-
-// Icons
+/**
+ * Icon Tweaks
+ */
 .icon-margin-right {
   margin-right: 0.4rem;
 }
 
-// Text
-.uppercase { text-transform: uppercase; }
+/**
+ * Text Classes
+ */
+.uppercase  { text-transform: uppercase; }
 
 .text-white { color: white; }
 
 .text-light { font-weight: 300; }
-.text-bold { font-weight: 700; }
+.text-bold  { font-weight: 700; }
 
-// Buttons
+/**
+ * Buttons
+ */
 a.button {
   border-radius: $global-radius;
 }
@@ -180,4 +196,131 @@ a.button {
     background: white;
     color: black;
   }
+}
+
+/**
+ * Alignment
+ */
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em;
+}
+
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.5em;
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/**
+ * Accessibility
+ */
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000; /* Above WP toolbar. */
+}
+
+/**
+ * WordPress Captions
+ */
+.wp-caption {
+  margin-bottom: 1.5em;
+  max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+  display: block;
+  margin: 0 auto;
+}
+
+.wp-caption-text {
+  text-align: center;
+}
+
+.wp-caption .wp-caption-text {
+  margin: 0.8075em 0;
+}
+
+/**
+ * WordPress Galleries
+ */
+.gallery {
+  margin-bottom: 1.5em;
+}
+
+.gallery-item {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+  max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+  max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+  max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+  max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+  max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+  max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+  max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+  max-width: 11.11%;
+}
+
+.gallery-caption {
+  display: block;
 }

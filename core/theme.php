@@ -67,24 +67,46 @@ if ( ! class_exists( 'Ilmenite_Framework' ) ) :
 		 **/
 		function theme_support() {
 
-			if( function_exists( 'add_theme_support' ) ) {
+			if ( function_exists( 'add_theme_support' ) ) {
 
-				// Add theme support for Automatic Feed Links
+				// Add default posts and comments RSS feed links to head.
 				add_theme_support( 'automatic-feed-links' );
 
-				// Add theme support for Featured Images
+				/*
+				 * Enable support for Post Thumbnails on posts and pages.
+				 *
+				 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+				 */
 				add_theme_support( 'post-thumbnails' );
 
 				// Add theme support for custom CSS in the TinyMCE visual editor
 				add_editor_style( '/assets/css/editor-style.css' );
 
-				// Add HTML5 support
-				add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'widgets' ) );
+				/*
+				 * Switch default core markup for search form, comment form, and comments
+				 * to output valid HTML5.
+				 */
+				add_theme_support( 'html5', array(
+					'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
+				) );
 
-				// Add Title Tag Support
+				/*
+				 * Let WordPress manage the document title.
+				 * By adding theme support, we declare that this theme does not use a
+				 * hard-coded <title> tag in the document head, and expect WordPress to
+				 * provide it for us.
+				 */
 				add_theme_support( 'title-tag' );
 
 			}
+
+			/*
+			 * Make theme available for translation.
+			 * Translations can be filed in the /languages/ directory.
+			 * If you're building a theme based on Ilmenite, use a find and replace
+			 * to change 'ilmenite' to the name of your theme in all the template files
+			 */
+			load_theme_textdomain( 'ilmenite', get_template_directory() . '/languages' );
 
 		}
 
@@ -93,6 +115,12 @@ if ( ! class_exists( 'Ilmenite_Framework' ) ) :
 		 */
 		function custom_image_sizes() {
 
+			// Set standard sizes
+			add_image_size( 'large', 1024, '', true ); // Large Thumbnail
+			add_image_size( 'medium', 640, '', true ); // Medium Thumbnail
+			add_image_size( 'small', 300, '', true ); // Small Thumbnail
+
+			// Custom Image Declaration
 			// add_image_size( $name, $width, $height, $crop );
 
 		}
@@ -135,7 +163,7 @@ if ( ! class_exists( 'Ilmenite_Framework' ) ) :
 			require_once( THEME_FUNCTIONS . '/sidebars.php' );
 
 			// UI Element Functions
-			require_once( THEME_FUNCTIONS . '/ui.php' );
+			require_once( THEME_FUNCTIONS . '/template-tags.php' );
 
 		}
 
@@ -145,22 +173,6 @@ if ( ! class_exists( 'Ilmenite_Framework' ) ) :
 		function dashboard_widgets() {
 
 			require_once( THEME_DASHBOARD_WIDGETS . '/agency-rss.php' ); // RSS Widget Showing Agency Blog Posts
-
-		}
-
-		/**
-		 * Makes theme available for the built-in localization
-		 **/
-		function language(){
-
-			$locale = get_locale();
-
-			load_theme_textdomain( 'TEXTDOMAINTHEMENAME', THEME_DIR . '/languages' );
-			$locale_file = THEME_DIR . "/languages/$locale.php";
-
-			if ( is_readable( $locale_file ) ){
-				require_once( $locale_file );
-			}
 
 		}
 

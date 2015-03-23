@@ -3,8 +3,9 @@
  * Displays the site footer
  **/
 ?>
-
 	<?php wp_footer(); ?>
 
-	</body>
+	</div><!-- #page -->
+
+</body>
 </html>

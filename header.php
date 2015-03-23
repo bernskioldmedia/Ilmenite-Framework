@@ -2,20 +2,21 @@
 /**
  * Outputs Site Header
  **/
-?>
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" <?php language_attributes(); ?>><![endif]-->
-<!--[if gt IE 8]><!--><html class="no-js" <?php language_attributes(); ?>><!--<![endif]-->
-	<head>
-		<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+?><!DOCTYPE html>
+<html class="no-js" <?php language_attributes(); ?>>
+<head>
+	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-		<?php wp_head(); ?>
+	<?php wp_head(); ?>
+</head>
 
-	</head>
+<body <?php body_class(); ?>>
 
-	<body <?php body_class(); ?>>
+	<div id="page" class="hfeed site">
+
+		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'ilmenite' ); ?></a>
 
 		<?php wp_nav_menu(array(
 			'theme_location' => 'primary-menu',

@@ -6,10 +6,22 @@ Version:            1.6
 Author:             Erik Bernskiold
 Author URI:         http://www.bernskioldmedia.com/
 
-License:            MIT License
-License URI:        http://opensource.org/licenses/MIT
+License: 			GNU General Public License v2 or later
+License URI: 		http://www.gnu.org/licenses/gpl-2.0.html
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+
+Some inspiration has been drawn from Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+
+Creating a site has never been easier either thanks to the fine work by Zurb,
+who created Foundation which this theme is based on.
 
 The stylesheet file is used as a placeholder to keep WordPress happy.
 All styles are written in SASS (see assets/sass directory) and saved and minified in the assets/css folder.
 Styles are included via core/functions/scripts-styles.php
 */
+
