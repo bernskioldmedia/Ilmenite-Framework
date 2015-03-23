@@ -10,32 +10,24 @@ module.exports = function(grunt) {
 			}
 		},
 
-		pot: {
-	      options:{
-	          text_domain: 'TEXTDOMAINTHEMENAME', // Your text domain. Produces my-text-domain.pot
-	          dest: 'languages/', //directory to place the pot file
-	          keywords: [ //WordPress localisation functions
-	            '__:1',
-	            '_e:1',
-	            '_x:1,2c',
-	            'esc_html__:1',
-	            'esc_html_e:1',
-	            'esc_html_x:1,2c',
-	            'esc_attr__:1',
-	            'esc_attr_e:1',
-	            'esc_attr_x:1,2c',
-	            '_ex:1,2c',
-	            '_n:1,2',
-	            '_nx:1,2,4c',
-	            '_n_noop:1,2',
-	            '_nx_noop:1,2,3c'
-	           ],
-	      },
-	      files:{
-	          src:  [ '**/*.php' ], //Parse all php files
-	          expand: true,
-	      }
-		},
+		makepot: {
+	        target: {
+	            options: {
+	                cwd: '',
+	                domainPath: '/languages',
+	                exclude: [
+	                	'node_modules'
+	                ],
+	                potFilename: 'ilmenite-framework.pot',
+	                processPot: function( pot, options ) {
+	                    pot.headers['language-team'] = 'Bernskiold Media <info@bernskioldmedia.com>';
+	                    return pot;
+	                },
+	                type: 'wp-theme',
+	                updatePoFiles: true
+	            }
+	        }
+	    },
 
 		po2mo: {
 			files: {
@@ -136,14 +128,14 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-autoprefixer');
-	grunt.loadNpmTasks('grunt-pot');
 	grunt.loadNpmTasks('grunt-po2mo');
 	grunt.loadNpmTasks('grunt-checktextdomain');
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
+	grunt.loadNpmTasks( 'grunt-wp-i18n' );
 
 	// Run!
 	grunt.registerTask( 'default', ['sass', 'uglify', 'watch'] );
 	grunt.registerTask( 'test', [ 'checktextdomain' ] );
-	grunt.registerTask( 'build', [ 'test', 'uglify', 'sass', 'pot', 'newer:po2mo', 'newer:imagemin' ] );
+	grunt.registerTask( 'build', [ 'test', 'uglify', 'sass', 'makepot', 'newer:po2mo', 'newer:imagemin' ] );
 
 }
