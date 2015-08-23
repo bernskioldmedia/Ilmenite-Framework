@@ -15,9 +15,6 @@ if ( ! class_exists( 'Ilmenite_Framework' ) ) :
 			// Add WordPress default add_theme_support
 			add_action( 'after_setup_theme', array( $this, 'theme_support' ) );
 
-			// Add localization support
-			add_action('init', array( $this, 'language' ) );
-
 			// Load functions
 			add_action( 'init', array( $this, 'functions' ) );
 
@@ -58,7 +55,7 @@ if ( ! class_exists( 'Ilmenite_Framework' ) ) :
 			define( 'THEME_IMAGES_URI', THEME_ASSETS_URI . '/images'); // URI to theme images folder
 			define( 'THEME_CSS_URI', THEME_ASSETS_URI . '/css'); // URI to css folder
 			define( 'THEME_JS_URI', THEME_ASSETS_URI . '/js'); // URI to javascripts folder
-			define( 'THEME_ICONS', THEME_ASSETS_URI . '/svg-icons'); // URI to theme svg icons folder
+			define( 'THEME_ICONS', THEME_ASSETS_URI . '/icons'); // URI to theme svg icons folder
 		}
 
 		/**
@@ -87,7 +84,11 @@ if ( ! class_exists( 'Ilmenite_Framework' ) ) :
 				 * to output valid HTML5.
 				 */
 				add_theme_support( 'html5', array(
-					'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
+					'search-form',
+					'comment-form',
+					'comment-list',
+					'gallery',
+					'caption',
 				) );
 
 				/*
@@ -149,6 +150,7 @@ if ( ! class_exists( 'Ilmenite_Framework' ) ) :
 
 			// Cleanup Functions
 			require_once( THEME_FUNCTIONS . '/cleanup.php' );
+			new Theme_Cleanup;
 
 			// Helper functions
 			require_once( THEME_FUNCTIONS . '/common.php' );
@@ -156,8 +158,9 @@ if ( ! class_exists( 'Ilmenite_Framework' ) ) :
 			// Transient Queries
 			require_once( THEME_FUNCTIONS . '/transient-queries.php' );
 
-			// Load scripts, styles, favicon etc.
+			// Load scripts, styles etc.
 			require_once( THEME_FUNCTIONS . '/scripts-styles.php' );
+			new Theme_Scripts_Styles;
 
 			// Sidebars
 			require_once( THEME_FUNCTIONS . '/sidebars.php' );
@@ -172,7 +175,8 @@ if ( ! class_exists( 'Ilmenite_Framework' ) ) :
 		 **/
 		function dashboard_widgets() {
 
-			require_once( THEME_DASHBOARD_WIDGETS . '/agency-rss.php' ); // RSS Widget Showing Agency Blog Posts
+			// RSS Widget Showing Agency Blog Posts
+			require_once( THEME_DASHBOARD_WIDGETS . '/agency-rss.php' );
 
 		}
 

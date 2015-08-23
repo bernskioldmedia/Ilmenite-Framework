@@ -1,17 +1,9 @@
 <?php
 /**
- * Page Template: Fullwidth Page
- *
- * Fullwidth page template to create pages that does not include the sidebar.
- *
- * @since Ilmenite Framework 1.0
- * @author XLD Studios
- * @version 1.0
- * @package Ilmenite Framework
- *
- * Template Name: Fullwidth Page
- *
+ * Template Name: Fullwidth
  **/
+
+_x( 'Fullwidth', 'frontpage page template name', 'ilmenite' );
 
 get_header(); ?>
 

@@ -23,6 +23,7 @@ $form-label-small-transform: capitalize !default;
 $form-label-bottom-margin: 0 !default;
 $input-font-family: inherit !default;
 $input-font-color: rgba(0,0,0,0.75) !default;
+$input-placeholder-font-color: #cccccc !default;
 $input-font-size: rem-calc(14) !default;
 $input-bg-color: $white !default;
 $input-focus-bg-color: scale-color($white, $lightness: -2%) !default;
@@ -73,6 +74,10 @@ $input-error-message-font-color-alt: $oil !default;
 // We use this to style the glowing effect of inputs when focused
 $glowing-effect-fade-time: .45s !default;
 $glowing-effect-color: $input-focus-border-color !default;
+
+// We use this to style the transition when inputs are focused and when the glowing effect is disabled.
+$input-transition-fade-time: 0.15s !default;
+$input-transition-fade-timing-function: linear !default;
 
 // Select variables
 $select-bg-color: $ghost !default;
@@ -135,7 +140,7 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: -3%) !default;
     border-color: $input-focus-border-color;
     outline: none;
   }
-  // Disbaled Styles
+  // Disabled Styles
   &:disabled {
     background-color: $input-disabled-bg;
     cursor: $input-disabled-cursor;
@@ -235,12 +240,14 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: -3%) !default;
 // We use this mixin to create postfix label styles
 // $bg - Default:$input-prefix-bg || scale-color($white, $lightness: -5%) !default;
 // $is-button - Toggle position settings if prefix is a button. Default: false
-@mixin postfix($bg:$input-prefix-bg, $border:$input-prefix-border-color, $is-button:false) {
+@mixin postfix($bg:$input-prefix-bg, $border-left-hidden:false, $border:$input-prefix-border-color, $is-button:false) {
 
   @if $bg {
     $bg-lightness: lightness($bg);
     background: $bg;
-    border-#{$default-float}: none;
+    @if $border-left-hidden {
+      border-#{$default-float}: none;
+    }
 
     // Control the font color based on background brightness
     @if $bg-lightness > 70%  or $bg == yellow { color: $input-prefix-font-color; }
@@ -417,11 +424,11 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: -3%) !default;
       border-radius: 0;
       @include form-element;
       @if $input-include-glowing-effect == false {
-        -webkit-transition: border-color 0.15s linear, background 0.15s linear;
-        -moz-transition: border-color 0.15s linear, background 0.15s linear;
-        -ms-transition: border-color 0.15s linear, background 0.15s linear;
-        -o-transition: border-color 0.15s linear, background 0.15s linear;
-        transition: border-color 0.15s linear, background 0.15s linear;
+        -webkit-transition: border-color $input-transition-fade-time $input-transition-fade-timing-function, background $input-transition-fade-time $input-transition-fade-timing-function;
+        -moz-transition: border-color $input-transition-fade-time $input-transition-fade-timing-function, background $input-transition-fade-time $input-transition-fade-timing-function;
+        -ms-transition: border-color $input-transition-fade-time $input-transition-fade-timing-function, background $input-transition-fade-time $input-transition-fade-timing-function;
+        -o-transition: border-color $input-transition-fade-time $input-transition-fade-timing-function, background $input-transition-fade-time $input-transition-fade-timing-function;
+        transition: border-color $input-transition-fade-time $input-transition-fade-timing-function, background $input-transition-fade-time $input-transition-fade-timing-function;
       }
       &.radius {
         @include radius($input-border-radius);
@@ -472,10 +479,28 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: -3%) !default;
       height: auto;
     }
 
-	/* Not allow resize out of parent */
-	textarea {
-		max-width: 100%;
-	}
+	  /* Not allow resize out of parent */
+	  textarea {
+	    max-width: 100%;
+	  }
+    
+    // style placeholder text cross browser
+    ::-webkit-input-placeholder {
+      color: $input-placeholder-font-color;
+    }
+
+    :-moz-placeholder { /* Firefox 18- */
+       color: $input-placeholder-font-color;  
+    }
+
+    ::-moz-placeholder {  /* Firefox 19+ */
+       color: $input-placeholder-font-color;  
+    }
+
+    :-ms-input-placeholder {  
+       color: $input-placeholder-font-color;  
+    }
+   
 
     /* Add height value for select elements to match text input height */
     select {

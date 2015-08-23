@@ -4,6 +4,9 @@
 # Ignore .svn directories
 .svn*
 
+# Ignore node_modules
+node_modules/**/**
+
 # Compiled source #
 ###################
 *.com

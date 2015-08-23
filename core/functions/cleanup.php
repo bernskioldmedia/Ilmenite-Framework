@@ -1,34 +1,47 @@
 <?php
+/**
+ * Cleanup WordPress stuff
+ *
+ * Some things added to WordPress are not things we need.
+ * These are cleanup and tweaks functions.
+ */
+class Theme_Cleanup {
 
-if ( ! function_exists( 'ilmenite_wp_head_cleanup' ) ) :
+	public function __construct() {
+
+		// Clean up wp_head()
+		add_action( 'init', array( $this, 'wp_head_cleanup' ) );
+
+		// Make oembed responsive
+		add_filter( 'embed_oembed_html', array( $this, 'wrap_oembed' ), 10, 4 );
+
+		// Remove WordPress Version from RSS Feeds
+		add_filter('the_generator', '__return_false');
+
+		// Rewrites the search URL
+		add_action( 'template_redirect', array( $this, 'nice_search_url' ) );
+
+		// Blank Search Query Fix
+		add_filter( 'request', array( $this, 'blank_search_fix' ) );
+
+	}
 
 	/**
 	 * Clean up wp_head() from uncessecary bloat.
 	 *
 	 * Remove unnecessary <link>'s
 	 */
-	function ilmenite_wp_head_cleanup() {
+	public function wp_head_cleanup() {
 
-		remove_action('wp_head', 'feed_links', 2);
-		remove_action('wp_head', 'feed_links_extra', 3);
-		remove_action('wp_head', 'rsd_link');
-		remove_action('wp_head', 'wlwmanifest_link');
-		remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
-		remove_action('wp_head', 'wp_generator');
-		remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
+		remove_action( 'wp_head', 'feed_links', 2 );
+		remove_action( 'wp_head', 'feed_links_extra', 3 );
+		remove_action( 'wp_head', 'rsd_link' );
+		remove_action( 'wp_head', 'wlwmanifest_link' );
+		remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );
+		remove_action( 'wp_head', 'wp_generator' );
+		remove_action( 'wp_head', 'wp_shortlink_wp_head', 10, 0 );
 
 	}
-
-	add_action( 'init', 'ilmenite_wp_head_cleanup' );
-
-endif;
-
-/**
- * Remove WordPress Version from RSS Feeds
- */
-add_filter('the_generator', '__return_false');
-
-if ( ! function_exists( 'ilmenite_wrap_oembed' ) ) :
 
 	/**
 	 * Wrap content embedded using oembed in div
@@ -37,17 +50,11 @@ if ( ! function_exists( 'ilmenite_wrap_oembed' ) ) :
 	 *
 	 * @link https://gist.github.com/965956
 	 */
-	function ilmenite_wrap_oembed( $cache, $url, $attr = '', $post_ID = '' ) {
+	public function wrap_oembed( $cache, $url, $attr = '', $post_ID = '' ) {
 
 		return '<div class="embed-wrapper">' . $cache . '</div>';
 
 	}
-
-	add_filter( 'embed_oembed_html', 'ilmenite_wrap_oembed', 10, 4 );
-
-endif;
-
-if ( ! function_exists( 'ilmenite_nice_search_url' ) ) :
 
 	/**
 	 * Redirects search results from /?s=query to /search/query/, converts %20 to +
@@ -55,7 +62,7 @@ if ( ! function_exists( 'ilmenite_nice_search_url' ) ) :
 	 * @link http://txfx.net/wordpress-plugins/nice-search/
 	 * @link https://github.com/roots/roots/blob/master/lib/cleanup.php
 	 */
-	function ilmenite_nice_search_url() {
+	public function nice_search_url() {
 
 		global $wp_rewrite;
 
@@ -71,12 +78,6 @@ if ( ! function_exists( 'ilmenite_nice_search_url' ) ) :
 
 	}
 
-	add_action( 'template_redirect', 'ilmenite_nice_search_url' );
-
-endif;
-
-if ( ! function_exists( 'ilmenite_blank_search_fix' ) ) :
-
 	/**
 	 * Fix for empty search queries redirecting to home page
 	 *
@@ -84,7 +85,7 @@ if ( ! function_exists( 'ilmenite_blank_search_fix' ) ) :
 	 * @link http://core.trac.wordpress.org/ticket/11330
 	 * @link https://github.com/roots/roots/blob/master/lib/cleanup.php
 	 */
-	function ilmenite_blank_search_fix( $query_vars ) {
+	public function blank_search_fix( $query_vars ) {
 
 		if ( isset($_GET['s'] ) && empty( $_GET['s'] ) && ! is_admin() ) {
 			$query_vars['s'] = ' ';
@@ -93,6 +94,4 @@ if ( ! function_exists( 'ilmenite_blank_search_fix' ) ) :
 		return $query_vars;
 	}
 
-	add_filter( 'request', 'ilmenite_blank_search_fix' );
-
-endif;
+}

@@ -2,7 +2,7 @@
 Theme Name:         Ilmenite Framework
 Theme URI:          http://www.ilmenite.io/
 Description:        Ilmenite Framework is a custom starter theme based on Foundation to speed up theme development.
-Version:            1.6
+Version:            1.7
 Author:             Erik Bernskiold
 Author URI:         http://www.bernskioldmedia.com/
 
@@ -24,4 +24,3 @@ The stylesheet file is used as a placeholder to keep WordPress happy.
 All styles are written in SASS (see assets/sass directory) and saved and minified in the assets/css folder.
 Styles are included via core/functions/scripts-styles.php
 */
-

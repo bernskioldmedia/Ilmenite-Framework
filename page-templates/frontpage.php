@@ -1,17 +1,9 @@
 <?php
 /**
- * Page Template: Frontpage
- *
- * Adds a custom page template to display the frontpage.
- *
- * @since Ilmenite Framework 1.0
- * @author XLD Studios
- * @version 1.0
- * @package Ilmenite Framework
- *
  * Template Name: Frontpage
- *
  **/
+
+_x( 'Frontpage', 'frontpage page template name', 'ilmenite' );
 
 get_header(); ?>
 
