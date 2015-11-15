@@ -1,7 +1,7 @@
 <?php
-if ( ! class_exists( 'BM_Dashboard_Widget' ) ) :
+if ( ! class_exists( 'BM_Dashboard_RSS' ) ) :
 
-     class BM_Dashboard_Widget {
+     class BM_Dashboard_RSS {
 
           public function __construct() {
 
@@ -18,7 +18,7 @@ if ( ! class_exists( 'BM_Dashboard_Widget' ) ) :
                global $wp_meta_boxes;
 
                // add a custom dashboard widget
-               wp_add_dashboard_widget( 'dashboard_custom_feed', __( 'From the Bernskiold Media Academy', 'betlehemskyrkan' ), array( $this, 'widget_output' ) );
+               wp_add_dashboard_widget( 'dashboard_custom_feed', __( 'From the Bernskiold Media Academy', 'ilmenite' ), array( $this, 'widget_output' ) );
           }
 
           /**
@@ -31,12 +31,12 @@ if ( ! class_exists( 'BM_Dashboard_Widget' ) ) :
                echo '<div class="rss-widget">';
 
                     wp_widget_rss_output(array(
-                         'url'          => _x( 'https://www.bernskioldmedia.com/en/feed/', 'bernskiold media rss feed url', 'betlehemskyrkan' ),
-                         'title'        => __( 'From the Bernskiold Media Academy', 'betlehemskyrkan' ),
-                         'items'        => 2,
+                         'url'          => _x( 'https://www.bernskioldmedia.com/en/feed/', 'bernskiold media rss feed url', 'ilmenite' ),
+                         'title'        => __( 'From the Bernskiold Media Academy', 'ilmenite' ),
+                         'items'        => 4,
                          'show_summary' => 1,
                          'show_author'  => 0,
-                         'show_date'    => 1
+                         'show_date'    => 0,
                     ));
 
                echo "</div>";
@@ -45,6 +45,6 @@ if ( ! class_exists( 'BM_Dashboard_Widget' ) ) :
 
      }
 
-     new BM_Dashboard_Widget;
+     new BM_Dashboard_RSS;
 
 endif;
