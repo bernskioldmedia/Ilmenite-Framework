@@ -26,7 +26,7 @@
       <path d="M12.5 12h-12c-.176 0-.343-.036-.5-.092v4.092h13v-4.092c-.157.056-.324.092-.5.092zm-9.5 3h-1v-2h1v2zm2 0h-1v-2h1v2zm5 0c-.552 0-1-.448-1-1s.448-1 1-1 1 .448 1 1-.448 1-1 1z" />
     </clipPath>
   </defs>
-  <g data-width="98" data-height="128" class="iconic-hard-drive-lg iconic-container iconic-lg" display="inline" transform="translate(15)">
+  <g class="iconic-hard-drive-lg iconic-container iconic-lg" data-width="98" data-height="128" display="inline" transform="translate(15)">
     <path clip-path="url(#iconic-size-lg-hard-drive-clip-0)" d="M0 8v112c0 4.418 3.582 8 8 8h82c4.418 0 8-3.582 8-8v-112c0-4.418-3.582-8-8-8h-82c-4.418 0-8 3.582-8 8z" class="iconic-hard-drive-casing iconic-hard-drive-casing-top iconic-property-fill" />
     <path clip-path="url(#iconic-size-lg-hard-drive-clip-1)" d="M0 8v112c0 4.418 3.582 8 8 8h82c4.418 0 8-3.582 8-8v-112c0-4.418-3.582-8-8-8h-82c-4.418 0-8 3.582-8 8z" class="iconic-hard-drive-casing iconic-hard-drive-casing-bottom iconic-property-fill"
     />
@@ -37,7 +37,7 @@
     />
     <path stroke="#000" stroke-width="2" stroke-linecap="round" d="M28.08 28.08c5.61-5.61 13.36-9.08 21.92-9.08" class="iconic-hard-drive-plate iconic-hard-drive-plate-reflection iconic-property-accent iconic-property-stroke" fill="none" />
   </g>
-  <g data-width="24" data-height="32" class="iconic-hard-drive-md iconic-container iconic-md" display="none" transform="scale(4) translate(4)">
+  <g class="iconic-hard-drive-md iconic-container iconic-md" data-width="24" data-height="32" display="none" transform="scale(4) translate(4)">
     <path clip-path="url(#iconic-size-md-hard-drive-clip-0)" d="M0 1v30c0 .552.448 1 1 1h22c.552 0 1-.448 1-1v-30c0-.552-.448-1-1-1h-22c-.552 0-1 .448-1 1z" class="iconic-hard-drive-casing iconic-hard-drive-casing-top iconic-property-fill" />
     <path clip-path="url(#iconic-size-md-hard-drive-clip-1)" d="M0 1v30c0 .552.448 1 1 1h22c.552 0 1-.448 1-1v-30c0-.552-.448-1-1-1h-22c-.552 0-1 .448-1 1z" class="iconic-hard-drive-casing iconic-hard-drive-casing-bottom iconic-property-fill" />
     <path d="M5.529 20.561c-.586.586-1.536.586-2.121 0-.586-.586-.586-1.536 0-2.121.586-.586 7.592-5.439 7.592-5.439s-4.885 6.975-5.471 7.561z" class="iconic-hard-drive-plate iconic-hard-drive-plate-needle iconic-property-accent iconic-property-fill"
@@ -45,7 +45,7 @@
     <path stroke="#000" d="M11.257 14.375c.236.074.482.125.743.125 1.381 0 2.5-1.119 2.5-2.5s-1.119-2.5-2.5-2.5-2.5 1.119-2.5 2.5c0 .259.051.503.123.738" class="iconic-hard-drive-plate iconic-hard-drive-plate-inner-rim iconic-property-accent iconic-property-stroke"
     fill="none" />
   </g>
-  <g data-width="13" data-height="16" class="iconic-hard-drive-sm iconic-container iconic-sm" display="none" transform="scale(8) translate(1)">
+  <g class="iconic-hard-drive-sm iconic-container iconic-sm" data-width="13" data-height="16" display="none" transform="scale(8) translate(1)">
     <path clip-path="url(#iconic-size-sm-hard-drive-clip-0)" d="M0 .5v15c0 .276.224.5.5.5h12c.276 0 .5-.224.5-.5v-15c0-.276-.224-.5-.5-.5h-12c-.276 0-.5.224-.5.5z" class="iconic-hard-drive-casing iconic-hard-drive-casing-top iconic-property-fill" />
     <path clip-path="url(#iconic-size-sm-hard-drive-clip-1)" d="M0 .5v15c0 .276.224.5.5.5h12c.276 0 .5-.224.5-.5v-15c0-.276-.224-.5-.5-.5h-12c-.276 0-.5.224-.5.5z" class="iconic-hard-drive-casing iconic-hard-drive-casing-bottom iconic-property-fill" />
     <path d="M4.707 8.707c-.391.391-1.024.391-1.414 0s-.391-1.024 0-1.414 2.707-1.293 2.707-1.293-.902 2.317-1.293 2.707z" class="iconic-hard-drive-plate iconic-hard-drive-plate-needle iconic-property-accent iconic-property-fill" />

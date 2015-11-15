@@ -15,7 +15,7 @@
       <path d="M0 0v15h16v-15h-16zm9 13c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4z" />
     </clipPath>
   </defs>
-  <g data-width="128" data-height="118" class="iconic-camera-slr-lg iconic-container iconic-lg" display="inline" transform="translate(0 5)">
+  <g class="iconic-camera-slr-lg iconic-container iconic-lg" data-width="128" data-height="118" display="inline" transform="translate(0 5)">
     <circle cx="112" cy="70" r="4" class="iconic-camera-slr-lens-release iconic-property-fill" />
     <path d="M78 44c-14.359 0-26 11.641-26 26s11.641 26 26 26 26-11.641 26-26-11.641-26-26-26zm0 49.649c-13.04 0-23.649-10.609-23.649-23.649s10.609-23.649 23.649-23.649 23.649 10.609 23.649 23.649-10.609 23.649-23.649 23.649z" class="iconic-camera-slr-lens iconic-camera-slr-lens-barrel iconic-property-fill"
     />
@@ -25,13 +25,13 @@
     <path clip-path="url(#iconic-size-lg-camera-slr-clip-0)" d="M108.126 19.657l-12.252-15.315c-1.035-1.294-3.217-2.343-4.874-2.343h-26c-1.657 0-3.839 1.049-4.874 2.343l-12.252 15.315c-1.035 1.294-3.217 2.343-4.874 2.343h-19c-13.255 0-24 10.745-24 24v69c0 1.657 1.343 3 3 3h122c1.657 0 3-1.343 3-3v-90c0-1.657-1.343-3-3-3h-12c-1.657 0-3.839-1.049-4.874-2.343z"
     class="iconic-camera-slr-body iconic-property-fill" />
   </g>
-  <g data-width="32" data-height="30" class="iconic-camera-slr-md iconic-container iconic-md" display="none" transform="scale(4) translate(0 1)">
+  <g class="iconic-camera-slr-md iconic-container iconic-md" data-width="32" data-height="30" display="none" transform="scale(4) translate(0 1)">
     <path clip-path="url(#iconic-size-md-camera-slr-clip-0)" d="M26.723 5.584l-3.445-5.168c-.153-.23-.501-.416-.777-.416h-7c-.276 0-.624.186-.777.416l-3.445 5.168c-.153.23-.501.416-.777.416h-4.5c-3.314 0-6 2.686-6 6v17.5c0 .276.224.5.5.5h31c.276 0 .5-.224.5-.5v-23c0-.276-.224-.5-.5-.5h-4c-.276 0-.624-.186-.777-.416z"
     class="iconic-camera-slr-body iconic-property-fill" />
     <path d="M19 12c-3.314 0-6 2.686-6 6s2.686 6 6 6 6-2.686 6-6-2.686-6-6-6zm0 2c-2.206 0-4 1.794-4 4 0 .276-.224.5-.5.5s-.5-.224-.5-.5c0-2.757 2.243-5 5-5 .276 0 .5.224.5.5s-.224.5-.5.5z" class="iconic-camera-slr-lens iconic-property-accent iconic-property-fill"
     />
   </g>
-  <g data-width="16" data-height="15" class="iconic-camera-slr-sm iconic-container iconic-sm" display="none" transform="scale(8)">
+  <g class="iconic-camera-slr-sm iconic-container iconic-sm" data-width="16" data-height="15" display="none" transform="scale(8)">
     <path clip-path="url(#iconic-size-sm-camera-slr-clip-0)" d="M12.861 2.792l-1.723-2.584c-.077-.115-.251-.208-.389-.208h-3.5c-.138 0-.312.093-.389.208l-1.723 2.584c-.077.115-.251.208-.389.208h-1.75c-1.657 0-3 1.343-3 3v8.75c0 .138.112.25.25.25h15.5c.138 0 .25-.112.25-.25v-11.5c0-.138-.112-.25-.25-.25h-2.5c-.138 0-.312-.093-.389-.208z"
     class="iconic-camera-slr-body iconic-property-fill" />
     <circle cx="9" cy="9" r="3" class="iconic-camera-slr-lens iconic-property-accent iconic-property-fill" />

@@ -62,7 +62,7 @@
   </g>
 <script class="iconic-api" type="application/ecmascript">
 //<![CDATA[
-var iconicApis=window._Iconic?window._Iconic.smartIconApis:{};iconicApis["justify"]=iconicApis["justify"]||function(t){var e=function(e){t.setAttribute("data-text-alignment",e);var i,r,a,n=t.querySelectorAll(".iconic-justify-left"),c=t.querySelectorAll(".iconic-justify-center"),o=t.querySelectorAll(".iconic-justify-right");switch(i=r=a="none",e){case"center":i="inline";break;case"right":a="inline";break;default:r="inline"}for(var s=0;s<n.length;s++)n[s].setAttribute("display",r),c[s].setAttribute("display",i),o[s].setAttribute("display",a)},i=function(){var i=t.getAttribute("data-text-alignment");i&&e(i)};return{update:i,setTextAlignment:e}};
+var iconicApis=window._Iconic?window._Iconic.smartIconApis:{};iconicApis["justify"]=iconicApis["justify"]||function(t){var e=function(e){t.setAttribute("data-text-alignment",e);var i,r,a,n=t.querySelectorAll(".iconic-justify-left"),o=t.querySelectorAll(".iconic-justify-center"),c=t.querySelectorAll(".iconic-justify-right");switch(i=r=a="none",e){case"center":i="inline";break;case"right":a="inline";break;default:r="inline"}for(var s=0;s<n.length;s++)n[s].setAttribute("display",r),o[s].setAttribute("display",i),c[s].setAttribute("display",a)},i=function(){var i=t.getAttribute("data-text-alignment");i&&e(i)};return{update:i,setTextAlignment:e}};
 //]]>
 </script>
 </svg>

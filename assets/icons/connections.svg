@@ -8,7 +8,7 @@
       />
     </clipPath>
   </defs>
-  <g data-width="128" data-height="120" class="iconic-connections-lg iconic-container iconic-lg" display="inline" transform="translate(0 4)">
+  <g class="iconic-connections-lg iconic-container iconic-lg" data-width="128" data-height="120" display="inline" transform="translate(0 4)">
     <path clip-path="url(#iconic-size-lg-connections-clip-0)" stroke="#000" stroke-width="4" class="iconic-connections-line iconic-connections-line-top-right iconic-property-stroke" d="M118 10l-54 54" fill="none" />
     <path clip-path="url(#iconic-size-lg-connections-clip-0)" stroke="#000" stroke-width="4" class="iconic-connections-line iconic-connections-line-left iconic-property-stroke" d="M64 64l-56-16" fill="none" />
     <path clip-path="url(#iconic-size-lg-connections-clip-0)" stroke="#000" stroke-width="4" class="iconic-connections-line iconic-connections-line-bottom-right iconic-property-stroke" d="M112 104l-48-40" fill="none" />
@@ -17,7 +17,7 @@
     <circle cx="118" cy="10" r="10" class="iconic-connections-dot iconic-connections-dot-top-right iconic-property-fill" />
     <circle cx="112" cy="104" r="16" class="iconic-connections-dot iconic-connections-dot-bottom-right iconic-property-fill" />
   </g>
-  <g data-width="32" data-height="30" class="iconic-connections-md iconic-container iconic-md" display="none" transform="scale(4) translate(0 1)">
+  <g class="iconic-connections-md iconic-container iconic-md" data-width="32" data-height="30" display="none" transform="scale(4) translate(0 1)">
     <path stroke="#000" class="iconic-connections-line iconic-connections-line-top-right iconic-property-stroke" d="M29.5 2.5l-13.5 13.5" fill="none" />
     <path stroke="#000" class="iconic-connections-line iconic-connections-line-bottom-right iconic-property-stroke" d="M28 26l-12-10" fill="none" />
     <path stroke="#000" class="iconic-connections-line iconic-connections-line-left iconic-property-stroke" d="M16 16l-14-4" fill="none" />
@@ -26,7 +26,7 @@
     <circle cx="29.5" cy="2.5" r="2.5" class="iconic-connections-dot iconic-connections-dot-top-right iconic-property-fill" />
     <circle cx="28" cy="26" r="4" class="iconic-connections-dot iconic-connections-dot-bottom-right iconic-property-fill" />
   </g>
-  <g data-width="16" data-height="15" class="iconic-connections-sm iconic-container iconic-sm" display="none" transform="scale(8)">
+  <g class="iconic-connections-sm iconic-container iconic-sm" data-width="16" data-height="15" display="none" transform="scale(8)">
     <path stroke="#000" class="iconic-connections-line iconic-connections-line-top-right iconic-property-stroke" d="M14.5 1.5l-6.5 6.5" fill="none" />
     <path stroke="#000" class="iconic-connections-line iconic-connections-line-bottom-right iconic-property-stroke" d="M14.5 13.5l-6.5-5.5" fill="none" />
     <path stroke="#000" class="iconic-connections-line iconic-connections-line-left iconic-property-stroke" d="M8 8l-7-2" fill="none" />

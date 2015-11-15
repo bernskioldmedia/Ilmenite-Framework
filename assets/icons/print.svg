@@ -17,7 +17,7 @@
       <path d="M0 5v7h3v-3h10v3h3v-7h-16zm14.5 2c-.276 0-.5-.224-.5-.5s.224-.5.5-.5.5.224.5.5-.224.5-.5.5z" />
     </clipPath>
   </defs>
-  <g data-width="128" data-height="98" class="iconic-print-lg iconic-container iconic-lg" display="inline" transform="translate(0 15)">
+  <g class="iconic-print-lg iconic-container iconic-lg" data-width="128" data-height="98" display="inline" transform="translate(0 15)">
     <path class="iconic-print-tray iconic-print-tray-top iconic-print-tray-top-border-left iconic-property-fill" d="M28 10h2v32h-2z" />
     <path class="iconic-print-tray iconic-print-tray-top iconic-print-tray-top-border-right iconic-property-fill" d="M98 10h2v32h-2z" />
     <path class="iconic-print-tray iconic-print-tray-bottom iconic-print-tray-bottom-left iconic-property-fill" d="M28 76h2v21h-2z" />
@@ -28,14 +28,14 @@
     <path clip-path="url(#iconic-size-lg-print-clip-1)" class="iconic-print-paper iconic-print-paper-bottom iconic-property-accent iconic-property-fill" d="M32 62h64v32h-64z" />
     <path class="iconic-print-paper iconic-print-paper-top iconic-property-accent iconic-property-fill" d="M32 0h64v28h-64z" />
   </g>
-  <g data-width="32" data-height="27" class="iconic-print-md iconic-container iconic-md" display="none" transform="scale(4) translate(0 2)">
+  <g class="iconic-print-md iconic-container iconic-md" data-width="32" data-height="27" display="none" transform="scale(4) translate(0 2)">
     <path class="iconic-print-tray iconic-print-tray-top iconic-print-tray-top-border-left iconic-property-fill" d="M6 3h1v8.083h-1z" />
     <path class="iconic-print-tray iconic-print-tray-top iconic-print-tray-top-border-right iconic-property-fill" d="M25 3h1v8.083h-1z" />
     <path d="M31.5 23h-31c-.276 0-.5-.224-.5-.5v-13c0-.276.224-.5.5-.5h31c.276 0 .5.224.5.5v13c0 .276-.224.5-.5.5z" clip-path="url(#iconic-size-md-print-clip-0)" class="iconic-print-body iconic-property-fill" />
     <path class="iconic-print-paper iconic-print-paper-bottom iconic-property-accent iconic-property-fill" d="M8 18h16v9h-16z" />
     <path class="iconic-print-paper iconic-print-paper-top iconic-property-accent iconic-property-fill" d="M8 0h16v8h-16z" />
   </g>
-  <g data-width="16" data-height="14" class="iconic-print-sm iconic-container iconic-sm" display="none" transform="scale(8) translate(0 1)">
+  <g class="iconic-print-sm iconic-container iconic-sm" data-width="16" data-height="14" display="none" transform="scale(8) translate(0 1)">
     <path class="iconic-print-tray iconic-print-tray-top iconic-print-tray-top-border-left iconic-property-fill" d="M2 2h1v4.042h-1z" />
     <path class="iconic-print-tray iconic-print-tray-top iconic-print-tray-top-border-right iconic-property-fill" d="M13 2h1v4.042h-1z" />
     <path d="M15.75 12h-15.5c-.138 0-.25-.112-.25-.25v-6.5c0-.138.112-.25.25-.25h15.5c.138 0 .25.112.25.25v6.5c0 .138-.112.25-.25.25z" clip-path="url(#iconic-size-sm-print-clip-0)" class="iconic-print-body iconic-property-fill" />

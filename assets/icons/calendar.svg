@@ -24,16 +24,16 @@
       <path d="M0 0h15v3h-15z" />
     </clipPath>
   </defs>
-  <g data-width="126" data-height="120" class="iconic-calendar-lg iconic-container iconic-lg" display="inline" transform="translate(1 4)">
+  <g class="iconic-calendar-lg iconic-container iconic-lg" data-width="126" data-height="120" display="inline" transform="translate(1 4)">
     <path d="M0 117v-114c0-1.657 1.343-3 3-3h120c1.657 0 3 1.343 3 3v114c0 1.657-1.343 3-3 3h-120c-1.657 0-3-1.343-3-3z" clip-path="url(#iconic-size-lg-calendar-clip-0)" class="iconic-calendar-body iconic-property-fill" />
     <path d="M0 118.5v-117c0-.828.672-1.5 1.5-1.5h123c.828 0 1.5.672 1.5 1.5v117c0 .828-.672 1.5-1.5 1.5h-123c-.828 0-1.5-.672-1.5-1.5z" clip-path="url(#iconic-size-lg-calendar-clip-1)" class="iconic-calendar-top iconic-property-accent iconic-property-fill"
     />
   </g>
-  <g data-width="30" data-height="32" class="iconic-calendar-md iconic-container iconic-md" display="none" transform="scale(4) translate(1)">
+  <g class="iconic-calendar-md iconic-container iconic-md" data-width="30" data-height="32" display="none" transform="scale(4) translate(1)">
     <path clip-path="url(#iconic-size-md-calendar-clip-0)" d="M0 .5v31c0 .276.224.5.5.5h29c.276 0 .5-.224.5-.5v-31c0-.276-.224-.5-.5-.5h-29c-.276 0-.5.224-.5.5z" class="iconic-calendar-body iconic-property-fill" />
     <path clip-path="url(#iconic-size-md-calendar-clip-1)" d="M0 .5v31c0 .276.224.5.5.5h29c.276 0 .5-.224.5-.5v-31c0-.276-.224-.5-.5-.5h-29c-.276 0-.5.224-.5.5z" class="iconic-calendar-top iconic-property-accent iconic-property-fill" />
   </g>
-  <g data-width="15" data-height="16" class="iconic-calendar-sm iconic-container iconic-sm" display="none" transform="scale(8)">
+  <g class="iconic-calendar-sm iconic-container iconic-sm" data-width="15" data-height="16" display="none" transform="scale(8)">
     <path clip-path="url(#iconic-size-sm-calendar-clip-0)" class="iconic-calendar-body iconic-property-fill" d="M0 0h15v16h-15z" />
     <path clip-path="url(#iconic-size-sm-calendar-clip-1)" class="iconic-calendar-top iconic-property-accent iconic-property-fill" d="M0 0h15v16h-15z" />
   </g>

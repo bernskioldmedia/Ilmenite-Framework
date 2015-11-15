@@ -2,7 +2,7 @@
   <g class="iconic-metadata">
     <title>Bitcoin Transaction</title>
   </g>
-  <g data-width="116" data-height="128" class="iconic-bitcoin-transaction-lg iconic-container iconic-lg" display="inline" transform="translate(6)">
+  <g class="iconic-bitcoin-transaction-lg iconic-container iconic-lg" data-width="116" data-height="128" display="inline" transform="translate(6)">
     <path stroke="#000" stroke-width="8" class="iconic-bitcoin-transaction-strike iconic-bitcoin-transaction-strike-top iconic-bitcoin-transaction-strike-left iconic-property-accent iconic-property-stroke" d="M32 0v18" fill="none" />
     <path stroke="#000" stroke-width="8" class="iconic-bitcoin-transaction-strike iconic-bitcoin-transaction-strike-top iconic-bitcoin-transaction-strike-right iconic-property-accent iconic-property-stroke" d="M48 0v18" fill="none" />
     <path stroke="#000" stroke-width="8" class="iconic-bitcoin-transaction-strike iconic-bitcoin-transaction-strike-bottom iconic-bitcoin-transaction-strike-left iconic-property-accent iconic-property-stroke" d="M32 110v18" fill="none" />
@@ -14,7 +14,7 @@
     <path stroke="#000" stroke-width="8" class="iconic-bitcoin-transaction-arrow iconic-bitcoin-transaction-arrow-top iconic-bitcoin-transaction-arrow-top-stem iconic-property-stroke" d="M110 48h-16" fill="none" />
     <path class="iconic-bitcoin-transaction-arrow iconic-bitcoin-transaction-arrow-top iconic-bitcoin-transaction-arrow-top-head iconic-property-fill" d="M96 36v24l-16-12z" />
   </g>
-  <g data-width="29" data-height="32" class="iconic-bitcoin-transaction-md iconic-container iconic-md" display="none" transform="scale(4) translate(1)">
+  <g class="iconic-bitcoin-transaction-md iconic-container iconic-md" data-width="29" data-height="32" display="none" transform="scale(4) translate(1)">
     <path stroke="#000" stroke-width="2" class="iconic-bitcoin-transaction-strike iconic-bitcoin-transaction-strike-top iconic-bitcoin-transaction-strike-left iconic-property-accent iconic-property-stroke" d="M8 0v6" fill="none" />
     <path stroke="#000" stroke-width="2" class="iconic-bitcoin-transaction-strike iconic-bitcoin-transaction-strike-top iconic-bitcoin-transaction-strike-right iconic-property-accent iconic-property-stroke" d="M12 0v6" fill="none" />
     <path stroke="#000" stroke-width="2" class="iconic-bitcoin-transaction-strike iconic-bitcoin-transaction-strike-bottom iconic-bitcoin-transaction-strike-left iconic-property-accent iconic-property-stroke" d="M8 26v6" fill="none" />
@@ -26,7 +26,7 @@
     <path stroke="#000" stroke-width="2" class="iconic-bitcoin-transaction-arrow iconic-bitcoin-transaction-arrow-top iconic-bitcoin-transaction-arrow-top-stem iconic-property-stroke" d="M27 12h-4" fill="none" />
     <path class="iconic-bitcoin-transaction-arrow iconic-bitcoin-transaction-arrow-top iconic-bitcoin-transaction-arrow-top-head iconic-property-fill" d="M24 15l-4-3 4-3z" />
   </g>
-  <g data-width="16" data-height="16" class="iconic-bitcoin-transaction-sm iconic-container iconic-sm" display="none" transform="scale(8)">
+  <g class="iconic-bitcoin-transaction-sm iconic-container iconic-sm" data-width="16" data-height="16" display="none" transform="scale(8)">
     <path stroke="#000" class="iconic-bitcoin-transaction-strike iconic-bitcoin-transaction-strike-top iconic-bitcoin-transaction-strike-left iconic-property-accent iconic-property-stroke" d="M3.5 0v3.5" fill="none" />
     <path stroke="#000" class="iconic-bitcoin-transaction-strike iconic-bitcoin-transaction-strike-top iconic-bitcoin-transaction-strike-right iconic-property-accent iconic-property-stroke" d="M5.5 0v3.5" fill="none" />
     <path stroke="#000" class="iconic-bitcoin-transaction-strike iconic-bitcoin-transaction-strike-bottom iconic-bitcoin-transaction-strike-left iconic-property-accent iconic-property-stroke" d="M3.5 12.5v3.5" fill="none" />

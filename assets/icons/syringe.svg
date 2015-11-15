@@ -2,7 +2,7 @@
   <g class="iconic-metadata">
     <title>Syringe</title>
   </g>
-  <g data-width="126" data-height="128" class="iconic-syringe-lg iconic-container iconic-lg" display="inline" transform="translate(1)">
+  <g class="iconic-syringe-lg iconic-container iconic-lg" data-width="126" data-height="128" display="inline" transform="translate(1)">
     <path class="iconic-syringe-needle iconic-property-accent iconic-property-fill" d="M44 84l-44 44v-3.627l42-42.373z" />
     <path transform="matrix(-.707 .707 -.707 -.707 197.449 -46.493)" class="iconic-syringe-plunger iconic-syringe-plunger-main iconic-property-fill" d="M97.54 9.161h21.628v16.971h-21.628z" />
     <path stroke="#000" stroke-width="4" stroke-linecap="round" class="iconic-syringe-plunger iconic-syringe-plunger-top iconic-property-stroke" d="M108 2l16 16" fill="none" />
@@ -11,7 +11,7 @@
     class="iconic-syringe-tube-main iconic-property-fill" />
     <path stroke="#000" stroke-width="4" stroke-linecap="round" class="iconic-syringe-tube iconic-syringe-tube-top iconic-property-stroke" d="M80 10l34 34" fill="none" />
   </g>
-  <g data-width="31" data-height="32" class="iconic-syringe-md iconic-container iconic-md" display="none" transform="scale(4)">
+  <g class="iconic-syringe-md iconic-container iconic-md" data-width="31" data-height="32" display="none" transform="scale(4)">
     <path class="iconic-syringe-needle iconic-property-accent iconic-property-fill" d="M12 20l-12 12v-2l11-11z" />
     <path class="iconic-syringe-plunger iconic-syringe-plunger-main iconic-property-fill" d="M29.438 3.5l-4 4-1.938-2 4-4z" />
     <path stroke="#000" stroke-linecap="round" class="iconic-syringe-plunger iconic-syringe-plunger-top iconic-property-stroke" d="M26.5.5l4 4" fill="none" />
@@ -20,7 +20,7 @@
     class="iconic-syringe-tube iconic-syringe-tube-main iconic-property-fill" />
     <path stroke="#000" stroke-linecap="round" class="iconic-syringe-tube iconic-syringe-tube-top iconic-property-stroke" d="M19.5 1.5l10 10" fill="none" />
   </g>
-  <g data-width="15" data-height="16" class="iconic-syringe-sm iconic-container iconic-sm" display="none" transform="scale(8)">
+  <g class="iconic-syringe-sm iconic-container iconic-sm" data-width="15" data-height="16" display="none" transform="scale(8)">
     <path class="iconic-syringe-needle iconic-property-accent iconic-property-fill" d="M5.969 10l-5.969 6v-2l5-5z" />
     <path class="iconic-syringe-plunger iconic-syringe-plunger-main iconic-property-fill" d="M13.969 2l-2 2-.969-1 2-2z" />
     <path stroke="#000" stroke-linecap="round" class="iconic-syringe-plunger iconic-syringe-plunger-top iconic-property-stroke" d="M12.5.5l2 2" fill="none" />

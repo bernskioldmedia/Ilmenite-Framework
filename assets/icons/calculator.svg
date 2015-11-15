@@ -15,13 +15,13 @@
       <path d="M0 0v16h15v-16h-15zm4 14h-2v-2h2v2zm0-3h-2v-2h2v2zm0-3h-2v-2h2v2zm3 6h-2v-2h2v2zm0-3h-2v-2h2v2zm0-3h-2v-2h2v2zm3 6h-2v-2h2v2zm0-3h-2v-2h2v2zm0-3h-2v-2h2v2zm3 6h-2v-5h2v5zm0-6h-2v-2h2v2zm0-3h-11v-3h11v3z" />
     </clipPath>
   </defs>
-  <g data-width="100" data-height="128" class="iconic-calculator-lg iconic-container iconic-lg" display="inline" transform="translate(14)">
+  <g class="iconic-calculator-lg iconic-container iconic-lg" data-width="100" data-height="128" display="inline" transform="translate(14)">
     <path clip-path="url(#iconic-size-lg-calculator-clip-0)" d="M97 128h-94c-1.657 0-3-1.343-3-3v-122c0-1.657 1.343-3 3-3h94c1.657 0 3 1.343 3 3v122c0 1.657-1.343 3-3 3z" class="iconic-calculator-body iconic-property-fill" />
   </g>
-  <g data-width="24" data-height="32" class="iconic-calculator-md iconic-container iconic-md" display="none" transform="scale(4) translate(4)">
+  <g class="iconic-calculator-md iconic-container iconic-md" data-width="24" data-height="32" display="none" transform="scale(4) translate(4)">
     <path clip-path="url(#iconic-size-md-calculator-clip-0)" d="M23 32h-22c-.552 0-1-.448-1-1v-30c0-.552.448-1 1-1h22c.552 0 1 .448 1 1v30c0 .552-.448 1-1 1z" class="iconic-calculator-body iconic-property-fill" />
   </g>
-  <g data-width="15" data-height="16" class="iconic-calculator-sm iconic-container iconic-sm" display="none" transform="scale(8)">
+  <g class="iconic-calculator-sm iconic-container iconic-sm" data-width="15" data-height="16" display="none" transform="scale(8)">
     <path clip-path="url(#iconic-size-sm-calculator-clip-0)" d="M14.75 16h-14.5c-.138 0-.25-.112-.25-.25v-15.5c0-.138.112-.25.25-.25h14.5c.138 0 .25.112.25.25v15.5c0 .138-.112.25-.25.25z" class="iconic-calculator-body iconic-property-fill" />
   </g>
 </svg>

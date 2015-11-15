@@ -2,7 +2,7 @@
   <g class="iconic-metadata">
     <title>Magic Wand</title>
   </g>
-  <g data-width="128" data-height="128" class="iconic-magic-wand-lg iconic-container iconic-lg" display="inline">
+  <g class="iconic-magic-wand-lg iconic-container iconic-lg" data-width="128" data-height="128" display="inline">
     <path d="M89.061 31.061l7.879 7.879c.586.586.586 1.536 0 2.121l-85.879 85.879c-.586.586-1.536.586-2.121 0l-7.879-7.879c-.586-.586-.586-1.536 0-2.121l85.879-85.879c.586-.586 1.536-.586 2.121 0z" class="iconic-magic-wand-shaft iconic-magic-wand-shaft-handle iconic-property-fill"
     />
     <path d="M100.939 17.061l-9.879 9.879c-.586.586-.586 1.536 0 2.121l7.879 7.879c.586.586 1.536.586 2.121 0l9.879-9.879c.586-.586.586-1.536 0-2.121l-7.879-7.879c-.586-.586-1.536-.586-2.121 0z" class="iconic-magic-wand-shaft iconic-magic-wand-shaft-tip iconic-property-fill"
@@ -35,7 +35,7 @@
     <circle cx="107" cy="49" r="1" class="iconic-magic-wand-spark iconic-property-fill" />
     <circle cx="115" cy="53" r="1" class="iconic-magic-wand-spark iconic-property-fill" />
   </g>
-  <g data-width="32" data-height="32" class="iconic-magic-wand-md iconic-container iconic-md" display="none" transform="scale(4)">
+  <g class="iconic-magic-wand-md iconic-container iconic-md" data-width="32" data-height="32" display="none" transform="scale(4)">
     <path d="M20.354 9.354l2.293 2.293c.195.195.195.512 0 .707l-19.293 19.293c-.195.195-.512.195-.707 0l-2.293-2.293c-.195-.195-.195-.512 0-.707l19.293-19.293c.195-.195.512-.195.707 0z" class="iconic-magic-wand-shaft iconic-magic-wand-shaft-handle iconic-property-fill"
     />
     <path d="M23.646 5.354l-2.335 2.335c-.195.195-.193.51.005.702l2.325 2.261c.198.193.517.19.712-.005l2.293-2.293c.195-.195.195-.512 0-.707l-2.293-2.293c-.195-.195-.512-.195-.707 0z" class="iconic-magic-wand-shaft iconic-magic-wand-shaft-tip iconic-property-fill"
@@ -48,7 +48,7 @@
     <path stroke="#000" stroke-linecap="round" class="iconic-magic-wand-ray iconic-magic-wand-ray-major iconic-magic-wand-ray-2 iconic-property-stroke" d="M17 .5l4 4" fill="none" />
     <path stroke="#000" stroke-linecap="round" class="iconic-magic-wand-ray iconic-magic-wand-ray-minor iconic-magic-wand-ray-1 iconic-property-stroke" d="M18.5 7.5h-2" fill="none" />
   </g>
-  <g data-width="16" data-height="16" class="iconic-magic-wand-sm iconic-container iconic-sm" display="none" transform="scale(8)">
+  <g class="iconic-magic-wand-sm iconic-container iconic-sm" data-width="16" data-height="16" display="none" transform="scale(8)">
     <path transform="matrix(-.707 -.707 .707 -.707 .757 22.314)" class="iconic-magic-wand-shaft iconic-magic-wand-shaft-handle iconic-property-fill" d="M3.586 5.343h2.828v11.314h-2.828z" />
     <path transform="matrix(.707 -.707 .707 .707 -.314 9.243)" class="iconic-magic-wand-shaft iconic-magic-wand-shaft-tip iconic-property-fill" d="M9.586 3.586h2.828v2.828h-2.828z" />
     <path stroke="#000" stroke-linecap="round" class="iconic-magic-wand-ray iconic-magic-wand-ray-major iconic-magic-wand-ray-4 iconic-property-stroke" d="M15.5.5l-2 2" fill="none" />

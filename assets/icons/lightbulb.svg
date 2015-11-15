@@ -10,7 +10,7 @@
       <path d="M64 57l-14.5 8.25v16.75h-34.25l-1.5-16 50.25-23z" />
     </clipPath>
   </defs>
-  <g data-width="64" data-height="128" class="iconic-lightbulb-lg iconic-container iconic-lg" display="inline" transform="translate(32)">
+  <g class="iconic-lightbulb-lg iconic-container iconic-lg" data-width="64" data-height="128" display="inline" transform="translate(32)">
     <path stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="iconic-lightbulb-screw iconic-lightbulb-screw-4 iconic-property-accent iconic-property-stroke" d="M44 122l-23.834 4.001" />
     <path stroke="#000" stroke-width="4" stroke-linecap="round" class="iconic-lightbulb-screw iconic-lightbulb-screw-3 iconic-property-accent iconic-property-stroke" d="M48 112l-32 6" fill="none" />
     <path stroke="#000" stroke-width="4" stroke-linecap="round" class="iconic-lightbulb-screw iconic-lightbulb-screw-2 iconic-property-accent iconic-property-stroke" d="M48 102l-32 6" fill="none" />
@@ -23,7 +23,7 @@
     <path stroke="#000" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" class="iconic-lightbulb-coil iconic-lightbulb-coil-2 iconic-property-stroke" d="M60 6l-56 26" fill="none" />
     <path stroke="#000" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" class="iconic-lightbulb-coil iconic-lightbulb-coil-1 iconic-property-stroke" d="M30 4.114l-26 11.886" fill="none" />
   </g>
-  <g data-width="16" data-height="32" class="iconic-lightbulb-md iconic-container iconic-md" display="none" transform="scale(4) translate(8)">
+  <g class="iconic-lightbulb-md iconic-container iconic-md" data-width="16" data-height="32" display="none" transform="scale(4) translate(8)">
     <path stroke="#000" stroke-linecap="round" class="iconic-lightbulb-screw iconic-lightbulb-screw-4 iconic-property-accent iconic-property-stroke" d="M5.5 31.5l5-1.429" fill="none" />
     <path stroke="#000" stroke-linecap="round" class="iconic-lightbulb-screw iconic-lightbulb-screw-3 iconic-property-accent iconic-property-stroke" d="M4.5 29.5l7-2" fill="none" />
     <path stroke="#000" stroke-linecap="round" class="iconic-lightbulb-screw iconic-lightbulb-screw-2 iconic-property-accent iconic-property-stroke" d="M4.5 27.5l7-2" fill="none" />
@@ -35,7 +35,7 @@
     <path stroke="#000" stroke-width="3" stroke-linecap="round" class="iconic-lightbulb-coil iconic-lightbulb-coil-1 iconic-property-stroke" d="M10.5 1.5l-9 4" fill="none" />
     <path d="M11 25h-6c-.552 0-1.142-.425-1.316-.949l-.367-1.103c-.175-.524.131-.949.684-.949h8c.552 0 .858.425.684.949l-.367 1.103c-.175.524-.764.949-1.316.949z" class="iconic-lightbulb-base iconic-property-fill" />
   </g>
-  <g data-width="10" data-height="16" class="iconic-lightbulb-sm iconic-container iconic-sm" display="none" transform="scale(8) translate(3)">
+  <g class="iconic-lightbulb-sm iconic-container iconic-sm" data-width="10" data-height="16" display="none" transform="scale(8) translate(3)">
     <path d="M7 14c0 1.105-.895 2-2 2s-2-.895-2-2" class="iconic-lightbulb-screw iconic-property-accent iconic-property-fill" />
     <path stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="iconic-lightbulb-coil iconic-lightbulb-coil-4 iconic-property-stroke" d="M8 8l-2 1v2" fill="none" />
     <path stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="iconic-lightbulb-coil iconic-lightbulb-coil-3 iconic-property-stroke" d="M4 10.5v.5" fill="none" />

@@ -16,21 +16,21 @@
       />
     </clipPath>
   </defs>
-  <g data-width="62" data-height="128" class="iconic-fork-lg iconic-container iconic-lg" display="inline" transform="translate(33)">
+  <g class="iconic-fork-lg iconic-container iconic-lg" data-width="62" data-height="128" display="inline" transform="translate(33)">
     <path stroke="#000" stroke-width="8" d="M12 112v-14c0-4.4 3.318-9.397 7.373-11.104l23.254-9.791c4.055-1.707 7.373-6.704 7.373-11.104v-22" clip-path="url(#iconic-size-lg-fork-clip-0)" class="iconic-fork-line-fork iconic-property-stroke" fill="none" />
     <path clip-path="url(#iconic-size-lg-fork-clip-0)" stroke="#000" stroke-width="8" class="iconic-fork-line-trunk iconic-property-stroke" d="M12 12v92" fill="none" />
     <circle cx="12" cy="116" r="12" class="iconic-fork-point-trunk-start iconic-property-accent iconic-property-fill" />
     <circle cx="50" cy="40" r="12" class="iconic-fork-point-fork iconic-property-accent iconic-property-fill" />
     <circle cx="12" cy="12" r="12" class="iconic-fork-point-trunk-start iconic-property-accent iconic-property-fill" />
   </g>
-  <g data-width="18" data-height="32" class="iconic-fork-md iconic-container iconic-md" display="none" transform="scale(4) translate(7)">
-    <path stroke="#000" stroke-width="3" d="M3.5 25s0-.787 0-1.75.833-2.091 1.851-2.507l7.298-2.986c1.018-.416 1.851-1.657 1.851-2.757v-3" clip-path="url(#iconic-size-md-fork-clip-0)" class="iconic-fork-line-fork iconic-property-stroke" fill="none" />
+  <g class="iconic-fork-md iconic-container iconic-md" data-width="18" data-height="32" display="none" transform="scale(4) translate(7)">
+    <path stroke="#000" stroke-width="3" d="M3.5 28.5v-5c0-1.1.833-2.341 1.851-2.757l7.298-2.986c1.018-.416 1.851-1.657 1.851-2.757v-3" clip-path="url(#iconic-size-md-fork-clip-0)" class="iconic-fork-line-fork iconic-property-stroke" fill="none" />
     <path clip-path="url(#iconic-size-md-fork-clip-0)" stroke="#000" stroke-width="3" class="iconic-fork-line-trunk iconic-property-stroke" d="M3.5 5v25" fill="none" />
     <circle cx="14.5" cy="8.5" r="3.5" class="iconic-fork-fork-point iconic-property-accent iconic-property-fill" />
     <circle cx="3.5" cy="28.5" r="3.5" class="iconic-fork-trunk-point-start iconic-property-accent iconic-property-fill" />
     <circle cx="3.5" cy="3.5" r="3.5" class="iconic-fork-point-trunk-end iconic-property-accent iconic-property-fill" />
   </g>
-  <g data-width="10" data-height="16" class="iconic-fork-sm iconic-container iconic-sm" display="none" transform="scale(8) translate(3)">
+  <g class="iconic-fork-sm iconic-container iconic-sm" data-width="10" data-height="16" display="none" transform="scale(8) translate(3)">
     <path stroke="#000" stroke-width="2" d="M2 14v-2c0-1.1.888-2.148 1.973-2.329l2.054-.342c1.085-.181 1.973-1.229 1.973-2.329v-3" clip-path="url(#iconic-size-sm-fork-clip-0)" class="iconic-fork-line-fork iconic-property-stroke" fill="none" />
     <path clip-path="url(#iconic-size-sm-fork-clip-0)" stroke="#000" stroke-width="2" class="iconic-fork-line-trunk iconic-property-stroke" d="M2 4v8" fill="none" />
     <circle cx="2" cy="14" r="2" class="iconic-fork-point-trunk-start iconic-property-accent iconic-property-fill" />

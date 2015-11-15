@@ -2,7 +2,7 @@
   <g class="iconic-metadata">
     <title>Headphones</title>
   </g>
-  <g data-width="116" data-height="124" class="iconic-headphones-lg iconic-container iconic-lg" display="inline" transform="translate(6 2)">
+  <g class="iconic-headphones-lg iconic-container iconic-lg" data-width="116" data-height="124" display="inline" transform="translate(6 2)">
     <path stroke="#000" stroke-width="2" stroke-linecap="round" d="M105 114v-27c0-2.2.542-5.716 1.204-7.814l3.591-11.371c.663-2.098 1.205-5.614 1.205-7.814v-9c0-2.2.391-5.757.868-7.905l3.132-14.095" class="iconic-headphones-connector iconic-headphones-connector-right iconic-property-stroke"
     fill="none" />
     <path stroke="#000" stroke-width="2" stroke-linecap="round" d="M11 113v-26c0-2.2-.542-5.716-1.204-7.814l-3.591-11.371c-.663-2.098-1.205-5.614-1.205-7.814v-9c0-2.2-.391-5.757-.868-7.905l-3.132-14.095" class="iconic-headphones-connector iconic-headphones-connector-left iconic-property-stroke"
@@ -16,7 +16,7 @@
     <path d="M111.015 38c-7.515-22.072-28.433-38-53.015-38s-45.5 15.928-53.015 38h-2.985v18c0 2.209 1.791 4 4 4s4-1.791 4-4c0-26.467 21.533-48 48-48s48 21.533 48 48c0 2.209 1.791 4 4 4s4-1.791 4-4v-18h-2.985z" class="iconic-headphones-top iconic-property-fill"
     />
   </g>
-  <g data-width="29" data-height="32" class="iconic-headphones-md iconic-container iconic-md" display="none" transform="scale(4) translate(1)">
+  <g class="iconic-headphones-md iconic-container iconic-md" data-width="29" data-height="32" display="none" transform="scale(4) translate(1)">
     <path stroke="#000" d="M1.5 13.5v3c0 1.1.225 2.675.5 3.5s.5 1.95.5 2.5 0 1.563 0 2.25 0 1.25 0 1.25" class="iconic-headphones-connector iconic-headphones-connector-left iconic-property-stroke" fill="none" />
     <path stroke="#000" d="M27.5 13.5v3c0 1.1-.225 2.675-.5 3.5s-.5 1.95-.5 2.5 0 1.563 0 2.25 0 1.25 0 1.25" class="iconic-headphones-connector iconic-headphones-connector-right iconic-property-stroke" fill="none" />
     <path d="M4 31c-2.209 0-4-1.791-4-4s1.791-4 4-4v8z" class="iconic-headphones-speaker iconic-headphones-speaker-back iconic-headphones-speaker-back-left iconic-property-fill" />
@@ -25,7 +25,7 @@
     <path d="M25.5 32h-2c-.276 0-.5-.224-.5-.5v-9c0-.276.224-.5.5-.5h2c.276 0 .5.224.5.5v9c0 .276-.224.5-.5.5z" class="iconic-headphones-speaker iconic-headphones-speaker-earpeice iconic-headphones-speaker-earpeice-right iconic-property-fill" />
     <path stroke="#000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M27.5 14.5c0-7.18-5.82-13-13-13s-13 5.82-13 13" class="iconic-headphones-top iconic-property-stroke" fill="none" />
   </g>
-  <g data-width="14" data-height="16" class="iconic-headphones-sm iconic-container iconic-sm" display="none" transform="scale(8) translate(1)">
+  <g class="iconic-headphones-sm iconic-container iconic-sm" data-width="14" data-height="16" display="none" transform="scale(8) translate(1)">
     <path stroke="#000" class="iconic-headphones-connector iconic-headphones-connector-left iconic-property-stroke" d="M1.5 6v7" fill="none" />
     <path stroke="#000" class="iconic-headphones-connector iconic-headphones-connector-right iconic-property-stroke" d="M12.5 6v7" fill="none" />
     <path d="M12.5 15c.828 0 1.5-.672 1.5-1.5s-.672-1.5-1.5-1.5h-1.5v3h1.5z" class="iconic-headphones-speaker iconic-headphones-speaker-back iconic-headphones-speaker-back-right iconic-property-fill" />

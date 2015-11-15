@@ -2,7 +2,7 @@
   <g class="iconic-metadata">
     <title>Guides</title>
   </g>
-  <g data-width="112" data-height="112" class="iconic-guides-lg iconic-container iconic-lg" display="inline" transform="translate(8 8)">
+  <g class="iconic-guides-lg iconic-container iconic-lg" data-width="112" data-height="112" display="inline" transform="translate(8 8)">
     <path stroke="#000" stroke-width="2" stroke-linecap="square" class="iconic-guides-tick iconic-guides-tick-minor iconic-guides-tick-x iconic-property-stroke" d="M111 1v2" fill="none" />
     <path stroke="#000" stroke-width="2" stroke-linecap="square" class="iconic-guides-tick iconic-guides-tick-major iconic-guides-tick-x iconic-property-accent iconic-property-stroke" d="M101 1v4" fill="none" />
     <path stroke="#000" stroke-width="2" stroke-linecap="square" class="iconic-guides-tick iconic-guides-tick-minor iconic-guides-tick-x iconic-property-stroke" d="M91 1v2" fill="none" />
@@ -27,7 +27,7 @@
     <path stroke="#000" stroke-width="2" stroke-linecap="square" class="iconic-guides-tick iconic-guides-tick-minor iconic-guides-tick-y iconic-property-stroke" d="M2 111h2" fill="none" />
     <path stroke="#000" stroke-width="2" stroke-linecap="square" class="iconic-guides-axes iconic-property-stroke" d="M111 1h-110v110" fill="none" />
   </g>
-  <g data-width="29" data-height="29" class="iconic-guides-md iconic-container iconic-md" display="none" transform="scale(4) translate(1 1)">
+  <g class="iconic-guides-md iconic-container iconic-md" data-width="29" data-height="29" display="none" transform="scale(4) translate(1 1)">
     <path stroke="#000" stroke-linecap="square" class="iconic-guides-tick iconic-guides-tick-minor iconic-guides-tick-x iconic-property-stroke" d="M28.5.5v1" fill="none" />
     <path stroke="#000" stroke-linecap="square" class="iconic-guides-tick iconic-guides-tick-major iconic-guides-tick-x iconic-property-accent iconic-property-stroke" d="M24.5.5v2" fill="none" />
     <path stroke="#000" stroke-linecap="square" class="iconic-guides-tick iconic-guides-tick-minor iconic-guides-tick-x iconic-property-stroke" d="M20.5.5v1" fill="none" />
@@ -43,7 +43,7 @@
     <path stroke="#000" stroke-linecap="square" class="iconic-guides-tick iconic-guides-tick-minor iconic-guides-tick-y iconic-property-stroke" d="M.5 4.5h1m-1 24h1" fill="none" />
     <path stroke="#000" stroke-linecap="square" class="iconic-guides-axes iconic-property-stroke" d="M28.5.5h-28v28" fill="none" />
   </g>
-  <g data-width="16" data-height="16" class="iconic-guides-sm iconic-container iconic-sm" display="none" transform="scale(8)">
+  <g class="iconic-guides-sm iconic-container iconic-sm" data-width="16" data-height="16" display="none" transform="scale(8)">
     <path stroke="#000" stroke-linecap="square" class="iconic-guides-tick iconic-guides-tick-minor iconic-guides-tick-x iconic-property-stroke" d="M15.5.5v1" fill="none" />
     <path stroke="#000" stroke-linecap="square" class="iconic-guides-tick iconic-guides-tick-major iconic-guides-tick-x iconic-property-accent iconic-property-stroke" d="M12.5.5v2" fill="none" />
     <path stroke="#000" stroke-linecap="square" class="iconic-guides-tick iconic-guides-tick-minor iconic-guides-tick-x iconic-property-stroke" d="M9.5.5v1" fill="none" />

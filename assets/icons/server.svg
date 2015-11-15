@@ -37,7 +37,7 @@
       <path d="M0 0v15h12v-15h-12zm11 14h-10v-13h10v13z" />
     </clipPath>
   </defs>
-  <g data-width="88" data-height="128" class="iconic-server-lg iconic-container iconic-lg" display="inline" transform="translate(20)">
+  <g class="iconic-server-lg iconic-container iconic-lg" data-width="88" data-height="128" display="inline" transform="translate(20)">
     <path clip-path="url(#iconic-size-lg-server-clip-0)" d="M80.5 36h-73c-.828 0-1.5-.672-1.5-1.5v-27c0-.828.672-1.5 1.5-1.5h73c.828 0 1.5.672 1.5 1.5v27c0 .828-.672 1.5-1.5 1.5z" class="iconic-server-chasis iconic-server-chasis-top iconic-property-fill"
     />
     <circle cx="69" cy="19" r="3" class="iconic-server-chasis-light iconic-server-chasis-top-light iconic-property-accent iconic-property-fill" />
@@ -51,14 +51,14 @@
     />
     <path class="iconic-server-rack iconic-server-rack-base iconic-property-fill" d="M0 102h88v26h-88z" />
   </g>
-  <g data-width="23" data-height="32" class="iconic-server-md iconic-container iconic-md" display="none" transform="scale(4) translate(4)">
+  <g class="iconic-server-md iconic-container iconic-md" data-width="23" data-height="32" display="none" transform="scale(4) translate(4)">
     <path clip-path="url(#iconic-size-md-server-clip-0)" d="M20.5 9h-18c-.276 0-.5-.224-.5-.5v-6c0-.276.224-.5.5-.5h18c.276 0 .5.224.5.5v6c0 .276-.224.5-.5.5z" class="iconic-server-chasis iconic-server-chasis-top iconic-property-fill" />
     <path clip-path="url(#iconic-size-md-server-clip-1)" d="M20.5 17h-18c-.276 0-.5-.224-.5-.5v-6c0-.276.224-.5.5-.5h18c.276 0 .5.224.5.5v6c0 .276-.224.5-.5.5z" class="iconic-server-chasis iconic-server-chasis-middle iconic-property-fill" />
     <path clip-path="url(#iconic-size-md-server-clip-2)" d="M20.5 25h-18c-.276 0-.5-.224-.5-.5v-6c0-.276.224-.5.5-.5h18c.276 0 .5.224.5.5v6c0 .276-.224.5-.5.5z" class="iconic-server-chasis iconic-server-chasis-bottom iconic-property-fill" />
     <path clip-path="url(#iconic-size-md-server-clip-3)" d="M22.5 27h-22c-.276 0-.5-.224-.5-.5v-26c0-.276.224-.5.5-.5h22c.276 0 .5.224.5.5v26c0 .276-.224.5-.5.5z" class="iconic-server-rack iconic-server-rack-walls iconic-property-fill" />
     <path class="iconic-server-rack iconic-server-rack-base iconic-property-fill" d="M0 26h23v6h-23z" />
   </g>
-  <g data-width="12" data-height="16" class="iconic-server-sm iconic-container iconic-sm" display="none" transform="scale(8) translate(2)">
+  <g class="iconic-server-sm iconic-container iconic-sm" data-width="12" data-height="16" display="none" transform="scale(8) translate(2)">
     <path d="M2 2v3h8v-3h-8zm3.5 2h-2c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h2c.276 0 .5.224.5.5s-.224.5-.5.5zm3 0c-.276 0-.5-.224-.5-.5s.224-.5.5-.5.5.224.5.5-.224.5-.5.5z" class="iconic-server-chasis iconic-server-chasis-bottom iconic-property-fill" />
     <path d="M2 6v3h8v-3h-8zm3.5 2h-2c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h2c.276 0 .5.224.5.5s-.224.5-.5.5zm3 0c-.276 0-.5-.224-.5-.5s.224-.5.5-.5.5.224.5.5-.224.5-.5.5z" class="iconic-server-chasis iconic-server-chasis-middle iconic-property-fill" />
     <path d="M2 10v3h8v-3h-8zm3.5 2h-2c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h2c.276 0 .5.224.5.5s-.224.5-.5.5zm3 0c-.276 0-.5-.224-.5-.5s.224-.5.5-.5.5.224.5.5-.224.5-.5.5z" class="iconic-server-chasis iconic-server-chasis-top iconic-property-fill" />

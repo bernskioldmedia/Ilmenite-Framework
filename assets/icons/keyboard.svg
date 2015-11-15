@@ -15,13 +15,13 @@
       <path d="M0 0v9h15v-9h-15zm10 2h1v1h-1v-1zm-2 0h1v1h-1v-1zm2 2v1h-1v-1h1zm-4-2h1v1h-1v-1zm2 2v1h-1v-1h1zm-4-2h1v1h-1v-1zm2 2v1h-1v-1h1zm-4-2h1v1h-1v-1zm0 2h2v1h-2v-1zm1 3h-1v-1h1v1zm8 0h-7v-1h7v1zm2 0h-1v-1h1v1zm0-2h-2v-1h2v1zm0-2h-1v-1h1v1z" />
     </clipPath>
   </defs>
-  <g data-width="126" data-height="50" class="iconic-keyboard-lg iconic-container iconic-lg" display="inline" transform="translate(1 39)">
+  <g class="iconic-keyboard-lg iconic-container iconic-lg" data-width="126" data-height="50" display="inline" transform="translate(1 39)">
     <path clip-path="url(#iconic-size-lg-keyboard-clip-0)" d="M124.5 50h-123c-.828 0-1.5-.672-1.5-1.5v-47c0-.828.672-1.5 1.5-1.5h123c.828 0 1.5.672 1.5 1.5v47c0 .828-.672 1.5-1.5 1.5z" class="iconic-property-fill" />
   </g>
-  <g data-width="31" data-height="15" class="iconic-keyboard-md iconic-container iconic-md" display="none" transform="scale(4) translate(0 8)">
+  <g class="iconic-keyboard-md iconic-container iconic-md" data-width="31" data-height="15" display="none" transform="scale(4) translate(0 8)">
     <path clip-path="url(#iconic-size-md-keyboard-clip-0)" d="M30.5 15h-30c-.276 0-.5-.224-.5-.5v-14c0-.276.224-.5.5-.5h30c.276 0 .5.224.5.5v14c0 .276-.224.5-.5.5z" class="iconic-property-fill" />
   </g>
-  <g data-width="15" data-height="9" class="iconic-keyboard-sm iconic-container iconic-sm" display="none" transform="scale(8) translate(0 3)">
+  <g class="iconic-keyboard-sm iconic-container iconic-sm" data-width="15" data-height="9" display="none" transform="scale(8) translate(0 3)">
     <path d="M14.75 9h-14.5c-.138 0-.25-.112-.25-.25v-8.5c0-.138.112-.25.25-.25h14.5c.138 0 .25.112.25.25v8.5c0 .138-.112.25-.25.25z" clip-path="url(#iconic-size-sm-keyboard-clip-0)" class="iconic-property-fill" />
   </g>
 </svg>

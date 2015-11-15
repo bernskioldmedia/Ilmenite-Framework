@@ -2,7 +2,7 @@
   <g class="iconic-metadata">
     <title>Bitcoin Address</title>
   </g>
-  <g data-width="128" data-height="128" class="iconic-bitcoin-address-lg iconic-container iconic-lg" display="inline">
+  <g class="iconic-bitcoin-address-lg iconic-container iconic-lg" data-width="128" data-height="128" display="inline">
     <path stroke="#000" stroke-width="4" class="iconic-bitcoin-address-square iconic-bitcoin-address-square-top-left iconic-bitcoin-address-square-top-left-outer iconic-property-stroke" d="M2 2h36v36h-36z" fill="none" />
     <path class="iconic-bitcoin-address-square iconic-bitcoin-address-square-top-left iconic-bitcoin-address-square-top-left-inner iconic-property-fill" d="M12 12h16v16h-16z" />
     <path stroke="#000" stroke-width="4" class="iconic-bitcoin-address-square iconic-bitcoin-address-square-top-right iconic-bitcoin-address-square-top-right-outer iconic-property-stroke" d="M90 2h36v36h-36z" fill="none" />
@@ -17,7 +17,7 @@
     <path class="iconic-bitcoin-address-strike iconic-bitcoin-address-strike-top iconic-bitcoin-address-strike-right iconic-property-accent iconic-property-fill" d="M112 56h8v10h-8z" />
     <path d="M128 112h-8v-16h8v16zm-8-40v-8h-40v8h8v40h-8v8h40v-8h-24v-16h24v-8h-24v-16h24zm8 0h-8v16h8v-16z" class="iconic-bitcoin-address-b iconic-property-accent iconic-property-fill" />
   </g>
-  <g data-width="32" data-height="32" class="iconic-bitcoin-address-md iconic-container iconic-md" display="none" transform="scale(4)">
+  <g class="iconic-bitcoin-address-md iconic-container iconic-md" data-width="32" data-height="32" display="none" transform="scale(4)">
     <path stroke="#000" class="iconic-bitcoin-address-square iconic-bitcoin-address-square-top-left iconic-bitcoin-address-square-top-left-outer iconic-property-stroke" d="M.5.5h9v9h-9z" fill="none" />
     <path class="iconic-bitcoin-address-square iconic-bitcoin-address-square-top-left iconic-bitcoin-address-square-top-left-inner iconic-property-fill" d="M3 3h4v4h-4z" />
     <path stroke="#000" class="iconic-bitcoin-address-square iconic-bitcoin-address-square-top-right iconic-bitcoin-address-square-top-right-outer iconic-property-stroke" d="M22.5.5h9v9h-9z" fill="none" />
@@ -32,7 +32,7 @@
     <path class="iconic-bitcoin-address-strike iconic-bitcoin-address-strike-top iconic-bitcoin-address-strike-right iconic-property-accent iconic-property-fill" d="M28 14h2v3h-2z" />
     <path d="M32 28h-2v-4h2v4zm-2-10v-2h-10v2h2v10h-2v2h10v-2h-6v-4h6v-2h-6v-4h6zm2 0h-2v4h2v-4z" class="iconic-bitcoin-address-b iconic-property-accent iconic-property-fill" />
   </g>
-  <g data-width="16" data-height="16" class="iconic-bitcoin-address-sm iconic-container iconic-sm" display="none" transform="scale(8)">
+  <g class="iconic-bitcoin-address-sm iconic-container iconic-sm" data-width="16" data-height="16" display="none" transform="scale(8)">
     <path stroke="#000" class="iconic-bitcoin-address-square iconic-bitcoin-address-square-top-left iconic-bitcoin-address-square-top-left-outer iconic-property-stroke" d="M.5.5h5v5h-5z" fill="none" />
     <path class="iconic-bitcoin-address-square iconic-bitcoin-address-square-top-left iconic-bitcoin-address-square-top-left-inner iconic-property-fill" d="M2 2h2v2h-2z" />
     <path stroke="#000" class="iconic-bitcoin-address-square iconic-bitcoin-address-square-top-right iconic-bitcoin-address-square-top-right-outer iconic-property-stroke" d="M10.5.5h5v5h-5z" fill="none" />

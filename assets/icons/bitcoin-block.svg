@@ -2,7 +2,7 @@
   <g class="iconic-metadata">
     <title>Bitcoin Block</title>
   </g>
-  <g data-width="128" data-height="128" class="iconic-bitcoin-block-lg iconic-container iconic-lg" display="inline">
+  <g class="iconic-bitcoin-block-lg iconic-container iconic-lg" data-width="128" data-height="128" display="inline">
     <path stroke="#000" stroke-width="8" class="iconic-bitcoin-block-strike iconic-bitcoin-block-strike-top iconic-bitcoin-block-strike-left iconic-property-accent iconic-property-stroke" d="M32 0v18" fill="none" />
     <path stroke="#000" stroke-width="8" class="iconic-bitcoin-block-strike iconic-bitcoin-block-strike-top iconic-bitcoin-block-strike-right iconic-property-accent iconic-property-stroke" d="M48 0v18" fill="none" />
     <path stroke="#000" stroke-width="8" class="iconic-bitcoin-block-strike iconic-bitcoin-block-strike-bottom iconic-bitcoin-block-strike-left iconic-property-accent iconic-property-stroke" d="M32 110v18" fill="none" />
@@ -11,7 +11,7 @@
     class="iconic-bitcoin-block-b iconic-property-fill" />
     <path stroke="#000" stroke-width="8" class="iconic-bitcoin-block-block iconic-property-stroke" d="M92 46h32v32h-32z" fill="none" />
   </g>
-  <g data-width="32" data-height="32" class="iconic-bitcoin-block-md iconic-container iconic-md" display="none" transform="scale(4)">
+  <g class="iconic-bitcoin-block-md iconic-container iconic-md" data-width="32" data-height="32" display="none" transform="scale(4)">
     <path stroke="#000" stroke-width="2" class="iconic-bitcoin-block-strike iconic-bitcoin-block-strike-top iconic-bitcoin-block-strike-left iconic-property-accent iconic-property-stroke" d="M8 0v6" fill="none" />
     <path stroke="#000" stroke-width="2" class="iconic-bitcoin-block-strike iconic-bitcoin-block-strike-top iconic-bitcoin-block-strike-right iconic-property-accent iconic-property-stroke" d="M12 0v6" fill="none" />
     <path stroke="#000" stroke-width="2" class="iconic-bitcoin-block-strike iconic-bitcoin-block-strike-bottom iconic-bitcoin-block-strike-left iconic-property-accent iconic-property-stroke" d="M8 26v6" fill="none" />
@@ -20,7 +20,7 @@
     class="iconic-bitcoin-block-b iconic-property-fill" />
     <path stroke="#000" stroke-width="2" class="iconic-bitcoin-block-block iconic-property-stroke" d="M23 12h8v8h-8z" fill="none" />
   </g>
-  <g data-width="16" data-height="16" class="iconic-bitcoin-block-sm iconic-container iconic-sm" display="none" transform="scale(8)">
+  <g class="iconic-bitcoin-block-sm iconic-container iconic-sm" data-width="16" data-height="16" display="none" transform="scale(8)">
     <path stroke="#000" class="iconic-bitcoin-block-strike iconic-bitcoin-block-strike-top iconic-bitcoin-block-strike-left iconic-property-accent iconic-property-stroke" d="M3.5 0v3.5" fill="none" />
     <path stroke="#000" class="iconic-bitcoin-block-strike iconic-bitcoin-block-strike-top iconic-bitcoin-block-strike-right iconic-property-accent iconic-property-stroke" d="M5.5 0v3.5" fill="none" />
     <path stroke="#000" class="iconic-bitcoin-block-strike iconic-bitcoin-block-strike-bottom iconic-bitcoin-block-strike-left iconic-property-accent iconic-property-stroke" d="M3.5 12.5v3.5" fill="none" />

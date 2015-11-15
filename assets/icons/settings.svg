@@ -16,7 +16,7 @@
       />
     </clipPath>
   </defs>
-  <g data-width="110" data-height="128" class="iconic-settings-lg iconic-container iconic-lg" display="inline" transform="translate(9)">
+  <g class="iconic-settings-lg iconic-container iconic-lg" data-width="110" data-height="128" display="inline" transform="translate(9)">
     <path stroke="#000" stroke-width="8" stroke-linecap="round" clip-path="url(#iconic-size-lg-settings-clip-0)" class="iconic-settings-line iconic-settings-line-1 iconic-property-accent iconic-property-stroke" d="M14 4v120" fill="none" />
     <path stroke="#000" stroke-width="8" stroke-linecap="round" clip-path="url(#iconic-size-lg-settings-clip-0)" class="iconic-settings-line iconic-settings-line-2 iconic-property-accent iconic-property-stroke" d="M54 4v120" fill="none" />
     <path stroke="#000" stroke-width="8" stroke-linecap="round" clip-path="url(#iconic-size-lg-settings-clip-0)" class="iconic-settings-line iconic-settings-line-3 iconic-property-accent iconic-property-stroke" d="M94 4v120" fill="none" />
@@ -24,7 +24,7 @@
     <path d="M54 80c-7.72 0-14 6.28-14 14s6.28 14 14 14 14-6.28 14-14-6.28-14-14-14z" class="iconic-settings-knob iconic-settings-knob-2 iconic-property-fill" />
     <path d="M14 24c-7.72 0-14 6.28-14 14s6.28 14 14 14 14-6.28 14-14-6.28-14-14-14z" class="iconic-settings-knob iconic-settings-knob-1 iconic-property-fill" />
   </g>
-  <g data-width="27" data-height="32" class="iconic-settings-md iconic-container iconic-md" display="none" transform="scale(4) translate(2)">
+  <g class="iconic-settings-md iconic-container iconic-md" data-width="27" data-height="32" display="none" transform="scale(4) translate(2)">
     <path clip-path="url(#iconic-size-md-settings-clip-0)" stroke="#000" stroke-width="3" stroke-linecap="round" class="iconic-settings-line iconic-settings-line-1 iconic-property-accent iconic-property-stroke" d="M3.5 1.5v29" fill="none" />
     <path clip-path="url(#iconic-size-md-settings-clip-0)" stroke="#000" stroke-width="3" stroke-linecap="round" class="iconic-settings-line iconic-settings-line-2 iconic-property-accent iconic-property-stroke" d="M13.5 1.5v29" fill="none" />
     <path clip-path="url(#iconic-size-md-settings-clip-0)" stroke="#000" stroke-width="3" stroke-linecap="round" class="iconic-settings-line iconic-settings-line-3 iconic-property-accent iconic-property-stroke" d="M23.5 1.5v29" fill="none" />
@@ -32,7 +32,7 @@
     <path d="M13.5 20c-1.93 0-3.5 1.57-3.5 3.5s1.57 3.5 3.5 3.5 3.5-1.57 3.5-3.5-1.57-3.5-3.5-3.5z" class="iconic-settings-knob iconic-settings-knob-2 iconic-property-fill" />
     <path d="M3.5 6c-1.93 0-3.5 1.57-3.5 3.5s1.57 3.5 3.5 3.5 3.5-1.57 3.5-3.5-1.57-3.5-3.5-3.5z" class="iconic-settings-knob iconic-settings-knob-1 iconic-property-fill" />
   </g>
-  <g data-width="16" data-height="16" class="iconic-settings-sm iconic-container iconic-sm" display="none" transform="scale(8)">
+  <g class="iconic-settings-sm iconic-container iconic-sm" data-width="16" data-height="16" display="none" transform="scale(8)">
     <path clip-path="url(#iconic-size-sm-settings-clip-0)" stroke="#000" stroke-width="2" stroke-linecap="round" class="iconic-settings-line iconic-settings-line-1 iconic-property-accent iconic-property-stroke" d="M2 1v14" fill="none" />
     <path clip-path="url(#iconic-size-sm-settings-clip-0)" stroke="#000" stroke-width="2" stroke-linecap="round" class="iconic-settings-line iconic-settings-line-2 iconic-property-accent iconic-property-stroke" d="M8 1v14" fill="none" />
     <path clip-path="url(#iconic-size-sm-settings-clip-0)" stroke="#000" stroke-width="2" stroke-linecap="round" class="iconic-settings-line iconic-settings-line-3 iconic-property-accent iconic-property-stroke" d="M14 1v14" fill="none" />
