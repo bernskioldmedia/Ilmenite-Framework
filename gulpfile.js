@@ -1,4 +1,5 @@
 var gulp 		= require('gulp');
+var concat 		= require('gulp-autoprefixer');
 var concat 		= require('gulp-concat');
 var imagemin 	= require('gulp-imagemin');
 var jshint 		= require('gulp-jshint');
@@ -43,25 +44,15 @@ gulp.task('js', function () {
 		'assets/js/src/main.js'
 	])
 		.pipe(plumber(plumberErrorHandler))
-		.pipe(jshint())
-		.pipe(jshint.reporter('fail'))
-		.pipe(concat('theme.js'))
-		.pipe(gulp.dest('assets/js'))
+		.pipe(sourcemaps.init())
+		.pipe(concat("theme.js"))
+		.pipe(gulp.dest("assets/js"))
+		.pipe(rename("theme.min.js"))
+		.pipe(uglify())
+		.pipe(sourcemaps.write("./"))
+		.pipe(gulp.dest("assets/js"))
 		.pipe(livereload());
 
-});
-
-// Uglify JavaScript
-gulp.task('compress',  function() {
-  return gulp.src('assets/js/*.js')
-  	.pipe(plumber(plumberErrorHandler))
-  	.pipe(sourcemaps.init())
-  	.pipe(concat("theme.js"))
-  	.pipe(gulp.dest("assets/js"))
-  	.pipe(rename("theme.min.js"))
-  	.pipe(uglify())
-  	.pipe(sourcemaps.write("./"))
-  	.pipe(gulp.dest("assets/js"));
 });
 
 // Image Minifcation
@@ -104,7 +95,7 @@ gulp.task('watch', function() {
 
 	gulp.watch('assets/scss/**/*.scss', ['sass']);
 
-	gulp.watch('assets/js/src/*.js', ['js', 'compress']);
+	gulp.watch('assets/js/src/*.js', ['js']);
 
 	gulp.watch('assets/images/*.{png,jpg,gif}', ['img']);
 
