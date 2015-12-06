@@ -5,66 +5,59 @@
  * Licensed under MIT Open Source
  */
 
-/**
- * Load Foundation by ZURB
- */
-
 // Make sure the charset is set appropriately
 @charset "UTF-8";
 
-// Normalize
-@import "libs/_normalize.scss";
+// Foundation for Sites by ZURB
+// foundation.zurb.com
+// Licensed under MIT Open Source
 
-// Import the foundation settings
-@import "libs/foundation/_settings.scss";
+// Third-party libraries
+@import 'vendor/normalize';
 
-// Make sure the charset is set appropriately
+// Sass utilities
+@import 'util/util';
 
-// Behold, here are all the Foundation components.
-@import 'libs/foundation/components/grid';
-// @import 'libs/foundation/components/accordion';
-@import 'libs/foundation/components/alert-boxes';
-@import 'libs/foundation/components/block-grid';
-// @import 'libs/foundation/components/breadcrumbs';
-// @import 'libs/foundation/components/button-groups';
-@import 'libs/foundation/components/buttons';
-@import 'libs/foundation/components/clearing';
-// @import 'libs/foundation/components/dropdown';
-// @import 'libs/foundation/components/dropdown-buttons';
-@import 'libs/foundation/components/flex-video';
-@import 'libs/foundation/components/forms';
-// @import 'libs/foundation/components/icon-bar';
-// @import 'libs/foundation/components/inline-lists';
-// @import 'libs/foundation/components/joyride';
-// @import 'libs/foundation/components/keystrokes';
-// @import 'libs/foundation/components/labels';
-@import 'libs/foundation/components/magellan';
-// @import 'libs/foundation/components/orbit';
-@import 'libs/foundation/components/pagination';
-// @import 'libs/foundation/components/panels';
-// @import 'libs/foundation/components/pricing-tables';
-// @import 'libs/foundation/components/progress-bars';
-// @import 'libs/foundation/components/range-slider';
-// @import 'libs/foundation/components/reveal';
-// @import 'libs/foundation/components/side-nav';
-// @import 'libs/foundation/components/split-buttons';
-// @import 'libs/foundation/components/sub-nav';
-// @import 'libs/foundation/components/switches';
-@import 'libs/foundation/components/tables';
-// @import 'libs/foundation/components/tabs';
-// @import 'libs/foundation/components/thumbs';
-// @import 'libs/foundation/components/tooltips';
-// @import 'libs/foundation/components/top-bar';
-@import 'libs/foundation/components/type';
-// @import 'libs/foundation/components/offcanvas';
-// @import 'libs/foundation/components/visibility';
+// Global variables and styles
+@import 'global';
 
-/**
- * Begin Layout Stylesheet
- */
+// Components
+@import 'grid/grid';
+@import 'typography/typography';
+@import 'forms/forms';
+@import 'components/visibility';
+@import 'components/float';
+@import 'components/button';
+// @import 'components/button-group';
+// @import 'components/accordion-menu';
+// @import 'components/accordion';
+// @import 'components/badge';
+// @import 'components/breadcrumbs';
+@import 'components/callout';
+@import 'components/close-button';
+// @import 'components/drilldown';
+// @import 'components/dropdown-menu';
+// @import 'components/dropdown';
+@import 'components/flex-video';
+// @import 'components/label';
+// @import 'components/media-object';
+@import 'components/menu';
+// @import 'components/off-canvas';
+// @import 'components/orbit';
+@import 'components/pagination';
+// @import 'components/progress-bar';
+// @import 'components/reveal';
+// @import 'components/slider';
+@import 'components/sticky';
+// @import 'components/switch';
+@import 'components/table';
+// @import 'components/tabs';
+// @import 'components/title-bar';
+// @import 'components/top-bar';
+// @import 'components/thumbnail';
+// @import 'components/tooltip';
 
-/**
- * Imports
- */
+// Other Imports
 @import "_template-modules.scss";
 @import "_forms.scss";
+
