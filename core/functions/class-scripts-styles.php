@@ -39,15 +39,11 @@ class Theme_Scripts_Styles {
 	public function scripts() {
 
 		// Register
-		// wp_register_script( $handle, $src, $deps, $ver, $in_footer );
-		// wp_register_script( 'iconic', Ilmenite_Theme()->get_theme_assets_uri() . '/js/plugins/iconic.min.js', '0.4.2', true );
-		// wp_register_script( 'foundation', Ilmenite_Theme()->get_theme_assets_uri() . '/js/plugins/foundation/foundation.js', array( 'jquery' ), Ilmenite_Theme()->get_theme_version(), true );
 		wp_register_script( 'modernizr', Ilmenite_Theme()->get_theme_assets_uri() . '/js/src/vendor/modernizr.min.js', false, '2.8.3', false );
 		wp_register_script( 'theme', Ilmenite_Theme()->get_theme_assets_uri() . '/js/theme.min.js', array( 'jquery' ), Ilmenite_Theme()->get_theme_version(), true );
 
 		// Enqueue
 		wp_enqueue_script( 'modernizr' );
-		// wp_enqueue_script( 'foundation' );
 		wp_enqueue_script( 'theme' );
 
 	}

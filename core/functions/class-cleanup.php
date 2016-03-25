@@ -10,7 +10,7 @@ class Theme_Cleanup {
 	public function __construct() {
 
 		// Clean up wp_head()
-		add_action( 'init', array( $this, 'wp_head_cleanup' ) );
+		$this->wp_head_cleanup();
 
 		// Make oembed responsive
 		add_filter( 'embed_oembed_html', array( $this, 'wrap_oembed' ), 10, 4 );
@@ -41,6 +41,18 @@ class Theme_Cleanup {
 		remove_action( 'wp_head', 'wp_generator' );
 		remove_action( 'wp_head', 'wp_shortlink_wp_head', 10, 0 );
 
+		// all actions related to emojis
+		remove_action( 'admin_print_styles', 'print_emoji_styles' );
+		remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+		remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+		remove_action( 'wp_print_styles', 'print_emoji_styles' );
+		remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+		remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+		remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
+
+		// filter to remove TinyMCE emojis
+		add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
+
 	}
 
 	/**
@@ -52,7 +64,7 @@ class Theme_Cleanup {
 	 */
 	public function wrap_oembed( $cache, $url, $attr = '', $post_ID = '' ) {
 
-		return '<div class="embed-wrapper">' . $cache . '</div>';
+		return '<div class="flex-video widescreen">' . $cache . '</div>';
 
 	}
 

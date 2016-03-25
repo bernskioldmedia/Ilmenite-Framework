@@ -63,7 +63,7 @@ if ( ! class_exists( 'Ilmenite_Theme' ) ) :
 			$this->theme_version = '1.0';
 
 			// Theme Name
-			$this->theme_name = __( 'THEMENAMEHERE', 'THEMETEXTDOMAIN' );
+			$this->theme_name = __( 'THEMENAMEHERE', 'TEXTDOMAINTHEMENAME' );
 
 			// Theme Slug
 			$this->theme_slug = 'ilmenite';
@@ -248,7 +248,7 @@ if ( ! class_exists( 'Ilmenite_Theme' ) ) :
 
 		public function change_admin_footer_text() {
 
-			$text = sprintf( __( '%s Website Admin Panel. Website developed by <a href="https://www.bernskioldmedia.com/en/">Bernskiold Media</a>.' ), bloginfo( 'name' ) );
+			$text = sprintf( __( '%s Website Admin Panel. Website developed by <a href="https://www.bernskioldmedia.com/en/">Bernskiold Media</a>.', 'ilmenite' ), bloginfo( 'name' ) );
 
 			echo $text;
 
@@ -299,14 +299,14 @@ if ( ! class_exists( 'Ilmenite_Theme' ) ) :
 		 * Get Theme Images URI
 		 */
 		public function get_theme_images_uri() {
-			return $this->theme_uri . '/images';
+			return $this->theme_uri . '/assets/images';
 		}
 
 		/**
 		 * Get Theme Icons URI
 		 */
 		public function get_theme_icons_uri() {
-			return $this->theme_uri . '/icons';
+			return $this->theme_uri . '/assets/icons';
 		}
 
 	}

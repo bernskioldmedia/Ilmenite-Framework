@@ -6,8 +6,8 @@
  * to the markup in this file.
  */
 
-if ( isset( $_GET['s'] ) ) {
-	$value = wp_strip_all_tags( $_GET['s'] );
+if ( get_search_query() ) {
+	$value = get_search_query();
 } else {
 	$value = '';
 }

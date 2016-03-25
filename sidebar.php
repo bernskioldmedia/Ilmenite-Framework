@@ -5,6 +5,6 @@
 ?>
 <aside class="sidebar">
 
-	<?php dynamic_sidebar('sidebar'); ?>
+	<?php dynamic_sidebar( 'sidebar' ); ?>
 
 </aside>
