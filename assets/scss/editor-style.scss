@@ -1,14 +1,6 @@
 /**
- * Custom Editor Styles
+ * Editor Stylesheet
+ *
+ * This stylesheet is used for all the WYSIWYG editor boxes in WordPress.
+ * Include all the layout style here and reset the body element to display nicely.
  */
-
-// Include relevant Foundation elements
-@import 'foundation/components/grid';
-@import 'foundation/components/block-grid';
-@import 'foundation/components/buttons';
-@import 'foundation/components/flex-video';
-@import 'foundation/components/inline-lists';
-@import 'foundation/components/type';
-
-// Include Other
-@import "_template-modules.scss";

@@ -1,0 +1,45 @@
+/**
+ * Typography Modules
+ */
+
+// Intro Text
+.intro {
+  font-size: 1.2em;
+}
+
+.intro2 {
+  font-size: 1.4rem;
+}
+
+// Font Heading
+.font-heading {
+  font-family: $header-font-family;
+}
+
+// Font Body
+.font-body {
+  font-family: $body-font-family;
+}
+
+/**
+ * Links
+ */
+.no-link {
+  color: inherit;
+
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.underlined-link {
+  text-decoration: underline;
+}
+
+.uppercase  { text-transform: uppercase; }
+
+.text-white { color: white; }
+
+.text-light { font-weight: 300; }
+.text-bold  { font-weight: 700; }

@@ -1,0 +1,74 @@
+@charset "UTF-8";
+/**
+ * Main Layout Stylesheet
+ *
+ * We build the modules and components in separate stylesheets that are then
+ * included into this one. Thanks to SASS and the pre-processing power of
+ * Gulp this is a very smooth process.
+ */
+
+/**
+ * Include and Load Foundation
+ *
+ * Foundation is our CSS framework of choice. It contains a lot of different
+ * things, much more than we typically need. Therefore, only load the minimum
+ * of what you need here by including only the necessary components.
+ */
+
+// Include Foundation
+@import "foundation/foundation.scss";
+
+@include foundation-global-styles;
+@include foundation-grid;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+// @include foundation-accordion;
+// @include foundation-accordion-menu;
+// @include foundation-badge;
+// @include foundation-breadcrumbs;
+// @include foundation-button-group;
+// @include foundation-callout;
+// @include foundation-close-button;
+// @include foundation-drilldown-menu;
+// @include foundation-dropdown;
+// @include foundation-dropdown-menu;
+@include foundation-flex-video;
+// @include foundation-label;
+// @include foundation-media-object;
+// @include foundation-menu;
+// @include foundation-off-canvas;
+// @include foundation-orbit;
+@include foundation-pagination;
+// @include foundation-progress-bar;
+// @include foundation-slider;
+// @include foundation-sticky;
+// @include foundation-reveal;
+// @include foundation-switch;
+@include foundation-table;
+// @include foundation-tabs;
+// @include foundation-thumbnail;
+// @include foundation-title-bar;
+// @include foundation-tooltip;
+// @include foundation-top-bar;
+
+/**
+ * Global Styles
+ */
+@import "global/variables";
+
+/**
+ * Base Styles
+ */
+@import "base/layout";
+@import "base/typography";
+@import "base/wordpress";
+
+/**
+ * Components
+ */
+@import "base/forms";
+@import "base/lists";
+@import "base/section";

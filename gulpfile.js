@@ -1,17 +1,15 @@
-var gulp 		= require('gulp');
-var concat 		= require('gulp-autoprefixer');
-var concat 		= require('gulp-concat');
-var imagemin 	= require('gulp-imagemin');
-var jshint 		= require('gulp-jshint');
-var livereload 	= require('gulp-livereload');
-var notify 		= require('gulp-notify');
-var plumber 	= require('gulp-plumber');
-var rename 		= require("gulp-rename");
-var sass 		= require('gulp-sass');
-var sort 		= require('gulp-sort');
-var sourcemaps 	= require("gulp-sourcemaps");
-var uglify 		= require('gulp-uglify');
-var wpPot 		= require('gulp-wp-pot');
+var gulp 			= require('gulp');
+var autoprefixer 	= require('gulp-autoprefixer');
+var concat 			= require('gulp-concat');
+var jshint 			= require('gulp-jshint');
+var livereload 		= require('gulp-livereload');
+var notify 			= require('gulp-notify');
+var plumber 		= require('gulp-plumber');
+var rename 			= require("gulp-rename");
+var sass 			= require('gulp-sass');
+var sort 			= require('gulp-sort');
+var sourcemaps 		= require("gulp-sourcemaps");
+var uglify 			= require('gulp-uglify');
 
 // Handle Errors
 var plumberErrorHandler = { errorHandler: notify.onError({
@@ -40,7 +38,8 @@ gulp.task('js', function () {
 
 	return gulp.src([
 		'assets/js/src/plugins/iconic.min.js',
-		'assets/js/src/plugins/foundation/foundation.js',
+		'assets/js/src/plugins/foundation/foundation.core.js',
+		'assets/js/src/plugins/foundation/foundation.util.*.js',
 		'assets/js/src/main.js'
 	])
 		.pipe(plumber(plumberErrorHandler))
@@ -55,39 +54,6 @@ gulp.task('js', function () {
 
 });
 
-// Image Minifcation
-gulp.task('img', function() {
-
-	return gulp.src('assets/images/*.{png,jpg,gif}')
-
-	.pipe(plumber(plumberErrorHandler))
-
-    .pipe(imagemin({
-      optimizationLevel: 7,
-      progressive: true
-    }))
-
-    .pipe(gulp.dest('assets/images'));
-
-});
-
-// WordPress POT Files
-gulp.task('pot', function() {
-
-	return gulp.src('*.php')
-	        .pipe(sort())
-	        .pipe(wpPot( {
-	            domain: 'TEXTDOMAIN',
-	            destFile:'languages/TEXTDOMAIN.pot',
-	            package: 'TEXTDOMAIN',
-	            bugReport: 'http://www.bernskioldmedia.com',
-	            lastTranslator: 'Bernskiold Media <info@bernskioldmedia.com>',
-	            team: 'Bernskiold Media <info@bernskioldmedia.com>'
-	        } ))
-	        .pipe(gulp.dest('dist'));
-
-});
-
 // Watch...
 gulp.task('watch', function() {
 
@@ -97,8 +63,6 @@ gulp.task('watch', function() {
 
 	gulp.watch('assets/js/src/*.js', ['js']);
 
-	gulp.watch('assets/images/*.{png,jpg,gif}', ['img']);
-
 });
 
-gulp.task('default', ['sass', 'js', 'img', 'concat']);
+gulp.task('default', ['sass', 'js', 'concat']);

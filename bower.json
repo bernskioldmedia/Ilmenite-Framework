@@ -1,0 +1,22 @@
+{
+  "name": "ilmenite-framework",
+  "version": "1.0.0",
+  "authors": [
+    "Erik Bernskiold <erik@bernskioldmedia.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [
+    "node"
+  ],
+  "license": "GPL",
+  "homepage": "ilmenite.io",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
