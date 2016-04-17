@@ -5,4 +5,4 @@
  **/
 
 // Include Theme Framework
-require_once locate_template( '/core/class-theme.php' );
+require_once locate_template( '/includes/class-theme.php' );

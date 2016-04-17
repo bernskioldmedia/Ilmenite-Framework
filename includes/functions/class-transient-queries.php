@@ -8,6 +8,8 @@
  * Queries in here are used throughout the various
  * parts of the site.
  */
+namespace BernskioldMedia\Ilmenite_Theme;
+
 class Ilmenite_Transient_Queries {
 
 	public function __construct() {

@@ -2,6 +2,7 @@
 /**
  * Customizes the wp-login.php
  */
+namespace BernskioldMedia\Ilmenite_Theme;
 
 class Theme_Login {
 

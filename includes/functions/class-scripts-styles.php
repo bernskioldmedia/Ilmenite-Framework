@@ -5,6 +5,8 @@
  * Handles the loading of scripts and styles for the
  * theme through the proper enqueuing methods.
  **/
+namespace BernskioldMedia\Ilmenite_Theme;
+
 class Theme_Scripts_Styles {
 
 	public function __construct() {
