@@ -57,6 +57,27 @@ class Ilmenite_Theme {
 	public $theme_slug = '';
 
 	/**
+	 * Helper Functions Class Instance
+	 *
+	 * @var object
+	 */
+	public $helper;
+
+	/**
+	 * Template Functions Class Instance
+	 *
+	 * @var object
+	 */
+	public $template;
+
+	/**
+	 * Transient Queries Class Instance
+	 *
+	 * @var object
+	 */
+	public $transient;
+
+	/**
 	 * The single instance of the class
 	 *
 	 * @var object
@@ -209,11 +230,11 @@ class Ilmenite_Theme {
 
 		// Cleanup Functions.
 		require_once( $this->theme_dir . '/core/functions/class-cleanup.php' );
-		$this->cleanup = new Theme_Cleanup;
+		new Theme_Cleanup;
 
 		// Helper functions.
 		require_once( $this->theme_dir . '/core/functions/class-helper-functions.php' );
-		$this->helpers = new Theme_Helpers;
+		$this->helper = new Theme_Helpers;
 
 		// Transient Queries.
 		require_once( $this->theme_dir . '/core/functions/class-transient-queries.php' );
@@ -221,7 +242,7 @@ class Ilmenite_Theme {
 
 		// Load scripts, styles etc.
 		require_once( $this->theme_dir . '/core/functions/class-scripts-styles.php' );
-		$this->scripts_styles = new Theme_Scripts_Styles;
+		new Theme_Scripts_Styles;
 
 		// Sidebars.
 		require_once( $this->theme_dir . '/core/functions/sidebars.php' );
@@ -232,7 +253,7 @@ class Ilmenite_Theme {
 
 		// WP Login Customization.
 		require_once( $this->theme_dir . '/core/functions/class-wp-login.php' );
-		$this->wp_login = new Theme_Login;
+		new Theme_Login;
 
 	}
 
