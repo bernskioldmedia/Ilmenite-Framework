@@ -88,10 +88,10 @@ class Ilmenite_Theme {
 		$this->theme_version = '1.0';
 
 		// Theme Name.
-		$this->theme_name = __( 'THEMENAMEHERE', 'TEXTDOMAINTHEMENAME' );
+		$this->theme_name = __( 'THEMENAMEHERE', 'THEMETEXTDOMAIN' );
 
 		// Theme Slug.
-		$this->theme_slug = 'ilmenite';
+		$this->theme_slug = 'THEMETEXTDOMAIN';
 
 		// Theme Directory.
 		$this->theme_dir = get_template_directory();
@@ -172,7 +172,7 @@ class Ilmenite_Theme {
 		 * If you're building a theme based on Ilmenite, use a find and replace
 		 * to change 'ilmenite' to the name of your theme in all the template files
 		 */
-		load_theme_textdomain( 'ilmenite', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'THEMETEXTDOMAIN', get_template_directory() . '/languages' );
 
 	}
 
@@ -196,7 +196,7 @@ class Ilmenite_Theme {
 		if ( ! function_exists( 'register_navigation_menus' ) ) {
 
 			$locations = array(
-				'primary-menu' => __( 'Main Navigation', 'TEXTDOMAINTHEMENAME' ),
+				'primary-menu' => __( 'Main Navigation', 'THEMETEXTDOMAIN' ),
 			);
 
 			register_nav_menus( $locations );
@@ -271,7 +271,7 @@ class Ilmenite_Theme {
 
 	public function change_admin_footer_text() {
 
-		$text = sprintf( __( '%s Website Admin Panel. Website developed by <a href="https://www.bernskioldmedia.com/en/">Bernskiold Media</a>.', 'ilmenite' ), bloginfo( 'name' ) );
+		$text = sprintf( __( '%s Website Admin Panel. Website developed by <a href="https://www.bernskioldmedia.com/en/">Bernskiold Media</a>.', 'THEMETEXTDOMAIN' ), bloginfo( 'name' ) );
 
 		echo $text;
 

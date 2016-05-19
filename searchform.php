@@ -16,10 +16,10 @@ if ( get_search_query() ) {
 
 	<div class="input-group">
 
-		<input type="text" value="<?php echo esc_attr( $value ); ?>" name="s" id="s" placeholder="<?php esc_html_e( 'What are you looking for?', 'TEXTDOMAINTHEMENAME' ); ?>" class="input-group-field">
+		<input type="text" value="<?php echo esc_attr( $value ); ?>" name="s" id="s" placeholder="<?php esc_html_e( 'What are you looking for?', 'THEMETEXTDOMAIN' ); ?>" class="input-group-field">
 
 		<div class="input-group-button">
-			<input type="submit" id="searchsubmit" class="button" value="<?php esc_html_e( 'Search', 'TEXTDOMAINTHEMENAME' ); ?>" />
+			<input type="submit" id="searchsubmit" class="button" value="<?php esc_html_e( 'Search', 'THEMETEXTDOMAIN' ); ?>" />
 		</div>
 
 	</div>

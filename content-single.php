@@ -13,13 +13,13 @@
 		<li><?php the_category(' / '); ?></li>
 		<li>
 		<?php
-			comments_popup_link( __('No Comments', 'TEXTDOMAINTHEMENAME'), __('1 Comment', 'TEXTDOMAINTHEMENAME'), __('% Comments', 'TEXTDOMAINTHEMENAME'), 'comments-link', __('Comments Closed', 'TEXTDOMAINTHEMENAME') );
+			comments_popup_link( __('No Comments', 'THEMETEXTDOMAIN'), __('1 Comment', 'THEMETEXTDOMAIN'), __('% Comments', 'THEMETEXTDOMAIN'), 'comments-link', __('Comments Closed', 'THEMETEXTDOMAIN') );
 		?>
 		</li>
 	</ul>
 
 	<div class="post-body">
-		<?php the_content( __('Continue Reading &raquo;', 'TEXTDOMAINTHEMENAME') ); ?>
+		<?php the_content( __('Continue Reading &raquo;', 'THEMETEXTDOMAIN') ); ?>
 	</div>
 
 </article>
