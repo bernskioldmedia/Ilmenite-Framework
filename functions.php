@@ -4,5 +4,5 @@
  * Loads and configures the theme.
  **/
 
-// Include Theme Framework
+// Include Theme Framework.
 require_once locate_template( '/includes/class-theme.php' );

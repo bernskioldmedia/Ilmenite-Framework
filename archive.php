@@ -11,13 +11,13 @@ get_header(); ?>
 
     	<h1 class="page-title archives-title">
 			<?php if ( is_day() ) : ?>
-				<?php printf( __( 'Daily Archives: %s', 'THEMETEXTDOMAIN' ),'<span>' . get_the_date() . '</span>' ); ?>
+				<?php printf( esc_html__( 'Daily Archives: %s', 'THEMETEXTDOMAIN' ),'<span>' . get_the_date() . '</span>' ); ?>
 			<?php elseif ( is_month() ) : ?>
-				<?php printf( __( 'Monthly Archives: %s', 'THEMETEXTDOMAIN' ), '<span>' . get_the_date( 'F Y' ) . '</span>' ); ?>
+				<?php printf( esc_html__( 'Monthly Archives: %s', 'THEMETEXTDOMAIN' ), '<span>' . get_the_date( 'F Y' ) . '</span>' ); ?>
 			<?php elseif ( is_year() ) : ?>
-				<?php printf( __( 'Yearly Archives: %s', 'THEMETEXTDOMAIN' ), '<span>' . get_the_date( 'Y' ) . '</span>' ); ?>
+				<?php printf( esc_html__( 'Yearly Archives: %s', 'THEMETEXTDOMAIN' ), '<span>' . get_the_date( 'Y' ) . '</span>' ); ?>
 			<?php else : ?>
-				<?php _e( 'Blog Archives', 'THEMETEXTDOMAIN' ); ?>
+				<?php esc_html_e( 'Blog Archives', 'THEMETEXTDOMAIN' ); ?>
 			<?php endif; ?>
 		</h1>
 

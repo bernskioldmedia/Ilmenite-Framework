@@ -78,36 +78,6 @@ class Transient_Queries {
 
 	}
 
-	/**
-	 * Transients Get Posts Function
-	 *
-	 * General function that saves a get_posts call as a transient.
-	 *
-	 * @param  string $transient_name The name of the transient that will be saved.
-	 * @param  array  $query_args     The arguments for the custom query.
-	 * @param  int 	$transient_time A time for how long the data should be cached.
-	 */
-	public function get_posts( $transient_name, $query_args, $transient_time = HOUR_IN_SECONDS ) {
-
-		// Get the transient.
-		$results = get_transient( $transient_name );
-
-		// If the transient doesn't exist, set it.
-		if ( false === $results ) {
-
-			// Create the query.
-			$results = get_posts( $query_args );
-
-			// Save the query to a transient.
-			set_transient( $transient_name, $results, $transient_time );
-
-		}
-
-		// Return the query.
-		return $results;
-
-	}
-
 	function get_terms( $transient_name, $taxonomy_name, $taxonomy_args = '', $transient_time = HOUR_IN_SECONDS ) {
 
 		// Get the transient.
@@ -127,5 +97,4 @@ class Transient_Queries {
 		return $results;
 
 	}
-
 }

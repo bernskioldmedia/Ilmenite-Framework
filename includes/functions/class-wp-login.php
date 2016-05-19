@@ -43,5 +43,4 @@ class Theme_Login {
 	public function stylesheet() {
 		wp_enqueue_style( 'custom-login', Ilmenite_Theme()->get_theme_assets_uri() . '/css/style-login.css' );
 	}
-
 }

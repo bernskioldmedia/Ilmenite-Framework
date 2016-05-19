@@ -3,7 +3,7 @@
  * Template Name: Frontpage
  **/
 
-_x( 'Frontpage', 'frontpage page template name', 'THEMETEXTDOMAIN' );
+esc_html_x( 'Frontpage', 'frontpage page template name', 'THEMETEXTDOMAIN' );
 
 get_header(); ?>
 

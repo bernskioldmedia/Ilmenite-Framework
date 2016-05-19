@@ -56,5 +56,4 @@ class Theme_Scripts_Styles {
 		wp_enqueue_script( 'theme' );
 
 	}
-
 }

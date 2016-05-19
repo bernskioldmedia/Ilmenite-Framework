@@ -87,7 +87,7 @@ class Ilmenite_Theme {
 		$this->theme_version = '1.0';
 
 		// Theme Name.
-		$this->theme_name = __( 'THEMENAMEHERE', 'THEMETEXTDOMAIN' );
+		$this->theme_name = esc_html__( 'THEMENAMEHERE', 'THEMETEXTDOMAIN' );
 
 		// Theme Slug.
 		$this->theme_slug = 'THEMETEXTDOMAIN';
@@ -195,7 +195,7 @@ class Ilmenite_Theme {
 		if ( ! function_exists( 'register_navigation_menus' ) ) {
 
 			$locations = array(
-				'primary-menu' => __( 'Main Navigation', 'THEMETEXTDOMAIN' ),
+				'primary-menu' => esc_html__( 'Main Navigation', 'THEMETEXTDOMAIN' ),
 			);
 
 			register_nav_menus( $locations );
@@ -270,9 +270,9 @@ class Ilmenite_Theme {
 
 	public function change_admin_footer_text() {
 
-		$text = sprintf( __( '%s Website Admin Panel. Website developed by <a href="https://www.bernskioldmedia.com/en/">Bernskiold Media</a>.', 'THEMETEXTDOMAIN' ), bloginfo( 'name' ) );
+		$text = sprintf( esc_html__( '%s Website Admin Panel. Website developed by <a href="https://www.bernskioldmedia.com/en/">Bernskiold Media</a>.', 'THEMETEXTDOMAIN' ), bloginfo( 'name' ) );
 
-		echo $text;
+		echo wp_kses_post( $text );
 
 	}
 

@@ -20,5 +20,4 @@ class Theme_Helpers {
 	 * Theme Helpers Constructor
 	 */
 	public function __construct() {}
-
 }

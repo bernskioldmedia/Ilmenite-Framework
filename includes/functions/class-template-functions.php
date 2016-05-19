@@ -26,8 +26,9 @@ class Template_Functions {
 	 */
 	public function pagination( $arrows = true, $ends = true, $pages = 2 ) {
 
-        if ( is_singular() )
+        if ( is_singular() ) {
         	return;
+        }
 
         global $wp_query, $paged;
 
@@ -35,40 +36,49 @@ class Template_Functions {
 
         $max_page = $wp_query->max_num_pages;
 
-        if ( $max_page == 1 )
+        if ( $max_page == 1 ) {
         	return;
+        }
 
-        if ( empty( $paged ) )
+        if ( empty( $paged ) ) {
         	$paged = 1;
+        }
 
-        if ( $arrows )
-        	$pagination .= $this->pagination_link( $paged - 1, 'arrow' . ( ( $paged <= 1 ) ? ' unavailable' : '' ), '&laquo;', __( 'Previous Page', 'ilmenite' ) );
+        if ( $arrows ) {
+        	$pagination .= $this->pagination_link( $paged - 1, 'arrow' . ( ( $paged <= 1 ) ? ' unavailable' : '' ), '&laquo;', esc_html__( 'Previous Page', 'THEMETEXTDOMAIN' ) );
+        }
 
-        if ( $ends && $paged > $pages + 1 )
+        if ( $ends && $paged > $pages + 1 ) {
         	$pagination .= $this->pagination_link( 1 );
+        }
 
-        if ( $ends && $paged > $pages + 2 )
+        if ( $ends && $paged > $pages + 2 ) {
         	$pagination .= $this->pagination_link( 1, 'unavailable', '&hellip;' );
+        }
 
         for ( $i = $paged - $pages; $i <= $paged + $pages; $i++ ) {
 
-            if ( $i > 0 && $i <= $max_page )
+            if ( $i > 0 && $i <= $max_page ) {
                 $pagination .= $this->pagination_link( $i, ( $i == $paged ) ? 'current' : '' );
+            }
 
         }
-        if ( $ends && $paged < $max_page - $pages - 1 )
+        if ( $ends && $paged < $max_page - $pages - 1 ) {
         	$pagination .= $this->pagination_link( $max_page, 'unavailable', '&hellip;' );
+        }
 
-        if ( $ends && $paged < $max_page - $pages )
+        if ( $ends && $paged < $max_page - $pages ) {
         	$pagination .= $this->pagination_link( $max_page );
+        }
 
-        if ( $arrows )
-        	$pagination .= $this->pagination_link( $paged + 1, 'arrow' . ( ( $paged >= $max_page ) ? ' unavailable' : '' ), '&raquo;', __( 'Next Page', 'ilmenite' ) );
+        if ( $arrows ) {
+        	$pagination .= $this->pagination_link( $paged + 1, 'arrow' . ( ( $paged >= $max_page ) ? ' unavailable' : '' ), '&raquo;', esc_html__( 'Next Page', 'THEMETEXTDOMAIN' ) );
+        }
 
         $pagination = '<ul class="pagination">' . $pagination . '</ul>';
         $pagination = '<div class="pagination-centered">' . $pagination . '</div>';
 
-        echo $pagination;
+        echo wp_kses_post( $pagination );
     }
 
     /**
@@ -85,7 +95,7 @@ class Template_Functions {
 
         $class = empty( $class ) ? $class : " class=\"$class\"";
         $content = ! empty( $content ) ? $content : $page;
-        $title = ! empty( $title ) ? $title : sprintf( __( 'Page %s', 'ilmenite' ), $page );
+        $title = ! empty( $title ) ? $title : sprintf( esc_html__( 'Page %s', 'THEMETEXTDOMAIN' ), $page );
 
         return "<li$class><a id=\"$id\" href=\"$href\" title=\"$title\">$content</a></li>\n";
     }
@@ -103,25 +113,31 @@ class Template_Functions {
     public function get_excerpt( $limit = 50, $text = false ) {
 
         if ( $text ) {
-            $excerpt = explode(' ', $text, $limit);
+
+            $excerpt = explode( ' ', $text, $limit );
+
         } else {
 
         	global $post;
 
-            $excerpt = explode(' ', get_the_excerpt(), $limit);
+            $excerpt = explode( ' ', get_the_excerpt(), $limit );
         }
 
         if ( count( $excerpt ) >= $limit ) {
+
         	array_pop( $excerpt );
+
             $excerpt = implode( " ", $excerpt ) . '...';
+
         } else {
+
             $excerpt = implode( " ", $excerpt );
+
         }
 
         $excerpt = strip_tags( preg_replace( '`\[[^\]]*\]`', '', $excerpt ) );
 
-        return $excerpt;
+        return wp_kses_post( $excerpt );
 
     }
-
 }

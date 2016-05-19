@@ -19,7 +19,7 @@
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'THEMETEXTDOMAIN' ); ?></a>
 
 		<?php wp_nav_menu(array(
-			'theme_location' => 'primary-menu',
-			'container'      => 'nav',
-			'container_id'   => 'primary-navigation',
+			'theme_location' 	=> 'primary-menu',
+			'container'      	=> 'nav',
+			'container_class'   => 'primary-navigation',
 		)); ?>

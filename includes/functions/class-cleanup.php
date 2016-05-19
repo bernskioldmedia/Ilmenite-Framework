@@ -106,6 +106,6 @@ class Theme_Cleanup {
 		}
 
 		return $query_vars;
-	}
 
+	}
 }

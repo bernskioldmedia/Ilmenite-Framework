@@ -3,7 +3,7 @@
  * Template Name: Fullwidth
  **/
 
-_x( 'Fullwidth', 'frontpage page template name', 'THEMETEXTDOMAIN' );
+esc_html_x( 'Fullwidth', 'frontpage page template name', 'THEMETEXTDOMAIN' );
 
 get_header(); ?>
 
