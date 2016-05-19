@@ -4,9 +4,16 @@
  *
  * These template functions are small functions to include various
  * types of template code in the theme, abstracted and re-usable.
+ *
+ * @package BernskioldMedia\Ilmenite_Theme
  */
 namespace BernskioldMedia\Ilmenite_Theme;
 
+/**
+ * Class Template_Functions
+ *
+ * @package BernskioldMedia\Ilmenite_Theme
+ */
 class Template_Functions {
 
 	/**

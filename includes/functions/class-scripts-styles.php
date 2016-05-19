@@ -7,8 +7,16 @@
  **/
 namespace BernskioldMedia\Ilmenite_Theme;
 
+/**
+ * Theme_Scripts_Styles Class
+ *
+ * @package BernskioldMedia\Ilmenite_Theme
+ */
 class Theme_Scripts_Styles {
 
+	/**
+	 * Theme_Scripts_Styles Constructor
+	 */
 	public function __construct() {
 
 		// Styles
@@ -27,11 +35,10 @@ class Theme_Scripts_Styles {
 	public function styles() {
 
 		// Register
-		// wp_register_style( $handle, $src, $deps, $ver, $media );
-		wp_register_style( 'layout', Ilmenite_Theme()->get_theme_assets_uri() . '/css/layout.css', false, Ilmenite_Theme()->get_theme_version(), 'all' );
+		wp_register_style( 'main', Ilmenite_Theme()->get_theme_assets_uri() . '/css/main.css', false, Ilmenite_Theme()->get_theme_version(), 'all' );
 
 		// Enqueue
-		wp_enqueue_style( 'layout' );
+		wp_enqueue_style( 'main' );
 
 	}
 

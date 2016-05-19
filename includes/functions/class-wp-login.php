@@ -1,11 +1,21 @@
 <?php
 /**
  * Customizes the wp-login.php
+ *
+ * @package BernskioldMedia\Ilmenite_Theme
  */
 namespace BernskioldMedia\Ilmenite_Theme;
 
+/**
+ * Class Theme_Login
+ *
+ * @package BernskioldMedia\Ilmenite_Theme
+ */
 class Theme_Login {
 
+	/**
+	 * Theme Login Class Constructor
+	 */
 	public function __construct() {
 
 		// Customize Logo URL
@@ -19,7 +29,7 @@ class Theme_Login {
 	/**
 	 * Custom Link for Login Page Logo
 	 *
-	 * @return string Login URL
+	 * @return string Login URL.
 	 */
 	public function logo_url() {
 		return home_url();

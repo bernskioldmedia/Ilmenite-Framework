@@ -2,7 +2,7 @@
 /**
  * Registers Sidebars
  */
-if( function_exists( 'register_sidebar' ) ) {
+if ( function_exists( 'register_sidebar' ) ) {
 
 	// Sets up a default sidebar.
 	register_sidebar(array(

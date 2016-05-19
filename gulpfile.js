@@ -21,7 +21,7 @@ var plumberErrorHandler = { errorHandler: notify.onError({
 // SASS
 gulp.task('sass', function () {
 
-    return gulp.src('assets/scss/layout.scss')
+    return gulp.src('assets/scss/main.scss')
     	.pipe(plumber(plumberErrorHandler))
     	.pipe(sass({outputStyle: 'compressed'}))
     	.pipe(autoprefixer({

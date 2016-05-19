@@ -13,6 +13,9 @@
  * Foundation is our CSS framework of choice. It contains a lot of different
  * things, much more than we typically need. Therefore, only load the minimum
  * of what you need here by including only the necessary components.
+ *
+ * IMPORTANT: If you uncomment/comment a part here, don't forget to update the
+ * corresponding one in foundation/foundation.scss too!
  */
 
 // Include Foundation

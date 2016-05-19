@@ -10,10 +10,15 @@
  * code more modular and easy to maintain and use.
  *
  * @author Bernskiold Media <info@bernskioldmedia.com>
- * @package Ilmenite Theme
+ * @package BernskioldMedia\Ilmenite_Theme
  */
 namespace BernskioldMedia\Ilmenite_Theme;
 
+/**
+ * Class Ilmenite_Theme
+ *
+ * @package BernskioldMedia\Ilmenite_Theme
+ */
 class Ilmenite_Theme {
 
 	/**
@@ -53,10 +58,17 @@ class Ilmenite_Theme {
 
 
 	/**
-	 * @var The single instance of the class
+	 * The single instance of the class
+	 *
+	 * @var object
 	 */
 	protected static $_instance = null;
 
+	/**
+	 * Class Instance
+	 *
+	 * @return object Instance Object.
+	 */
 	public static function instance() {
 
 	    if ( is_null( self::$_instance ) ) {
@@ -72,43 +84,42 @@ class Ilmenite_Theme {
 	 **/
 	public function __construct() {
 
-		// Theme Version
+		// Theme Version.
 		$this->theme_version = '1.0';
 
-		// Theme Name
+		// Theme Name.
 		$this->theme_name = __( 'THEMENAMEHERE', 'TEXTDOMAINTHEMENAME' );
 
-		// Theme Slug
+		// Theme Slug.
 		$this->theme_slug = 'ilmenite';
 
-		// Theme Directory
+		// Theme Directory.
 		$this->theme_dir = get_template_directory();
 
-		// Theme URI
+		// Theme URI.
 		$this->theme_uri = get_template_directory_uri();
 
-		// Add WordPress default add_theme_support
+		// Add WordPress default add_theme_support.
 		add_action( 'after_setup_theme', array( $this, 'theme_support' ) );
 
-		// Load functions
+		// Load functions.
 		add_action( 'init', array( $this, 'functions' ) );
 
-		// Load custom dashboard widgets
+		// Load custom dashboard widgets.
 		add_action( 'admin_init', array( $this, 'dashboard_widgets' ) );
 
-		// Remove non-necessary dashboard widgets
+		// Remove non-necessary dashboard widgets.
 		add_action( 'wp_dashboard_setup', array( $this, 'remove_dashboard_widgets' ) );
 
-		// Add custom image sizes
+		// Add custom image sizes.
 		add_action( 'after_setup_theme', array( $this, 'custom_image_sizes' ) );
 
-		// Add navigation menus
+		// Add navigation menus.
 		add_action( 'after_setup_theme', array( $this, 'register_navigation_menus' ) );
 
-		// Customize Admin
+		// Customize Admin.
 		add_filter( 'admin_footer_text', array( $this, 'change_admin_footer_text' ) );
 		add_action( 'admin_menu', array( $this, 'admin_no_footer_version' ) );
-		add_action( 'admin_head', array( $this, 'admin_dashboard_title' ) );
 
 	}
 
@@ -170,13 +181,10 @@ class Ilmenite_Theme {
 	 */
 	public function custom_image_sizes() {
 
-		// Set standard sizes
-		add_image_size( 'large', 1024, '', true ); // Large Thumbnail
-		add_image_size( 'medium', 640, '', true ); // Medium Thumbnail
-		add_image_size( 'small', 300, '', true ); // Small Thumbnail
-
-		// Custom Image Declaration
-		// add_image_size( $name, $width, $height, $crop );
+		// Set standard sizes.
+		add_image_size( 'large', 1024, '', true ); // Large Thumbnail.
+		add_image_size( 'medium', 640, '', true ); // Medium Thumbnail.
+		add_image_size( 'small', 300, '', true ); // Small Thumbnail.
 
 	}
 
@@ -202,29 +210,30 @@ class Ilmenite_Theme {
 	 **/
 	public function functions() {
 
-		// Cleanup Functions
+		// Cleanup Functions.
 		require_once( $this->theme_dir . '/core/functions/class-cleanup.php' );
 		$this->cleanup = new Theme_Cleanup;
 
-		// Helper functions
+		// Helper functions.
 		require_once( $this->theme_dir . '/core/functions/class-helper-functions.php' );
 		$this->helpers = new Theme_Helpers;
 
-		// Transient Queries
-		require_once( $this->theme_dir . '/core/functions/transient-queries.php' );
+		// Transient Queries.
+		require_once( $this->theme_dir . '/core/functions/class-transient-queries.php' );
 		$this->transient = new Transient_Queries;
 
 		// Load scripts, styles etc.
 		require_once( $this->theme_dir . '/core/functions/class-scripts-styles.php' );
 		$this->scripts_styles = new Theme_Scripts_Styles;
 
-		// Sidebars
+		// Sidebars.
 		require_once( $this->theme_dir . '/core/functions/sidebars.php' );
 
-		// UI Element Functions
-		require_once( $this->theme_dir . '/core/functions/template-tags.php' );
+		// UI Element Functions.
+		require_once( $this->theme_dir . '/core/functions/class-template-functions.php' );
+		$this->template = new Template_Functions;
 
-		// WP Login Customization
+		// WP Login Customization.
 		require_once( $this->theme_dir . '/core/functions/class-wp-login.php' );
 		$this->wp_login = new Theme_Login;
 
@@ -235,13 +244,13 @@ class Ilmenite_Theme {
 	 **/
 	public function dashboard_widgets() {
 
-		// Website Welcome Widget
+		// Website Welcome Widget.
 		require_once( $this->theme_dir . '/core/dashboard-widgets/class-bm-dashboard-welcome.php' );
 
-		// RSS Widget Showing Agency Blog Posts
+		// RSS Widget Showing Agency Blog Posts.
 		require_once( $this->theme_dir . '/core/dashboard-widgets/class-bm-dashboard-rss.php' );
 
-		// Support Widget
+		// Support Widget.
 		require_once( $this->theme_dir . '/core/dashboard-widgets/class-bm-dashboard-support.php' );
 
 	}
@@ -250,7 +259,7 @@ class Ilmenite_Theme {
 
 		global $wp_meta_boxes;
 
-		// Hide Some Default Dashboard Widgets
+		// Hide Some Default Dashboard Widgets.
 		unset( $wp_meta_boxes['dashboard']['normal']['core']['dashboard_plugins'] );
 		unset( $wp_meta_boxes['dashboard']['side']['core']['dashboard_primary'] );
 		unset( $wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary'] );
@@ -272,15 +281,6 @@ class Ilmenite_Theme {
 	    remove_filter( 'update_footer', 'core_update_footer' );
 	}
 
-	public function admin_dashboard_title(){
-
-	    if ( $GLOBALS['title'] != 'Dashboard' ){
-	        return;
-	    }
-
-	    $GLOBALS['title'] =  __( 'Business Dashboard', 'ilmenite' );
-	}
-
 	/**
 	 * Get Theme URI
 	 */
@@ -292,7 +292,7 @@ class Ilmenite_Theme {
 	 * Get Theme Path
 	 */
 	public function get_theme_path() {
-		return $this->theme_path;
+		return $this->theme_dir;
 	}
 
 	/**
@@ -338,4 +338,4 @@ function theme() {
 
 // Initialize the class instance only once,
 // because we need it to run right away.
-BernskioldMedia\Ilmenite_Theme\theme();
+theme();

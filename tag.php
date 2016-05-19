@@ -27,7 +27,7 @@ get_header(); ?>
 	    	if(function_exists('wp_pagenavi')) :
 	    		wp_pagenavi(); // Add support for the WP-Pagenavi plugin if it is installed. Otherwise use the default.
 	    	else :
-	    		ilmenite_pagination();
+	    		BernskioldMedia\Ilmenite_Theme\theme()->template->pagination();
 	    	endif;
 		?>
 

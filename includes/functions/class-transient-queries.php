@@ -7,17 +7,33 @@
  *
  * Queries in here are used throughout the various
  * parts of the site.
+ *
+ * @package BernskioldMedia\Ilmenite_Theme
  */
 namespace BernskioldMedia\Ilmenite_Theme;
 
-class Ilmenite_Transient_Queries {
+/**
+ * Class Transient_Queries
+ *
+ * @package BernskioldMedia\Ilmenite_Theme
+ */
+class Transient_Queries {
 
+	/**
+	 * Class Transient_Queries Constructor
+	 */
 	public function __construct() {
 
-
+		// Hook the cleaning to save post.
+		// add_action( 'save_post', array( $this, 'cleaning' ) );
 
 	}
 
+	/**
+	 * Run Cleaning Functions for the Transient Queries
+	 *
+	 * The funciton is hooked to save post in the constructor above.
+	 */
 	public function cleaning() {
 
 	}
@@ -33,18 +49,18 @@ class Ilmenite_Transient_Queries {
 	 */
 	public function get_query( $transient_name, $query_args, $transient_time = HOUR_IN_SECONDS ) {
 
-		// Get the transient
+		// Get the transient.
 		$results = get_transient( $transient_name );
 
-		// If the transient doesn't exist, set it
+		// If the transient doesn't exist, set it.
 		if ( false === $results ) {
 
-			// Create the query
+			// Create the query.
 			$results = new WP_Query( $query_args );
 
 			if ( $transient_time ) {
 
-				// Save the query to a transient with expiration time
+				// Save the query to a transient with expiration time.
 				set_transient( $transient_name, $results, $transient_time );
 
 			} else {
@@ -57,7 +73,7 @@ class Ilmenite_Transient_Queries {
 
 		}
 
-		// Return the query
+		// Return the query.
 		return $results;
 
 	}
@@ -73,37 +89,37 @@ class Ilmenite_Transient_Queries {
 	 */
 	public function get_posts( $transient_name, $query_args, $transient_time = HOUR_IN_SECONDS ) {
 
-		// Get the transient
+		// Get the transient.
 		$results = get_transient( $transient_name );
 
-		// If the transient doesn't exist, set it
+		// If the transient doesn't exist, set it.
 		if ( false === $results ) {
 
-			// Create the query
+			// Create the query.
 			$results = get_posts( $query_args );
 
-			// Save the query to a transient
+			// Save the query to a transient.
 			set_transient( $transient_name, $results, $transient_time );
 
 		}
 
-		// Return the query
+		// Return the query.
 		return $results;
 
 	}
 
 	function get_terms( $transient_name, $taxonomy_name, $taxonomy_args = '', $transient_time = HOUR_IN_SECONDS ) {
 
-		// Get the transient
+		// Get the transient.
 		$results = get_transient( $transient_name );
 
-		// If the transient doesn't exist, set it
+		// If the transient doesn't exist, set it.
 		if ( false === $results ) {
 
-			// Get the terms
+			// Get the terms.
 			$results = get_terms( $taxonomy_name, $taxonomy_args );
 
-			// Save the terms to a transient
+			// Save the terms to a transient.
 			set_transient( $transient_name, $results, $transient_time );
 
 		}
