@@ -2,12 +2,33 @@
 
 The Ilmenite Framework is a custom theme starter framework for WordPress made by Bernskiold Media used as a base for all our themes. The framework is meant to be customized and turned into a fully customized template, removing all references to "Ilmenite Framework".
 
-All functions that extend WordPress are organized neatly in the core/ directory through subfolders and the theme set up using a base class in core/theme.php.
+All functions that extend WordPress are organized neatly in the includes/ directory through subfolders and the theme set up using a base class in includes/theme.php.
 
-The framework is currently made to be used with Foundation 5 (CSS Framework) and as such out of the box includes our customization of our workflow based on Foundation 5 by Zurb, however this can be easily changed.
+The framework is currently made to be used with Foundation 6 (CSS Framework) and as such out of the box includes our customization of our workflow based on Foundation 6 by Zurb, however this can be easily changed.
+
+## Getting Started
+To get started with this starter theme, follow this checklist to turn it into your own:
+
+1. Update style.css with your own information.
+2. Update package.json with your own information.
+3. Update bower.json with your own information.
+4. Replace `THEMETEXTDOMAIN` across the theme with your own textdomain.
+5. Replace the namespace `BernskioldMedia\ClientName\Theme` with your own namespace across the whole theme.
+6. Initialize node via `npm install`
+7. Run Gulp using `gulp watch`
+8. Open the main.js file under `assets/js/src/main.js` and save it to generate the minified JS files.
+9. Open the main.scss file in `assets/scss/main.scss`.
+
+And that's it. You're ready to work!
 
 ## Changelog
 You will not find references to these version numbers within the code as everything will be versioned 1.0 to make theme development faster.
+
+**Version 2.0**
+* Reengineered the entire structure to use an OOP, class-based approach.
+* Updated Foundation
+* Added bower.json
+* Fixed
 
 **Version 1.5**
 * Updated Foundation
@@ -58,4 +79,4 @@ You will not find references to these version numbers within the code as everyth
 + Added editor-style.css styles to load from layout.css
 
 **Version 1.0**
-First framework release.
+* First framework release.

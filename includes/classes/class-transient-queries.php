@@ -47,7 +47,7 @@ class Transient_Queries {
 	 * @param  array  $query_args     The arguments for the custom query.
 	 * @param  int 	$transient_time A time for how long the data should be cached.
 	 */
-	public function get_query( $transient_name, $query_args, $transient_time = HOUR_IN_SECONDS ) {
+	public function get_query( $transient_name, $query_args, $transient_time = HOUR_IN_SECONDS ) {
 
 		// Get the transient.
 		$results = get_transient( $transient_name );
@@ -56,7 +56,7 @@ class Transient_Queries {
 		if ( false === $results ) {
 
 			// Create the query.
-			$results = new WP_Query( $query_args );
+			$results = new \WP_Query( $query_args );
 
 			if ( $transient_time ) {
 

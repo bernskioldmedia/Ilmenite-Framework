@@ -141,6 +141,9 @@ class Ilmenite_Theme {
 		add_filter( 'admin_footer_text', array( $this, 'change_admin_footer_text' ) );
 		add_action( 'admin_menu', array( $this, 'admin_no_footer_version' ) );
 
+		// Sidebars.
+		require_once( $this->theme_dir . '/includes/sidebars.php' );
+
 	}
 
 	/**
@@ -226,33 +229,30 @@ class Ilmenite_Theme {
 	/**
 	 * Loads Core Functions and Classes
 	 **/
-	public function functions() {
+	public function classes() {
 
 		// Cleanup Functions.
-		require_once( $this->theme_dir . '/core/functions/class-cleanup.php' );
+		require_once( $this->theme_dir . '/includes/classes/class-cleanup.php' );
 		new Theme_Cleanup;
 
 		// Helper functions.
-		require_once( $this->theme_dir . '/core/functions/class-helper-functions.php' );
+		require_once( $this->theme_dir . '/includes/classes/class-helper-functions.php' );
 		$this->helper = new Theme_Helpers;
 
 		// Transient Queries.
-		require_once( $this->theme_dir . '/core/functions/class-transient-queries.php' );
+		require_once( $this->theme_dir . '/includes/classes/class-transient-queries.php' );
 		$this->transient = new Transient_Queries;
 
 		// Load scripts, styles etc.
-		require_once( $this->theme_dir . '/core/functions/class-scripts-styles.php' );
+		require_once( $this->theme_dir . '/includes/classes/class-scripts-styles.php' );
 		new Theme_Scripts_Styles;
 
-		// Sidebars.
-		require_once( $this->theme_dir . '/core/functions/sidebars.php' );
-
 		// UI Element Functions.
-		require_once( $this->theme_dir . '/core/functions/class-template-functions.php' );
+		require_once( $this->theme_dir . '/includes/classes/class-template-functions.php' );
 		$this->template = new Template_Functions;
 
 		// WP Login Customization.
-		require_once( $this->theme_dir . '/core/functions/class-wp-login.php' );
+		require_once( $this->theme_dir . '/includes/classes/class-wp-login.php' );
 		new Theme_Login;
 
 	}
@@ -263,13 +263,13 @@ class Ilmenite_Theme {
 	public function dashboard_widgets() {
 
 		// Website Welcome Widget.
-		require_once( $this->theme_dir . '/core/dashboard-widgets/class-bm-dashboard-welcome.php' );
+		require_once( $this->theme_dir . '/includes/dashboard-widgets/class-bm-dashboard-welcome.php' );
 
 		// RSS Widget Showing Agency Blog Posts.
-		require_once( $this->theme_dir . '/core/dashboard-widgets/class-bm-dashboard-rss.php' );
+		require_once( $this->theme_dir . '/includes/dashboard-widgets/class-bm-dashboard-rss.php' );
 
 		// Support Widget.
-		require_once( $this->theme_dir . '/core/dashboard-widgets/class-bm-dashboard-support.php' );
+		require_once( $this->theme_dir . '/includes/dashboard-widgets/class-bm-dashboard-support.php' );
 
 	}
 

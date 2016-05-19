@@ -35,7 +35,7 @@ class Theme_Scripts_Styles {
 	public function styles() {
 
 		// Register
-		wp_register_style( 'main', Ilmenite_Theme()->get_theme_assets_uri() . '/css/main.css', false, Ilmenite_Theme()->get_theme_version(), 'all' );
+		wp_register_style( 'main', theme()->get_theme_assets_uri() . '/css/main.css', false, theme()->get_theme_version(), 'all' );
 
 		// Enqueue
 		wp_enqueue_style( 'main' );
@@ -48,8 +48,8 @@ class Theme_Scripts_Styles {
 	public function scripts() {
 
 		// Register
-		wp_register_script( 'modernizr', Ilmenite_Theme()->get_theme_assets_uri() . '/js/src/vendor/modernizr.min.js', false, '2.8.3', false );
-		wp_register_script( 'theme', Ilmenite_Theme()->get_theme_assets_uri() . '/js/theme.min.js', array( 'jquery' ), Ilmenite_Theme()->get_theme_version(), true );
+		wp_register_script( 'modernizr', theme()->get_theme_assets_uri() . '/js/src/vendor/modernizr.min.js', false, '2.8.3', false );
+		wp_register_script( 'theme', theme()->get_theme_assets_uri() . '/js/theme.min.js', array( 'jquery' ), theme()->get_theme_version(), true );
 
 		// Enqueue
 		wp_enqueue_script( 'modernizr' );
