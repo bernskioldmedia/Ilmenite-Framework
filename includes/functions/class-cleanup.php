@@ -64,7 +64,7 @@ class Theme_Cleanup {
 	 *
 	 * @link https://gist.github.com/965956
 	 */
-	public function wrap_oembed( $cache, $url, $attr = '', $post_ID = '' ) {
+	public function wrap_oembed( $cache, $url, $attr = '', $post_id = '' ) {
 
 		return '<div class="flex-video widescreen">' . $cache . '</div>';
 
@@ -80,8 +80,9 @@ class Theme_Cleanup {
 
 		global $wp_rewrite;
 
-		if ( ! isset( $wp_rewrite ) || ! is_object( $wp_rewrite ) || ! $wp_rewrite->using_permalinks() )
+		if ( ! isset( $wp_rewrite ) || ! is_object( $wp_rewrite ) || ! $wp_rewrite->using_permalinks() ) {
 			return;
+		}
 
 		$search_base = $wp_rewrite->search_base;
 
