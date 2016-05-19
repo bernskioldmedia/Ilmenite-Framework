@@ -18,7 +18,7 @@ if ( ! class_exists( 'BM_Dashboard_RSS' ) ) :
                global $wp_meta_boxes;
 
                // add a custom dashboard widget
-               wp_add_dashboard_widget( 'dashboard_custom_feed', __( 'From the Bernskiold Media Academy', 'ilmenite' ), array( $this, 'widget_output' ) );
+               wp_add_dashboard_widget( 'dashboard_custom_feed', __( 'From the Bernskiold Media Academy', 'THEMETEXTDOMAIN' ), array( $this, 'widget_output' ) );
           }
 
           /**
@@ -31,8 +31,8 @@ if ( ! class_exists( 'BM_Dashboard_RSS' ) ) :
                echo '<div class="rss-widget">';
 
                     wp_widget_rss_output(array(
-                         'url'          => _x( 'https://www.bernskioldmedia.com/en/feed/', 'bernskiold media rss feed url', 'ilmenite' ),
-                         'title'        => __( 'From the Bernskiold Media Academy', 'ilmenite' ),
+                         'url'          => _x( 'https://www.bernskioldmedia.com/en/feed/', 'bernskiold media rss feed url', 'THEMETEXTDOMAIN' ),
+                         'title'        => __( 'From the Bernskiold Media Academy', 'THEMETEXTDOMAIN' ),
                          'items'        => 4,
                          'show_summary' => 1,
                          'show_author'  => 0,

@@ -16,7 +16,7 @@
 
 	<div id="page" class="hfeed site">
 
-		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'ilmenite' ); ?></a>
+		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'THEMETEXTDOMAIN' ); ?></a>
 
 		<?php wp_nav_menu(array(
 			'theme_location' => 'primary-menu',

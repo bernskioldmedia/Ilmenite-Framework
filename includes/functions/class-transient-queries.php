@@ -8,14 +8,14 @@
  * Queries in here are used throughout the various
  * parts of the site.
  *
- * @package BernskioldMedia\Ilmenite_Theme
+ * @package BernskioldMedia\ClientName\Theme
  */
-namespace BernskioldMedia\Ilmenite_Theme;
+namespace BernskioldMedia\ClientName\Theme;
 
 /**
  * Class Transient_Queries
  *
- * @package BernskioldMedia\Ilmenite_Theme
+ * @package BernskioldMedia\ClientName\Theme
  */
 class Transient_Queries {
 

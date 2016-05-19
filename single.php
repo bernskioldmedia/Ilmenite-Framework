@@ -5,6 +5,8 @@
 
 get_header(); ?>
 
+<main class="main" role="main">
+
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 			<?php get_template_part('content', 'single'); ?>
@@ -20,5 +22,7 @@ get_header(); ?>
 	<?php endif; ?>
 
 	<?php get_sidebar(); ?>
+
+</main>
 
 <?php get_footer(); ?>

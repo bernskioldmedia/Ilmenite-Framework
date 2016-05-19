@@ -3,20 +3,22 @@
  * Template Name: Frontpage
  **/
 
-_x( 'Frontpage', 'frontpage page template name', 'ilmenite' );
+_x( 'Frontpage', 'frontpage page template name', 'THEMETEXTDOMAIN' );
 
 get_header(); ?>
 
-	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<main class="main" role="main">
 
-		<?php get_template_part('content', 'page'); ?>
+	<?php if ( have_posts() ) : ?>
 
-	<?php endwhile; ?>
+		<?php while ( have_posts() ) : the_post(); ?>
 
-	<?php else : ?>
+			<?php get_template_part( 'content', 'page' ); ?>
 
-		<?php get_template_part('content', '404'); ?>
+		<?php endwhile; ?>
 
 	<?php endif; ?>
+
+</main>
 
 <?php get_footer(); ?>

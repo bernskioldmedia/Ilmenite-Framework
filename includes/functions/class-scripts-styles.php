@@ -5,12 +5,12 @@
  * Handles the loading of scripts and styles for the
  * theme through the proper enqueuing methods.
  **/
-namespace BernskioldMedia\Ilmenite_Theme;
+namespace BernskioldMedia\ClientName\Theme;
 
 /**
  * Theme_Scripts_Styles Class
  *
- * @package BernskioldMedia\Ilmenite_Theme
+ * @package BernskioldMedia\ClientName\Theme
  */
 class Theme_Scripts_Styles {
 

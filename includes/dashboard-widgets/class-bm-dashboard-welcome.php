@@ -18,7 +18,7 @@ if ( ! class_exists( 'BM_Dashboard_Welcome' ) ) :
               global $wp_meta_boxes;
 
               // add a custom dashboard widget
-              add_meta_box( 'dashboard_bm_welcome_widget', __( 'Welcome To Your Website', 'ilmenite' ), array( $this, 'widget_output' ), 'dashboard', 'side', 'high' );
+              add_meta_box( 'dashboard_bm_welcome_widget', __( 'Welcome To Your Website', 'THEMETEXTDOMAIN' ), array( $this, 'widget_output' ), 'dashboard', 'side', 'high' );
 
           }
 
@@ -35,8 +35,8 @@ if ( ! class_exists( 'BM_Dashboard_Welcome' ) ) :
             ob_start(); ?>
 
               <div class="welcome-panel-content">
-                <p class="about-description"><?php _e( 'Your business dashboard shows you important and relevant information about your website available at your fingertips.', 'ilmenite' ); ?></p>
-                <p><?php _e( 'If you ever need any support, just use the support widget here to send a message to our helpdesk which is available to answer your questions.', 'ilmenite' ); ?></p>
+                <p class="about-description"><?php _e( 'Your business dashboard shows you important and relevant information about your website available at your fingertips.', 'THEMETEXTDOMAIN' ); ?></p>
+                <p><?php _e( 'If you ever need any support, just use the support widget here to send a message to our helpdesk which is available to answer your questions.', 'THEMETEXTDOMAIN' ); ?></p>
               </div>
 
             <?php

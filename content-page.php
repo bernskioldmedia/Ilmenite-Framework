@@ -3,8 +3,7 @@
  * Content Template for Pages
  **/
 ?>
-
-<article id="page-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="page-<?php the_ID(); ?>" <?php post_class( 'page-item' ); ?>>
 
 	<h1 class="page-title"><?php the_title(); ?></h1>
 

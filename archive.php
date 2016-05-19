@@ -5,6 +5,8 @@
 
 get_header(); ?>
 
+<main class="main" role="main">
+
 	<?php if ( have_posts() ) : ?>
 
     	<h1 class="page-title archives-title">
@@ -19,19 +21,13 @@ get_header(); ?>
 			<?php endif; ?>
 		</h1>
 
-    		<?php while ( have_posts() ) : the_post(); ?>
+    	<?php while ( have_posts() ) : the_post(); ?>
 
-        		<?php get_template_part('content', get_post_format()); ?>
+        	<?php get_template_part( 'content', get_post_format() ); ?>
 
- 			<?php endwhile; ?>
+ 		<?php endwhile; ?>
 
-		<?php
-			if(function_exists('wp_pagenavi')) :
-				wp_pagenavi(); // Add support for the WP-Pagenavi plugin if it is installed. Otherwise use the default.
-			else :
-				BernskioldMedia\Ilmenite_Theme\theme()->template->pagination();
-			endif;
-		?>
+		<?php  BernskioldMedia\ClientName\Theme\theme()->template->pagination(); ?>
 
 	<?php else : ?>
 
@@ -40,5 +36,7 @@ get_header(); ?>
 	<?php endif; ?>
 
 	<?php get_sidebar(); ?>
+
+</main>
 
 <?php get_footer(); ?>

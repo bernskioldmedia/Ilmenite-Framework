@@ -5,7 +5,7 @@
  * Some things added to WordPress are not things we need.
  * These are cleanup and tweaks functions.
  */
-namespace BernskioldMedia\Ilmenite_Theme;
+namespace BernskioldMedia\ClientName\Theme;
 
 class Theme_Cleanup {
 

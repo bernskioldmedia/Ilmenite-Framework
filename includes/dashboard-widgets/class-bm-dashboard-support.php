@@ -18,7 +18,7 @@ if ( ! class_exists( 'BM_Dashboard_Support' ) ) :
                global $wp_meta_boxes;
 
                // add a custom dashboard widget
-               add_meta_box( 'dashboard_bm_support_widget', __( 'Are you having problems?', 'ilmenite' ), array( $this, 'widget_output' ), 'dashboard', 'side', 'high' );
+               add_meta_box( 'dashboard_bm_support_widget', __( 'Are you having problems?', 'THEMETEXTDOMAIN' ), array( $this, 'widget_output' ), 'dashboard', 'side', 'high' );
           }
 
           /**
@@ -35,7 +35,7 @@ if ( ! class_exists( 'BM_Dashboard_Support' ) ) :
 
             ob_start(); ?>
 
-              <p><?php _e( '<strong>Your problems are our problems!</strong> Our <a href="https://www.bernskioldmedia.com/en/helpdesk/">website helpdesk</a> is available to help you with any questions and problems you might have. Regardless of whether you have a support plan or not, our helpdesk is available on a case-by-case consulting basis per our current rates.', 'ilmenite' ); ?></p>
+              <p><?php _e( '<strong>Your problems are our problems!</strong> Our <a href="https://www.bernskioldmedia.com/en/helpdesk/">website helpdesk</a> is available to help you with any questions and problems you might have. Regardless of whether you have a support plan or not, our helpdesk is available on a case-by-case consulting basis per our current rates.', 'THEMETEXTDOMAIN' ); ?></p>
 
               <?php if ( ! $processed ) : ?>
 
@@ -43,41 +43,41 @@ if ( ! class_exists( 'BM_Dashboard_Support' ) ) :
 
                   <div class="input-text-wrap">
                     <label for="name">
-                      <?php _e( 'Your Name', 'ilmenite' ); ?>
+                      <?php _e( 'Your Name', 'THEMETEXTDOMAIN' ); ?>
                       <input type="text" class="regular-text" name="name" id="name" value="<?php echo $current_user->user_firstname . ' ' . $current_user->user_lastname; ?>">
                     </label>
                   </div>
 
                   <div class="input-text-wrap">
                     <label for="email">
-                      <?php _e( 'Your E-Mail', 'ilmenite' ); ?>
+                      <?php _e( 'Your E-Mail', 'THEMETEXTDOMAIN' ); ?>
                       <input type="text" class="regular-text" name="email" id="email" value="<?php echo $current_user->user_email; ?>">
                     </label>
                   </div>
 
                   <div class="textarea-text-wrap">
                     <label for="question">
-                      <?php _e( 'What Do You Need Help With?', 'ilmenite' ); ?><br/>
+                      <?php _e( 'What Do You Need Help With?', 'THEMETEXTDOMAIN' ); ?><br/>
                       <textarea name="question" id="question" rows="3" cols="20" class="large-text"></textarea>
                     </label>
                   </div>
 
                   <div class="textarea-text-wrap">
                     <label for="mood">
-                      <?php _e( 'How are you feeling right now?', 'ilmenite' ); ?><br/>
+                      <?php _e( 'How are you feeling right now?', 'THEMETEXTDOMAIN' ); ?><br/>
                       <select name="mood" id="mood">
-                        <option value="<?php _e( 'Awesome', 'ilmenite' ); ?>"><?php _e( 'Awesome', 'ilmenite' ); ?></option>
-                        <option value="<?php _e( 'Curious', 'ilmenite' ); ?>"><?php _e( 'Curious', 'ilmenite' ); ?></option>
-                        <option value="<?php _e( 'Confused', 'ilmenite' ); ?>"><?php _e( 'Confused', 'ilmenite' ); ?></option>
-                        <option value="<?php _e( 'Worried', 'ilmenite' ); ?>"><?php _e( 'Worried', 'ilmenite' ); ?></option>
-                        <option value="<?php _e( 'Panicked', 'ilmenite' ); ?>"><?php _e( 'Panicked', 'ilmenite' ); ?></option>
-                        <option value="<?php _e( 'Unsure', 'ilmenite' ); ?>"><?php _e( 'Unsure', 'ilmenite' ); ?></option>
+                        <option value="<?php _e( 'Awesome', 'THEMETEXTDOMAIN' ); ?>"><?php _e( 'Awesome', 'THEMETEXTDOMAIN' ); ?></option>
+                        <option value="<?php _e( 'Curious', 'THEMETEXTDOMAIN' ); ?>"><?php _e( 'Curious', 'THEMETEXTDOMAIN' ); ?></option>
+                        <option value="<?php _e( 'Confused', 'THEMETEXTDOMAIN' ); ?>"><?php _e( 'Confused', 'THEMETEXTDOMAIN' ); ?></option>
+                        <option value="<?php _e( 'Worried', 'THEMETEXTDOMAIN' ); ?>"><?php _e( 'Worried', 'THEMETEXTDOMAIN' ); ?></option>
+                        <option value="<?php _e( 'Panicked', 'THEMETEXTDOMAIN' ); ?>"><?php _e( 'Panicked', 'THEMETEXTDOMAIN' ); ?></option>
+                        <option value="<?php _e( 'Unsure', 'THEMETEXTDOMAIN' ); ?>"><?php _e( 'Unsure', 'THEMETEXTDOMAIN' ); ?></option>
                       </select>
                     </label>
                   </div>
 
                   <p>
-                    <input type="submit" name="submit" id="submit-question" class="button button-primary" value="<?php _e( 'Send Question', 'ilmenite' ); ?>">
+                    <input type="submit" name="submit" id="submit-question" class="button button-primary" value="<?php _e( 'Send Question', 'THEMETEXTDOMAIN' ); ?>">
                   </p>
 
                 </form>
@@ -85,7 +85,7 @@ if ( ! class_exists( 'BM_Dashboard_Support' ) ) :
               <?php else : ?>
 
                 <div class="updated">
-                  <p><?php _e( 'Your support message has been successfully sent.', 'ilmenite' ); ?></p>
+                  <p><?php _e( 'Your support message has been successfully sent.', 'THEMETEXTDOMAIN' ); ?></p>
                 </div>
 
               <?php endif; ?>
@@ -117,7 +117,7 @@ if ( ! class_exists( 'BM_Dashboard_Support' ) ) :
 
               I'm currently feeling: $mood.";
 
-              wp_mail( 'erik@bernskioldmedia.com', __( 'Website Support Enquiry', 'ilmenite' ), $message );
+              wp_mail( 'erik@bernskioldmedia.com', __( 'Website Support Enquiry', 'THEMETEXTDOMAIN' ), $message );
 
               return true;
 

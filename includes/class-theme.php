@@ -10,14 +10,14 @@
  * code more modular and easy to maintain and use.
  *
  * @author Bernskiold Media <info@bernskioldmedia.com>
- * @package BernskioldMedia\Ilmenite_Theme
+ * @package BernskioldMedia\ClientName\Theme
  */
-namespace BernskioldMedia\Ilmenite_Theme;
+namespace BernskioldMedia\ClientName\Theme;
 
 /**
  * Class Ilmenite_Theme
  *
- * @package BernskioldMedia\Ilmenite_Theme
+ * @package BernskioldMedia\ClientName\Theme
  */
 class Ilmenite_Theme {
 
@@ -55,7 +55,6 @@ class Ilmenite_Theme {
 	 * @var string
 	 */
 	public $theme_slug = '';
-
 
 	/**
 	 * The single instance of the class
@@ -181,7 +180,7 @@ class Ilmenite_Theme {
 	 */
 	public function custom_image_sizes() {
 
-		// Set standard sizes.
+		// Set standard image sizes.
 		add_image_size( 'large', 1024, '', true ); // Large Thumbnail.
 		add_image_size( 'medium', 640, '', true ); // Medium Thumbnail.
 		add_image_size( 'small', 300, '', true ); // Small Thumbnail.
@@ -333,7 +332,7 @@ class Ilmenite_Theme {
  * over and over again in our theme code.
  */
 function theme() {
-    return theme::instance();
+    return Ilmenite_Theme::instance();
 }
 
 // Initialize the class instance only once,

@@ -5,6 +5,8 @@
 
 get_header(); ?>
 
+<main class="main" role="main">
+
 	<?php get_search_form(); ?>
 
 	<?php if ( have_posts() ) : ?>
@@ -19,13 +21,7 @@ get_header(); ?>
 
 		<?php endwhile; ?>
 
-		<?php
-	   	if(function_exists('wp_pagenavi')) :
-	   		wp_pagenavi(); // Add support for the WP-Pagenavi plugin if it is installed. Otherwise use the default.
-	   	else :
-	   		BernskioldMedia\Ilmenite_Theme\theme()->template->pagination();
-	   	endif;
-		?>
+		<?php BernskioldMedia\ClientName\Theme\theme()->template->pagination(); ?>
 
 	<?php else : ?>
 
@@ -34,5 +30,7 @@ get_header(); ?>
 		<p><?php _e( 'Unfortuantely we could not find any results for your search query. Please try again with another query.', 'THEMETEXTDOMAIN' ); ?></p>
 
 	<?php endif; ?>
+
+</main>
 
 <?php get_footer(); ?>

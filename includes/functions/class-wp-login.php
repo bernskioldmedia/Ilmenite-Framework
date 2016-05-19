@@ -2,14 +2,14 @@
 /**
  * Customizes the wp-login.php
  *
- * @package BernskioldMedia\Ilmenite_Theme
+ * @package BernskioldMedia\ClientName\Theme
  */
-namespace BernskioldMedia\Ilmenite_Theme;
+namespace BernskioldMedia\ClientName\Theme;
 
 /**
  * Class Theme_Login
  *
- * @package BernskioldMedia\Ilmenite_Theme
+ * @package BernskioldMedia\ClientName\Theme
  */
 class Theme_Login {
 
