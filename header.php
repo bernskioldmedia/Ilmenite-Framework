@@ -1,8 +1,4 @@
-<?php
-/**
- * Outputs Site Header
- **/
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html class="no-js" <?php language_attributes(); ?>>
 <head>
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
