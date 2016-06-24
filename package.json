@@ -9,10 +9,10 @@
   }],
   "repository": {
     "type": "git",
-    "url": "https://github.com/xldstudios/ilmenite-framework"
+    "url": "https://github.com/bernskioldmedia/ilmenite-framework"
   },
   "bugs": {
-    "url": "https://github.com/xldstudios/ilmenite-framework/issues"
+    "url": "https://github.com/bernskioldmedia/ilmenite-framework/issues"
   },
   "devDependencies": {
     "gulp": "^3.9.0",

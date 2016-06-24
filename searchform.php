@@ -5,6 +5,7 @@
  * Styles the default WordPress search form according
  * to the markup in this file.
  */
+namespace BernskioldMedia\ClientName\Theme;
 
 if ( get_search_query() ) {
 	$value = get_search_query();

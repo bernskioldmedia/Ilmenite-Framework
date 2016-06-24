@@ -2,6 +2,7 @@
 /**
  * Displays Search Results
  **/
+namespace BernskioldMedia\ClientName\Theme;
 
 get_header(); ?>
 
@@ -21,7 +22,7 @@ get_header(); ?>
 
 		<?php endwhile; ?>
 
-		<?php BernskioldMedia\ClientName\Theme\theme()->template->pagination(); ?>
+		<?php theme()->template->pagination(); ?>
 
 	<?php else : ?>
 

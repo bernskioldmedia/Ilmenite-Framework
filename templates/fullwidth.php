@@ -2,8 +2,9 @@
 /**
  * Template Name: Fullwidth
  **/
+namespace BernskioldMedia\ClientName\Theme;
 
-esc_html_x( 'Fullwidth', 'frontpage page template name', 'THEMETEXTDOMAIN' );
+esc_html_x( 'Fullwidth', 'fullwidth page template name', 'THEMETEXTDOMAIN' );
 
 get_header(); ?>
 

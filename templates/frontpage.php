@@ -2,6 +2,7 @@
 /**
  * Template Name: Frontpage
  **/
+namespace BernskioldMedia\ClientName\Theme;
 
 esc_html_x( 'Frontpage', 'frontpage page template name', 'THEMETEXTDOMAIN' );
 

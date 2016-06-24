@@ -2,6 +2,7 @@
 /**
  * Displays Post Index Page
  **/
+namespace BernskioldMedia\ClientName\Theme;
 
 get_header(); ?>
 
@@ -15,11 +16,12 @@ get_header(); ?>
 
 		<?php endwhile; ?>
 
-	   <?php BernskioldMedia\ClientName\Theme\theme()->template->pagination(); ?>
+	   <?php theme()->template->pagination(); ?>
 
 	<?php else : ?>
 
-	    <?php get_template_part( 'content', '404' ); // Streamline and get the 404 content from a unified file. ?>
+		<h1><?php esc_html_e( 'Content Not Found', 'THEMETEXTDOMAIN' ); ?></h1>
+		<p class="intro"><?php esc_html_e( 'Unfortunately there is no content to display for this view.', 'THEMETEXTDOMAIN' ); ?></p>
 
 	<?php endif; ?>
 

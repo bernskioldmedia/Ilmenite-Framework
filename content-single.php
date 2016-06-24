@@ -2,6 +2,7 @@
 /**
  * Content Template for Single Posts
  **/
+namespace BernskioldMedia\ClientName\Theme;
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'single-post-item' ); ?>>
 

@@ -2,6 +2,7 @@
 /**
  * Content Template for Pages
  **/
+namespace BernskioldMedia\ClientName\Theme;
 ?>
 <article id="page-<?php the_ID(); ?>" <?php post_class( 'page-item' ); ?>>
 

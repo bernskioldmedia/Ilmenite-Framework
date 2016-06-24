@@ -2,6 +2,7 @@
 /**
  * Displays Page
  **/
+namespace BernskioldMedia\ClientName\Theme;
 
 get_header(); ?>
 

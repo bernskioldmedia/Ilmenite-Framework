@@ -2,6 +2,7 @@
 /**
  * Content Template for General Posts
  **/
+namespace BernskioldMedia\ClientName\Theme;
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'post-item' ); ?>>
 
