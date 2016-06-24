@@ -1,0 +1,23 @@
+{
+  "name": "ilmenite-framework",
+  "description": "A WordPress starter theme framework.",
+  "version": "1.0.0",
+  "keywords": [
+    "wordpress",
+    "framework",
+    "starter theme"
+  ],
+  "homepage": "http://ilmenite.io",
+  "authors": [
+    {
+      "name": "Bernskiold Media AB",
+      "homepage": "http://www.bernskioldmedia.com",
+      "email": "info@bernskioldmedia.com"
+    }
+  ],
+  "support": {
+    "email": "support@bernskioldmedia.com",
+    "issues": "https://github.com/bernskioldmedia/ilmenite-framework/issues"
+  },
+  "license": "GPL"
+}

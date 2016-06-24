@@ -18,11 +18,27 @@
  * corresponding one in foundation/foundation.scss too!
  */
 
-// Include Foundation
+// Include Foundation Base
 @import "foundation/foundation.scss";
 
+/**
+ * Enable Foundation Components
+ *
+ * Comment/uncomment those we do not want so that we keep
+ * our CSS small and non-bloated.
+ *
+ * Note: Flexbox is enabled by default.
+ */
+
+// Standard Grid
+// @include foundation-grid;
+
+// Flexbox Grid
+@include foundation-flex-grid;
+@include foundation-flex-classes;
+
+// Components
 @include foundation-global-styles;
-@include foundation-grid;
 @include foundation-typography;
 @include foundation-button;
 @include foundation-forms;
