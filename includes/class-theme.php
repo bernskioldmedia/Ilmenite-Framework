@@ -289,7 +289,7 @@ class Ilmenite_Theme {
 
 	public function change_admin_footer_text() {
 
-		$text = sprintf( esc_html__( '%s Website Admin Panel. Website developed by <a href="https://www.bernskioldmedia.com/en/">Bernskiold Media</a>.', 'THEMETEXTDOMAIN' ), bloginfo( 'name' ) );
+		$text = sprintf( __( '%s Website Admin Panel. Website developed by <a href="https://www.bernskioldmedia.com/en/">Bernskiold Media</a>.', 'THEMETEXTDOMAIN' ), bloginfo( 'name' ) );
 
 		echo wp_kses_post( $text );
 
