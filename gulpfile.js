@@ -46,9 +46,9 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
 
 	var scripts = [
-		'assets/js/src/plugins/iconic.min.js',
-		'assets/js/src/plugins/foundation/foundation.core.js',
-		'assets/js/src/plugins/foundation/foundation.util.*.js',
+		'assets/js/src/vendor/iconic.min.js',
+		'assets/js/src/vendor/foundation/foundation.core.js',
+		'assets/js/src/vendor/foundation/foundation.util.*.js',
 		'assets/js/src/main.js'
 	];
 
