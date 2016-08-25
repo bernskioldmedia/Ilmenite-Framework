@@ -1,3 +1,8 @@
+/**
+ * Gulpfile.js
+ */
+
+// Load the Gulp modules.
 var gulp 			= require('gulp');
 var autoprefixer 	= require('gulp-autoprefixer');
 var concat 			= require('gulp-concat');
@@ -12,29 +17,41 @@ var sort 			= require('gulp-sort');
 var sourcemaps 		= require("gulp-sourcemaps");
 var uglify 			= require('gulp-uglify');
 
-// Handle Errors
-var plumberErrorHandler = { errorHandler: notify.onError({
-    title: 'Gulp',
-    message: 'Error: <%= error.message %>'
-  })
-};
+// Set files to be processed
+var processFiles = {
+	scripts: [
+		'assets/js/src/vendor/iconic.min.js',
+		'assets/js/src/vendor/foundation/foundation.core.js',
+		'assets/js/src/vendor/foundation/foundation.util.*.js',
+		'assets/js/src/main.js'
+	],
+	styles: [
+		'assets/scss/main.scss'
+	],
+	images: [
+		'assets/images/**/*'
+	]
+}
 
 // Styles
 gulp.task('styles', function() {
 
-	return gulp.src('assets/scss/main.scss')
+	return gulp.src(processFiles.styles)
+		.pipe(plumber())
 		.pipe(sourcemaps.init())
 		.pipe(sass({
 			outputStyle: 'compressed'
 		}))
 		.pipe(autoprefixer({
 			browsers: [
+				'> 1%',
 				'last 2 versions'
 			],
 			cascade: false
 		}))
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest('assets/css'))
+		.pipe(plumber.stop())
 		.pipe(livereload());
 		.pipe(notify({
 			message: 'Styles Task Completed!'
@@ -45,14 +62,8 @@ gulp.task('styles', function() {
 // Scripts
 gulp.task('scripts', function() {
 
-	var scripts = [
-		'assets/js/src/vendor/iconic.min.js',
-		'assets/js/src/vendor/foundation/foundation.core.js',
-		'assets/js/src/vendor/foundation/foundation.util.*.js',
-		'assets/js/src/main.js'
-	];
-
-	return gulp.src(scripts)
+	return gulp.src(processFiles.scripts)
+		.pipe(plumber())
 		.pipe(sourcemaps.init())
 		.pipe(concat('theme.js'))
 		.pipe(gulp.dest('assets/js'))
@@ -62,6 +73,7 @@ gulp.task('scripts', function() {
 		.pipe(uglify())
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest('assets/js'))
+		.pipe(plumber.stop())
 		.pipe(livereload())
 		.pipe(notify({
 			message: 'Scripts Task Completed!'
@@ -71,7 +83,7 @@ gulp.task('scripts', function() {
 
 // Images
 gulp.task('images', function() {
-  return gulp.src('assets/images/**/*')
+  return gulp.src(processFiles.images)
     .pipe(cache(imagemin({
     	optimizationLevel: 3,
     	progressive: true,
@@ -90,22 +102,13 @@ gulp.task('watch', function() {
 	livereload.listen();
 
 	// Watch .scss files
-	gulp.watch('assets/scss/**/*.scss', function(event) {
-		console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
-		gulp.run('styles');
-	});
+	gulp.watch('assets/scss/**/*.scss',  ['styles']);
 
 	// Watch .js files
-	gulp.watch('assets/js/src/**/*.js', function(event) {
-		console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
-		gulp.run('scripts');
-	});
+	gulp.watch('assets/js/src/**/*.js', ['scripts']);
 
 	// Watch image files
-	gulp.watch('assets/images/**/*', function(event) {
-		console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
-		gulp.run('images');
-	});
+	gulp.watch('assets/images/**/*', ['images']);
 
 });
 
