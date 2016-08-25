@@ -5,8 +5,9 @@
 // Load the Gulp modules.
 var gulp 			= require('gulp');
 var autoprefixer 	= require('gulp-autoprefixer');
+var babel 			= require("gulp-babel");
 var concat 			= require('gulp-concat');
-var imagemin 		= require('gulp-imagemin'),
+var imagemin 		= require('gulp-imagemin');
 var jshint 			= require('gulp-jshint');
 var livereload 		= require('gulp-livereload');
 var notify 			= require('gulp-notify');
@@ -52,7 +53,7 @@ gulp.task('styles', function() {
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest('assets/css'))
 		.pipe(plumber.stop())
-		.pipe(livereload());
+		.pipe(livereload())
 		.pipe(notify({
 			message: 'Styles Task Completed!'
 		}));
@@ -65,6 +66,7 @@ gulp.task('scripts', function() {
 	return gulp.src(processFiles.scripts)
 		.pipe(plumber())
 		.pipe(sourcemaps.init())
+		.pipe(babel())
 		.pipe(concat('theme.js'))
 		.pipe(gulp.dest('assets/js'))
 		.pipe(rename({
@@ -84,11 +86,11 @@ gulp.task('scripts', function() {
 // Images
 gulp.task('images', function() {
   return gulp.src(processFiles.images)
-    .pipe(cache(imagemin({
+    .pipe(imagemin({
     	optimizationLevel: 3,
     	progressive: true,
     	interlaced: true
-    })))
+    }))
     .pipe(livereload())
     .pipe(gulp.dest('assets/images'))
     .pipe(notify({
