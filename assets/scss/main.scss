@@ -19,7 +19,10 @@
  */
 
 // Include Foundation Base
-@import "foundation/foundation.scss";
+@import "foundation/foundation";
+
+// Include Foundation Settings
+@import "foundation/settings/_settings";
 
 /**
  * Enable Foundation Components
