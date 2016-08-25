@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "A WordPress starter theme framework.",
   "author": "Bernskiold Media <info@bernskioldmedia.com>",
-  "contributors": [{
-    "name": "Erik Bernskiold",
-    "email": "erik@bernskioldmedia.com"
-  }],
+  "contributors": [
+    {
+      "name": "Erik Bernskiold",
+      "email": "erik@bernskioldmedia.com"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/bernskioldmedia/ilmenite-framework"
@@ -22,7 +24,7 @@
     "gulp-jshint": "^2.0.1",
     "gulp-livereload": "^3.8.0",
     "gulp-notify": "^2.2.0",
-    "gulp-plumber": "^1.0.1",
+    "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.0.4",
     "gulp-sort": "^2.0.0",
