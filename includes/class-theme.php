@@ -123,7 +123,7 @@ class Ilmenite_Theme {
 		add_action( 'after_setup_theme', array( $this, 'theme_support' ) );
 
 		// Load functions.
-		add_action( 'init', array( $this, 'functions' ) );
+		add_action( 'init', array( $this, 'classes' ) );
 
 		// Load custom dashboard widgets.
 		add_action( 'admin_init', array( $this, 'dashboard_widgets' ) );
