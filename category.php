@@ -2,6 +2,7 @@
 /**
  * Template for the Category Archives
  **/
+namespace BernskioldMedia\ClientName\Theme;
 
 get_header(); ?>
 
