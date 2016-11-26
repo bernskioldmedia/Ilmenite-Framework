@@ -8,9 +8,20 @@ get_header(); ?>
 
 <main class="main" role="main">
 
-	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+	<?php if ( have_posts() ) : ?>
 
-			<?php get_template_part( 'content', 'single' ); ?>
+		<?php while ( have_posts() ) : the_post(); ?>
+
+			<article id="post-<?php the_ID(); ?>" <?php post_class( 'single-post-item' ); ?>>
+
+				<h1 class="post-title"><?php the_title(); ?></h1>
+
+				<div class="post-body">
+					<?php the_content(); ?>
+				</div>
+
+			</article>
+
 
 			<?php comments_template(); ?>
 
