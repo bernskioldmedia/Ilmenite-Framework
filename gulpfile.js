@@ -18,6 +18,13 @@ var sort 			= require('gulp-sort');
 var sourcemaps 		= require("gulp-sourcemaps");
 var uglify 			= require('gulp-uglify');
 
+// Handle Errors
+var plumberErrorHandler = { errorHandler: notify.onError({
+    title: 'Gulp',
+    message: 'Error: <%= error.message %>'
+  })
+};
+
 // Set files to be processed
 var processFiles = {
 	scripts: [
@@ -38,7 +45,7 @@ var processFiles = {
 gulp.task('styles', function() {
 
 	return gulp.src(processFiles.styles)
-		.pipe(plumber())
+		.pipe(plumber(plumberErrorHandler))
 		.pipe(sourcemaps.init())
 		.pipe(sass({
 			outputStyle: 'compressed'
@@ -64,7 +71,7 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
 
 	return gulp.src(processFiles.scripts)
-		.pipe(plumber())
+		.pipe(plumber(plumberErrorHandler))
 		.pipe(sourcemaps.init())
 		.pipe(babel())
 		.pipe(concat('theme.js'))
@@ -86,6 +93,7 @@ gulp.task('scripts', function() {
 // Images
 gulp.task('images', function() {
   return gulp.src(processFiles.images)
+  	.pipe(plumber(plumberErrorHandler))
     .pipe(imagemin({
     	optimizationLevel: 3,
     	progressive: true,
@@ -108,9 +116,6 @@ gulp.task('watch', function() {
 
 	// Watch .js files
 	gulp.watch('assets/js/src/**/*.js', ['scripts']);
-
-	// Watch image files
-	gulp.watch('assets/images/**/*', ['images']);
 
 });
 
