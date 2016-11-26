@@ -268,9 +268,6 @@ class Ilmenite_Theme {
 		// RSS Widget Showing Agency Blog Posts.
 		require_once( $this->theme_dir . '/includes/dashboard-widgets/class-bm-dashboard-rss.php' );
 
-		// Support Widget.
-		require_once( $this->theme_dir . '/includes/dashboard-widgets/class-bm-dashboard-support.php' );
-
 	}
 
 	public function remove_dashboard_widgets() {
