@@ -15,11 +15,11 @@
 namespace BernskioldMedia\ClientName\Theme;
 
 /**
- * Class Ilmenite_Theme
+ * Class Theme
  *
  * @package BernskioldMedia\ClientName\Theme
  */
-class Ilmenite_Theme {
+class Theme {
 
 	/**
 	 * Theme URL
@@ -342,11 +342,11 @@ class Ilmenite_Theme {
  * Theme Function
  *
  * The theme function is used to that we can easily call the methods
- * on this class without having to redefine the Ilmenite_Theme class
+ * on this class without having to redefine the Theme class
  * over and over again in our theme code.
  */
 function theme() {
-    return Ilmenite_Theme::instance();
+    return Theme::instance();
 }
 
 // Initialize the class instance only once,
