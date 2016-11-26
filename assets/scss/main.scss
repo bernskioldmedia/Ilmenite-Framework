@@ -79,6 +79,11 @@
 @include foundation-float-classes;
 
 /**
+ * Include Font Awesome
+ */
+@import "_font-awesome";
+
+/**
  * Global Styles
  */
 @import "global/variables";
