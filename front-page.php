@@ -4,7 +4,7 @@
  **/
 namespace BernskioldMedia\ClientName\Theme;
 
-esc_html_x( 'Frontpage', 'frontpage page template name', 'THEMETEXTDOMAIN' );
+_x( 'Frontpage', 'frontpage page template name', 'THEMETEXTDOMAIN' );
 
 get_header(); ?>
 
