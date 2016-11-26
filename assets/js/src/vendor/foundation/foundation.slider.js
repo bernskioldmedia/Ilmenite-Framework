@@ -13,9 +13,9 @@
 
 class Slider {
   /**
-   * Creates a new instance of a drilldown menu.
+   * Creates a new instance of a slider control.
    * @class
-   * @param {jQuery} element - jQuery object to make into an accordion menu.
+   * @param {jQuery} element - jQuery object to make into a slider control.
    * @param {Object} options - Overrides to the default plugin settings.
    */
   constructor(element, options) {
@@ -292,7 +292,7 @@ class Slider {
       } else {
         barXY = eventFromBar;
       }
-      offsetPct = percent(barXY, barDim);
+      var offsetPct = percent(barXY, barDim);
 
       value = (this.options.end - this.options.start) * offsetPct + this.options.start;
 
