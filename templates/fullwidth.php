@@ -4,7 +4,7 @@
  **/
 namespace BernskioldMedia\ClientName\Theme;
 
-esc_html_x( 'Fullwidth', 'fullwidth page template name', 'THEMETEXTDOMAIN' );
+_x( 'Fullwidth', 'fullwidth page template name', 'THEMETEXTDOMAIN' );
 
 get_header(); ?>
 
