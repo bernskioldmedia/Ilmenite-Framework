@@ -164,7 +164,7 @@ class Template_Functions {
                 $layout = get_row_layout();
 
                 // Load a section template with the layout name.
-                get_template_part( "sections/$layout" );
+                get_template_part( "components/sections/$layout" );
 
             }
 
