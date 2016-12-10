@@ -278,20 +278,6 @@
 			text-decoration: underline;
 		}
 	}
-
-	&.has-border {
-
-		&:after {
-			width: 5rem;
-			height: 2px;
-			content: '';
-			background: $primary-color;
-			display: block;
-			margin-top: 0.4rem;
-			margin-bottom: 1rem;
-		}
-	}
-
 }
 
 .col-4 .block-title {
