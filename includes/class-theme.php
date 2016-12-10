@@ -229,6 +229,10 @@ class Theme {
 	 **/
 	public function classes() {
 
+		// Block Grid.
+		require_once( $this->theme_dir . '/includes/classes/class-block-grid.php' );
+		new Block_Grid;
+
 		// Cleanup Functions.
 		require_once( $this->theme_dir . '/includes/classes/class-cleanup.php' );
 		new Theme_Cleanup;
