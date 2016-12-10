@@ -101,3 +101,15 @@
 @import "components/forms";
 @import "components/lists";
 @import "components/section";
+@import "components/blocks";
+
+/**
+ * Layout
+ */
+@import "layout/header";
+@import "layout/footer";
+
+/**
+ * Templates
+ */
+@import "templates/frontpage";
