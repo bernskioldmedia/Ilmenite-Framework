@@ -38,7 +38,7 @@ class Accordion {
    */
   _init() {
     this.$element.attr('role', 'tablist');
-    this.$tabs = this.$element.children('li, [data-accordion-item]');
+    this.$tabs = this.$element.children('[data-accordion-item]');
 
     this.$tabs.each(function(idx, el) {
       var $el = $(el),
@@ -203,19 +203,22 @@ Accordion.defaults = {
   /**
    * Amount of time to animate the opening of an accordion pane.
    * @option
-   * @example 250
+   * @type {number}
+   * @default 250
    */
   slideSpeed: 250,
   /**
    * Allow the accordion to have multiple open panes.
    * @option
-   * @example false
+   * @type {boolean}
+   * @default false
    */
   multiExpand: false,
   /**
    * Allow the accordion to close all panes.
    * @option
-   * @example false
+   * @type {boolean}
+   * @default false
    */
   allowAllClosed: false
 };
