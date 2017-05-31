@@ -28,7 +28,6 @@ var plumberErrorHandler = { errorHandler: notify.onError({
 // Set files to be processed
 var processFiles = {
 	scripts: [
-		'assets/js/src/vendor/iconic.min.js',
 		'assets/js/src/vendor/foundation/foundation.core.js',
 		'assets/js/src/vendor/foundation/foundation.util.*.js',
 		'assets/js/src/main.js'
