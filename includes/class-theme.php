@@ -22,6 +22,20 @@ namespace BernskioldMedia\ClientName\Theme;
 class Theme {
 
 	/**
+	 * Theme Author Name
+	 *
+	 * @var string
+	 */
+	public $theme_author = '';
+
+	/**
+	 * Theme Author URL
+	 *
+	 * @var string
+	 */
+	public $theme_author_url = '';
+
+	/**
 	 * Theme URL
 	 *
 	 * @var string
@@ -108,10 +122,14 @@ class Theme {
 		$this->theme_version = wp_get_theme()->get( 'Version' );
 
 		// Theme Name.
-		$this->theme_name = esc_html__( 'THEMENAMEHERE', 'THEMETEXTDOMAIN' );
+		$this->theme_name = wp_get_theme()->get( 'Name' );
 
 		// Theme Slug.
-		$this->theme_slug = 'THEMETEXTDOMAIN';
+		$this->theme_slug = wp_get_theme()->get( 'TextDomain' );
+
+		// Theme Author Name + URL.
+		$this->theme_author = wp_get_theme()->get( 'AUthor' );
+		$this->theme_author_url = wp_get_theme()->get( 'AuthorURI' );
 
 		// Theme Directory.
 		$this->theme_dir = get_template_directory();
@@ -193,7 +211,7 @@ class Theme {
 		 * Make the theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 */
-		load_theme_textdomain( 'THEMETEXTDOMAIN', get_template_directory() . '/languages' );
+		load_theme_textdomain( wp_get_theme()->get( 'TextDomain' ), get_template_directory() . '/languages' );
 
 	}
 
@@ -288,7 +306,12 @@ class Theme {
 
 	public function change_admin_footer_text() {
 
-		$text = sprintf( __( '%s Website Admin Panel. Website developed by <a href="https://www.bernskioldmedia.com/en/">Bernskiold Media</a>.', 'THEMETEXTDOMAIN' ), bloginfo( 'name' ) );
+		$text = sprintf(
+			__( '%1$s Website Admin Panel. Website developed by <a href="%3$s">%2$s</a>.', 'THEMETEXTDOMAIN' ),
+			bloginfo( 'name' ),
+			$this->get_theme_author(),
+			$this->get_theme_author_url()
+		);
 
 		echo wp_kses_post( $text );
 
@@ -317,6 +340,22 @@ class Theme {
 	 */
 	public function get_theme_version() {
 		return $this->theme_version;
+	}
+
+	/**
+	 * Get Theme Author
+	 * @return string
+	 */
+	public function get_theme_author() {
+		return $this->theme_author;
+	}
+
+	/**
+	 * Get Theme Author URL
+	 * @return string
+	 */
+	public function get_theme_author_url() {
+		return $this->theme_author_url;
 	}
 
 	/**
