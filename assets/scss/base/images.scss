@@ -1,0 +1,14 @@
+/**
+ * Image Classes
+ *
+ * These are special classes that affect images in some way and are ready
+ * to be used on any style element.
+ */
+.image-rounded {
+	border-radius: $global-radius;
+}
+
+.image-round,
+.image-circle {
+	border-radius: 50%;
+}

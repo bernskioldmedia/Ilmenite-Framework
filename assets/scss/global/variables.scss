@@ -8,4 +8,76 @@
  * We do tend to add some custom variables to projects, and they are located
  * in this very file.
  */
-$border-color: #dddddd;
+
+/**
+ * Global
+ */
+
+// Font weight for 'light' style. Extends Foundation's "global-weight-X".
+$global-weight-light: 300;
+
+/**
+ * Colors
+ *
+ * Name your colors in helpful ways, according to the brand manual.
+ */
+$color-white: white;
+$color-black: black;
+$color-primary: $primary-color;
+$color-secondary: #eeeeee;
+$color-accent: #000000;
+
+$color-snow: #f3f3f5;
+$color-stone: #ccc;
+
+/**
+ * Margins & Paddings
+ */
+$size-small: 0.5rem;
+$size-medium: 1rem;
+$size-large: 1.5rem;
+$size-xlarge: 2rem;
+$size-xxlarge: 2.5rem;
+
+/**
+ * Border Sizes
+ */
+$border-size-thin: 1px;
+$border-size-thick: 0.33332rem;
+
+/**
+ * Text Sizes
+ */
+$text-xsmall: 0.6rem;
+$text-small: 0.875rem;
+$text-large: 1.125rem;
+$text-xlarge: 1.5rem;
+$text-xxlarge: 2rem;
+
+/**
+ * Z-Index Layers
+ *
+ * Useful when positioning absolutely or fixed to place elements
+ * on special layers and keeping consistent values.
+ */
+$layer-1: 100;
+$layer-2: 200;
+$layer-3: 300;
+$layer-4: 400;
+$layer-5: 500;
+$layer-6: 600;
+$layer-7: 700;
+$layer-8: 800;
+$layer-9: 900;
+$layer-10: 1000;
+
+$layer-neg-1: -100;
+$layer-neg-2: -200;
+$layer-neg-3: -300;
+$layer-neg-4: -400;
+$layer-neg-5: -500;
+$layer-neg-6: -600;
+$layer-neg-7: -700;
+$layer-neg-8: -800;
+$layer-neg-9: -900;
+$layer-neg-10: -1000;

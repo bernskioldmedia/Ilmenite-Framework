@@ -1,14 +1,23 @@
 /**
  * List Modules
  */
-.inline-block-list {
+.list-unstyled,
+.list-inline {
   list-style: none;
   margin: 0;
+}
 
-  li {
-    display: inline-block;
-    max-width: 100%;
-  }
+.list-inline li,
+.list-inline-item {
+  display: inline-block;
+}
+
+.list-inline-item:not(:last-child) {
+  margin-right: 5px;
+}
+
+.list-inline-collapsed {
+  margin-right: -5px;
 }
 
 .separated-list {
@@ -26,14 +35,5 @@
 
   li:last-child:after {
     content: '';
-  }
-}
-
-.no-bullets {
-  list-style: none;
-  margin: 0;
-
-  ul {
-    list-style: none;
   }
 }

@@ -1,0 +1,109 @@
+/**
+ * Color Classes
+ *
+ * These classes are meant to be used to add the brand colors to elements
+ * by simply adding its class.
+ */
+
+/**
+ * Text Colors
+ */
+.text-transparent {
+	color: transparent;
+}
+
+.text-white {
+	color: white;
+}
+
+.text-black {
+	color: black;
+}
+
+.text-body {
+	color: $body-font-color;
+}
+
+.text-primary {
+	color: $primary-color;
+}
+
+.text-secondary {
+	color: $secondary-color;
+}
+
+.text-accent {
+	color: $accent-color;
+}
+
+/**
+ * Background Colors
+ */
+.bg-transparent {
+	background-color: transparent;
+}
+
+.bg-primary {
+	background-color: $color-primary;
+}
+
+.bg-secondary {
+	background-color: $color-secondary;
+}
+
+.bg-accent {
+	background-color: $color-accent;
+}
+
+.bg-white {
+	background-color: white;
+}
+
+.bg-black {
+	background-color: black;
+}
+
+/**
+ * Border Colors
+ */
+.border-default {
+	border-color: currentColor;
+}
+
+.border-transparent {
+	border-color: transparent;
+}
+
+.border-primary {
+	border-color: $color-primary;
+}
+
+.border-accent {
+	border-color: $accent-color;
+}
+
+.border-stone {
+	border-color: $color-stone;
+}
+
+.border-snow {
+	border-color: $color-snow;
+}
+
+/**
+ * Shadows
+ */
+.shadow {
+    box-shadow: 0 1px 5px 0 #728099;
+}
+
+/**
+ * Extensions
+ */
+.is-dark-background {
+	color: white;
+
+	a {
+		color: inherit;
+	}
+}

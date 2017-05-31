@@ -1,64 +1,619 @@
 /**
- * Border Modules
+ * Borders
+ *
+ * Color classes are located in colors.scss
  */
-.border-top    { border-top: 1px solid $border-color; }
-.border-right  { border-right: 1px solid $border-color; }
-.border-bottom { border-bottom: 1px solid $border-color; }
-.border-left   { border-left: 1px solid $border-color; }
+.border {
+	border: $border-size-thin solid currentColor;
+}
+
+.border-t,
+.border-y {
+	border-top-width: $border-size-thin;
+	border-top-style: solid;
+}
+
+.border-r,
+.border-x {
+	border-right-width: $border-size-thin;
+	border-right-style: solid;
+}
+
+.border-b,
+.border-y {
+	border-bottom-width: $border-size-thin;
+	border-bottom-style: solid;
+}
+
+.border-l,
+.border-x {
+	border-left-width: $border-size-thin;
+	border-left-style: solid;
+}
+
+.border-t-0,
+.border-y-0 {
+	border-top-width: 0;
+}
+
+.border-r-0,
+.border-x-0 {
+	border-right-width: 0;
+}
+
+.border-b-0,
+.border-y-0 {
+	border-bottom-width: 0;
+}
+
+.border-l-0,
+.border-x-0 {
+	border-left-width: 0;
+}
+
+.border-t-thick,
+.border-y-thick {
+	border-top-width: $border-size-thick;
+}
+
+.border-r-thick,
+.border-x-thick {
+	border-right-width: $border-size-thick;
+}
+
+.border-b-thick,
+.border-y-thick {
+	border-bottom-width: $border-size-thick;
+}
+
+.border-l-thick,
+.border-x-thick {
+	border-left-width: $border-size-thick;
+}
+
+.border-thin {
+	border-width: $border-size-thin;
+	border-style: solid;
+}
+
+.border-thick {
+	border-width: $border-size-thick;
+	border-style: solid;
+}
 
 /**
  * Spacing Classes
  */
-.pt0 { padding-top: 0rem; }
-.pt1 { padding-top: 1rem; }
-.pt2 { padding-top: 2rem; }
-.pt3 { padding-top: 3rem; }
-.pt4 { padding-top: 4rem; }
-
-.pr0 { padding-right: 0rem; }
-.pr1 { padding-right: 1rem; }
-.pr2 { padding-right: 2rem; }
-.pr3 { padding-right: 3rem; }
-.pr4 { padding-right: 4rem; }
-
-.pb0 { padding-bottom: 0rem; }
-.pb1 { padding-bottom: 1rem; }
-.pb2 { padding-bottom: 2rem; }
-.pb3 { padding-bottom: 3rem; }
-.pb4 { padding-bottom: 4rem; }
-
-.pl0 { padding-left: 0rem; }
-.pl1 { padding-left: 1rem; }
-.pl2 { padding-left: 2rem; }
-.pl3 { padding-left: 3rem; }
-.pl4 { padding-left: 4rem; }
-
-.mt0 { margin-top: 0rem; }
-.mt1 { margin-top: 1rem; }
-.mt2 { margin-top: 2rem; }
-.mt3 { margin-top: 3rem; }
-.mt4 { margin-top: 4rem; }
-
-.mr0 { margin-right: 0rem; }
-.mr1 { margin-right: 1rem; }
-.mr2 { margin-right: 2rem; }
-.mr3 { margin-right: 3rem; }
-.mr4 { margin-right: 4rem; }
-
-.mb0 { margin-bottom: 0rem; }
-.mb1 { margin-bottom: 1rem; }
-.mb2 { margin-bottom: 2rem; }
-.mb3 { margin-bottom: 3rem; }
-.mb4 { margin-bottom: 4rem; }
-
-.ml0 { margin-left: 0rem; }
-.ml1 { margin-left: 1rem; }
-.ml2 { margin-left: 2rem; }
-.ml3 { margin-left: 3rem; }
-.ml4 { margin-left: 4rem; }
 
 /**
- * Background Modules
+ * Margin
  */
-.bg-primary   { background: $primary-color; }
-.bg-secondary { background: $secondary-color; }
+.m-t-0,
+.m-y-0  {
+	margin-top: 0;
+}
+
+.m-r-0,
+.m-x-0 {
+	margin-right: 0;
+}
+
+.m-b-0,
+.m-y-0 {
+	margin-bottom: 0;
+}
+
+.m-l-0,
+.m-x-0 {
+	margin-left: 0;
+}
+
+.m-a-0 {
+	margin: 0;
+}
+
+// Margin: Small
+.m-a-s {
+	margin: $size-small;
+}
+
+.m-t-s,
+.m-y-s {
+	margin-top: $size-small;
+}
+
+.m-r-s,
+.m-x-s {
+	margin-right: $size-small;
+}
+
+.m-b-s,
+.m-y-s {
+	margin-bottom: $size-small;
+}
+
+.m-l-s,
+.m-x-s {
+	margin-left: $size-small;
+}
+
+// Margin: Medium
+.m-a-m {
+	margin: $size-medium;
+}
+
+.m-t-m,
+.m-y-m {
+	margin-top: $size-medium;
+}
+
+.m-r-m,
+.m-x-m {
+	margin-right: $size-medium;
+}
+
+.m-b-m,
+.m-y-m {
+	margin-bottom: $size-medium;
+}
+
+.m-l-m,
+.m-x-m {
+	margin-left: $size-medium;
+}
+
+// Margin: Large
+.m-a-l {
+	margin: $size-large;
+}
+
+.m-t-l,
+.m-y-l {
+	margin-top: $size-large;
+}
+
+.m-r-l,
+.m-x-l {
+	margin-right: $size-large;
+}
+
+.m-b-l,
+.m-y-l {
+	margin-bottom: $size-large;
+}
+
+.m-l-l,
+.m-x-l {
+	margin-left: $size-large;
+}
+
+// Margin: X-Large
+.m-a-xl {
+	margin: $size-xlarge;
+}
+
+.m-t-xl,
+.m-y-xl {
+	margin-top: $size-xlarge;
+}
+
+.m-r-xl,
+.m-x-xl {
+	margin-right: $size-xlarge;
+}
+
+.m-b-xl,
+.m-y-xl {
+	margin-bottom: $size-xlarge;
+}
+
+.m-l-xl,
+.m-x-xl {
+	margin-left: $size-xlarge;
+}
+
+// Margin: XX-Large
+.m-a-xxl {
+	margin: $size-xxlarge;
+}
+
+.m-t-xxl,
+.m-y-xxl {
+	margin-top: $size-xxlarge;
+}
+
+.m-r-xxl,
+.m-x-xxl {
+	margin-right: $size-xxlarge;
+}
+
+.m-b-xxl,
+.m-y-xxl {
+	margin-bottom: $size-xxlarge;
+}
+
+.m-l-xxl,
+.m-x-xxl {
+	margin-left: $size-xxlarge;
+}
+
+/**
+ * Padding
+ */
+.p-t-0,
+.p-y-0 {
+	padding-top: 0;
+}
+
+.p-r-0,
+.p-x-0 {
+	padding-right: 0;
+}
+
+.p-b-0,
+.p-y-0 {
+	padding-bottom: 0;
+}
+
+.p-l-0,
+.p-x-0 {
+	padding-left: 0;
+}
+
+.p-a-0 {
+	padding: 0;
+}
+
+// Padding: Small
+.p-a-s {
+	padding: $size-small;
+}
+
+.p-t-s,
+.p-y-s {
+	padding-top: $size-small;
+}
+
+.p-r-s,
+.p-x-s {
+	padding-right: $size-small;
+}
+
+.p-b-s,
+.p-y-s {
+	padding-bottom: $size-small;
+}
+
+.p-l-s,
+.p-x-s {
+	padding-left: $size-small;
+}
+
+// Padding: Medium
+.p-a-m {
+	padding: $size-medium;
+}
+
+.p-t-m,
+.p-y-m {
+	padding-top: $size-medium;
+}
+
+.p-r-m,
+.p-x-m {
+	padding-right: $size-medium;
+}
+
+.p-b-m,
+.p-y-m {
+	padding-bottom: $size-medium;
+}
+
+.p-l-m,
+.p-x-m {
+	padding-left: $size-medium;
+}
+
+// Padding: Large
+.p-a-l {
+	padding: $size-large;
+}
+
+.p-t-l,
+.p-y-l {
+	padding-top: $size-large;
+}
+
+.p-r-l,
+.p-x-l {
+	padding-right: $size-large;
+}
+
+.p-b-l,
+.p-y-l {
+	padding-bottom: $size-large;
+}
+
+.p-l-l,
+.p-x-l {
+	padding-left: $size-large;
+}
+
+// Padding: X-Large
+.p-a-xl {
+	padding: $size-xlarge;
+}
+
+.p-t-xl,
+.p-y-xl {
+	padding-top: $size-xlarge;
+}
+
+.p-r-xl,
+.p-x-xl {
+	padding-right: $size-xlarge;
+}
+
+.p-b-xl,
+.p-y-xl {
+	padding-bottom: $size-xlarge;
+}
+
+.p-l-xl,
+.p-x-xl {
+	padding-left: $size-xlarge;
+}
+
+// Padding: XX-Large
+.p-a-xxl {
+	padding: $size-xxlarge;
+}
+
+.p-t-xxl,
+.p-y-xxl {
+	padding-top: $size-xxlarge;
+}
+
+.p-r-xxl,
+.p-x-xxl {
+	padding-right: $size-xxlarge;
+}
+
+.p-b-xxl,
+.p-y-xxl {
+	padding-bottom: $size-xxlarge;
+}
+
+.p-l-xxl,
+.p-x-xxl {
+	padding-left: $size-xxlarge;
+}
+
+/**
+ * Element Width/Heights
+ */
+.full,
+.full-width,
+.width-full {
+	width: 100%;
+}
+
+.full-height,
+.height-full {
+	height: 100%;
+}
+
+.full-vh,
+.height-100vh {
+	height: 100vh;
+}
+
+.width-auto {
+	width: auto;
+}
+
+.height-auto {
+	height: auto;
+}
+
+.width-limit-full {
+	max-width: 100%;
+}
+
+.height-limit-full {
+	max-height: 100%;
+}
+
+.height-limit-100vh {
+	max-height: 100vh;
+}
+
+.width-ensure-full {
+	min-width: 100%;
+}
+
+.height-ensure-full {
+	min-height: 100%;
+}
+
+.height-ensure-100vh {
+	min-height: 100vh;
+}
+
+/**
+ * Overflows
+ */
+.overflow-hidden {
+	background: overflow: hiden;
+}
+
+/**
+ * Backgrounds
+ *
+ * General background extension classes. Note, color background classes
+ * are found instead in colors.scss.
+ */
+.bg-cover {
+	background-size: cover;
+}
+
+.bg-contain {
+	background-size: contain;
+}
+
+.bg-cover,
+.bg-contain {
+	background-position: 50%;
+}
+
+.bg-repeat {
+	background-repeat: repeat;
+}
+
+.bg-repeat-x {
+	background-repeat: repeat-x;
+}
+
+.bg-repeat-y {
+	background-repeat: repeat-y;
+}
+
+.bg-repeat-none {
+	background-repeat: no-repeat;
+}
+
+.bg-center {
+	background-position: 50%;
+}
+
+.bg-left {
+    background-position-x: left;
+}
+
+.bg-right {
+    background-position-x: right;
+}
+
+.bg-top {
+    background-position-y: top;
+}
+
+.bg-bottom {
+    background-position-y: bottom;
+}
+
+/**
+ * Position Classes
+ */
+.pos-a {
+	position: absolute;
+}
+
+.pos-r {
+	position: relative;
+}
+
+.pos-f {
+	position: fixed;
+}
+
+.pos-s {
+	position: static;
+}
+
+/**
+ * Layer Classes
+ *
+ * Useful when positioning absolutely or fixed to place elements
+ * on special layers and keeping consistent values.
+ */
+.layer-1 {
+	z-index: $layer-1;
+}
+
+.layer-2 {
+	z-index: $layer-2;
+}
+
+.layer-3 {
+	z-index: $layer-3;
+}
+
+.layer-4 {
+	z-index: $layer-4;
+}
+
+.layer-5 {
+	z-index: $layer-5;
+}
+
+.layer-6 {
+	z-index: $layer-6;
+}
+
+.layer-7 {
+	z-index: $layer-7;
+}
+
+.layer-8 {
+	z-index: $layer-8;
+}
+
+.layer-9 {
+	z-index: $layer-9;
+}
+
+.layer-10 {
+	z-index: $layer-10;
+}
+
+.layer-neg-1 {
+	z-index: $layer-neg-1;
+}
+
+.layer-neg-2 {
+	z-index: $layer-neg-2;
+}
+
+.layer-neg-3 {
+	z-index: $layer-neg-3;
+}
+
+.layer-neg-4 {
+	z-index: $layer-neg-4;
+}
+
+.layer-neg-5 {
+	z-index: $layer-neg-5;
+}
+
+.layer-neg-6 {
+	z-index: $layer-neg-6;
+}
+
+.layer-neg-7 {
+	z-index: $layer-neg-7;
+}
+
+.layer-neg-8 {
+	z-index: $layer-neg-8;
+}
+
+.layer-neg-9 {
+	z-index: $layer-neg-9;
+}
+
+.layer-neg-10 {
+	z-index: $layer-neg-10;
+}
+
+/**
+ * Animations
+ */
+.animate-border {
+    transition: border .25s;
+}
+
+.animate-transform {
+    transition: transform .25s cubic-bezier(.4, 0, .05, 1.13);
+}
