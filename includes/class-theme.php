@@ -137,6 +137,20 @@ class Theme {
 		// Theme URI.
 		$this->theme_uri = get_template_directory_uri();
 
+		// Run the actions.
+		$this->actions();
+
+		// Load Sidebars.
+		require_once( $this->theme_dir . '/includes/sidebars.php' );
+
+	}
+
+	/**
+	 * Hooks into and runs actions
+	 * used in the setup of the theme.
+	 */
+	public function actions() {
+
 		// Add WordPress default add_theme_support.
 		add_action( 'after_setup_theme', array( $this, 'theme_support' ) );
 
@@ -158,9 +172,6 @@ class Theme {
 		// Customize Admin.
 		add_filter( 'admin_footer_text', array( $this, 'change_admin_footer_text' ) );
 		add_action( 'admin_menu', array( $this, 'admin_no_footer_version' ) );
-
-		// Sidebars.
-		require_once( $this->theme_dir . '/includes/sidebars.php' );
 
 	}
 
