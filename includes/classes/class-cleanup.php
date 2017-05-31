@@ -66,7 +66,7 @@ class Theme_Cleanup {
 	 */
 	public function wrap_oembed( $cache, $url, $attr = '', $post_id = '' ) {
 
-		return '<div class="flex-video widescreen">' . $cache . '</div>';
+		return '<div class="responsive-embed widescreen">' . $cache . '</div>';
 
 	}
 
