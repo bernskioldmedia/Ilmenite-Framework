@@ -19,19 +19,6 @@
 }
 
 /**
- * .hx Classes
- */
-@each $size, $headers in $header-sizes {
-  @include breakpoint($size) {
-    @each $header, $font-size in $headers {
-      .#{$header} {
-        font-size: rem-calc($font-size);
-      }
-    }
-  }
-}
-
-/**
  * Links
  */
 .no-link {
