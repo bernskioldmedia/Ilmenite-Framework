@@ -140,36 +140,4 @@ class Template_Functions {
         return wp_kses_post( $excerpt );
 
     }
-
-    /**
-     * Load Flex Page
-     *
-     * This function loads the flex page components for the
-     * currently active $post.
-     */
-    public function load_flex_page() {
-
-        global $post;
-
-        // If we have the page sections...
-        if ( have_rows( 'sections', $post ) ) {
-
-            do_action( 'before_flex_sections' );
-
-            // Loop through the page sections...
-            while ( have_rows( 'sections', $post ) ) {
-                the_row();
-
-                // Get the layout name.
-                $layout = get_row_layout();
-
-                // Load a section template with the layout name.
-                get_template_part( "components/sections/$layout" );
-
-            }
-
-            do_action( 'after_flex_sections' );
-
-        }
-    }
 }
