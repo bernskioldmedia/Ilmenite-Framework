@@ -24,6 +24,16 @@ And that's it. You're ready to work!
 ## Changelog
 You will not find references to these version numbers within the code as everything will be versioned 1.0 to make theme development faster.
 
+**Version 2.2**
+* Added tons of new helper CSS classes
+* Updated video embed to use the new Foundation video embed
+* Removed included block grid structure
+* Removed mostly unused scripts & styles
+* Load more theme data from style.css
+
+**Version 2.1**
+* Updated Foundation version to 6.3.1
+
 **Version 2.0**
 * Reengineered the entire structure to use an OOP, class-based approach.
 * Updated Foundation
