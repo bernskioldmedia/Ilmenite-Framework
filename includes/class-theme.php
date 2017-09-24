@@ -280,7 +280,7 @@ class Ilmenite {
 
 		// WP Login Customization.
 		require_once( $this->get_theme_path( 'includes/classes/class-wp-login.php' ) );
-		new Theme_Login;
+		new Login_Page;
 
 	}
 

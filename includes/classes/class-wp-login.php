@@ -7,11 +7,11 @@
 namespace BernskioldMedia\ClientName\Theme;
 
 /**
- * Class Theme_Login
+ * Class Login_Page
  *
  * @package BernskioldMedia\ClientName\Theme
  */
-class Theme_Login {
+class Login_Page {
 
 	/**
 	 * Theme Login Class Constructor
