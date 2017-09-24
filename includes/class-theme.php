@@ -26,49 +26,49 @@ class Ilmenite {
 	 *
 	 * @var string
 	 */
-	public $theme_author = '';
+	protected $theme_author = '';
 
 	/**
 	 * Theme Author URL
 	 *
 	 * @var string
 	 */
-	public $theme_author_url = '';
+	protected $theme_author_url = '';
 
 	/**
 	 * Theme URL
 	 *
 	 * @var string
 	 */
-	public $theme_url = '';
+	protected $theme_url = '';
 
 	/**
 	 * Theme Directory Path
 	 *
 	 * @var string
 	 */
-	public $theme_dir = '';
+	protected $theme_dir = '';
 
 	/**
 	 * Theme Version Number
 	 *
 	 * @var string
 	 */
-	public $theme_version = '';
+	protected $theme_version = '';
 
 	/**
 	 * Theme Name
 	 *
 	 * @var string
 	 */
-	public $theme_name = '';
+	protected $theme_name = '';
 
 	/**
 	 * Theme Slug
 	 *
 	 * @var string
 	 */
-	public $theme_slug = '';
+	protected $theme_slug = '';
 
 	/**
 	 * Helper Functions Class Instance
@@ -134,14 +134,14 @@ class Ilmenite {
 		// Theme Directory.
 		$this->theme_dir = get_template_directory();
 
-		// Theme URI.
-		$this->theme_uri = get_template_directory_uri();
+		// Theme URL.
+		$this->theme_url = get_template_directory_uri();
 
 		// Run the actions.
 		$this->actions();
 
 		// Load Sidebars.
-		require_once( $this->theme_dir . '/includes/sidebars.php' );
+		require_once( $this->get_theme_path( 'includes/sidebars.php' ) );
 
 	}
 
@@ -259,27 +259,27 @@ class Ilmenite {
 	public function classes() {
 
 		// Cleanup Functions.
-		require_once( $this->theme_dir . '/includes/classes/class-cleanup.php' );
+		require_once( $this->get_theme_path( 'includes/classes/class-cleanup.php' ) );
 		new Theme_Cleanup;
 
 		// Helper functions.
-		require_once( $this->theme_dir . '/includes/classes/class-helper-functions.php' );
+		require_once( $this->get_theme_path( 'includes/classes/class-helper-functions.php' ) );
 		$this->helper = new Theme_Helpers;
 
 		// Transient Queries.
-		require_once( $this->theme_dir . '/includes/classes/class-transient-queries.php' );
+		require_once( $this->get_theme_path( 'includes/classes/class-transient-queries.php' ) );
 		$this->transient = new Transient_Queries;
 
 		// Load scripts, styles etc.
-		require_once( $this->theme_dir . '/includes/classes/class-scripts-styles.php' );
+		require_once( $this->get_theme_path( 'includes/classes/class-scripts-styles.php' ) );
 		new Theme_Scripts_Styles;
 
 		// UI Element Functions.
-		require_once( $this->theme_dir . '/includes/classes/class-template-functions.php' );
+		require_once( $this->get_theme_path( 'includes/classes/class-template-functions.php' ) );
 		$this->template = new Template_Functions;
 
 		// WP Login Customization.
-		require_once( $this->theme_dir . '/includes/classes/class-wp-login.php' );
+		require_once( $this->get_theme_path( 'includes/classes/class-wp-login.php' ) );
 		new Theme_Login;
 
 	}
@@ -290,13 +290,19 @@ class Ilmenite {
 	public function dashboard_widgets() {
 
 		// Website Welcome Widget.
-		require_once( $this->theme_dir . '/includes/dashboard-widgets/class-bm-dashboard-welcome.php' );
+		require_once( $this->get_theme_path( 'includes/dashboard-widgets/class-bm-dashboard-welcome.php' ) );
 
 		// RSS Widget Showing Agency Blog Posts.
-		require_once( $this->theme_dir . '/includes/dashboard-widgets/class-bm-dashboard-rss.php' );
+		require_once( $this->get_theme_path( 'includes/dashboard-widgets/class-bm-dashboard-rss.php' ) );
 
 	}
 
+
+	/**
+	 * Remove Dashboard Widgets
+	 *
+	 * @return void
+	 */
 	public function remove_dashboard_widgets() {
 
 		global $wp_meta_boxes;
@@ -311,11 +317,16 @@ class Ilmenite {
 
 	}
 
+	/**
+	 * Change Admin Footer Text
+	 *
+	 * @return void
+	 */
 	public function change_admin_footer_text() {
 
 		$text = sprintf(
 			__( '%1$s Website Admin Panel. Website developed by <a href="%3$s">%2$s</a>.', 'THEMETEXTDOMAIN' ),
-			bloginfo( 'name' ),
+			get_bloginfo( 'name' ),
 			$this->get_theme_author(),
 			$this->get_theme_author_url()
 		);
@@ -324,66 +335,84 @@ class Ilmenite {
 
 	}
 
+	/**
+	 * Admin No Footer Version
+	 *
+	 * @return void
+	 */
 	public function admin_no_footer_version() {
 	    remove_filter( 'update_footer', 'core_update_footer' );
 	}
 
 	/**
 	 * Get Theme URI
+	 *
+	 * @param string $file_name File Name.
+	 *
+	 * @return string
 	 */
-	public function get_theme_uri() {
-		return $this->theme_uri;
+	public static function get_theme_url( $file_name = '' ) {
+		return $this->theme_url . '/' . $file_name;
 	}
 
 	/**
 	 * Get Theme Path
+	 *
+	 * @param string $file_name File Name.
+	 *
+	 * @return string
 	 */
-	public function get_theme_path() {
-		return $this->theme_dir;
+	public static function get_theme_path( $file_name = '' ) {
+		return $this->theme_dir . '/' . $file_name;
 	}
 
 	/**
 	 * Get Theme Version
+	 *
+	 * @return string
 	 */
-	public function get_theme_version() {
+	public static function get_theme_version() {
 		return $this->theme_version;
 	}
 
 	/**
 	 * Get Theme Author
+	 *
 	 * @return string
 	 */
-	public function get_theme_author() {
+	public static function get_theme_author() {
 		return $this->theme_author;
 	}
 
 	/**
 	 * Get Theme Author URL
+	 *
 	 * @return string
 	 */
-	public function get_theme_author_url() {
+	public static function get_theme_author_url() {
 		return $this->theme_author_url;
 	}
 
 	/**
 	 * Get Theme Assets URI
+	 *
+	 * @param string $path Asset File Name.
+	 *
+	 * @return string
 	 */
-	public function get_theme_assets_uri() {
-		return $this->theme_uri . '/assets';
+	public static function get_theme_assets_uri( $asset_file = '' ) {
+		return $this->theme_url . '/assets/' . $asset_file;
 	}
 
 	/**
 	 * Get Theme Images URI
+	 *
+	 * @param string $image_file Image File Name.
+	 *
+	 * @return string
 	 */
-	public function get_theme_images_uri() {
-		return $this->theme_uri . '/assets/images';
-	}
-
-	/**
-	 * Get Theme Icons URI
-	 */
-	public function get_theme_icons_uri() {
-		return $this->theme_uri . '/assets/icons';
+	public static function get_theme_images_uri( $image_file = '' ) {
+		return $this->theme_url . '/assets/images/' . $image_file;
 	}
 
 }
@@ -394,6 +423,8 @@ class Ilmenite {
  * The theme function is used to that we can easily call the methods
  * on this class without having to redefine the Theme class
  * over and over again in our theme code.
+ *
+ * @return object
  */
 function Ilmenite() {
     return Ilmenite::instance();
