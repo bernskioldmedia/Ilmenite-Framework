@@ -15,11 +15,11 @@
 namespace BernskioldMedia\ClientName\Theme;
 
 /**
- * Class Theme
+ * Class Ilmenite
  *
  * @package BernskioldMedia\ClientName\Theme
  */
-class Theme {
+class Ilmenite {
 
 	/**
 	 * Theme Author Name
@@ -395,10 +395,10 @@ class Theme {
  * on this class without having to redefine the Theme class
  * over and over again in our theme code.
  */
-function theme() {
-    return Theme::instance();
+function Ilmenite() {
+    return Ilmenite::instance();
 }
 
 // Initialize the class instance only once,
 // because we need it to run right away.
-theme();
+Ilmenite();

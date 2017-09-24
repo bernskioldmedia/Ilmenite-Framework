@@ -14,6 +14,7 @@ To get started with this starter theme, follow this checklist to turn it into yo
 3. Update bower.json with your own information.
 4. Replace `THEMETEXTDOMAIN` across the theme with your own textdomain.
 5. Replace the namespace `BernskioldMedia\ClientName\Theme` with your own namespace across the whole theme.
+6. Replace the theme class and init function `Ilmenite` with your own theme name.
 6. Initialize node via `npm install`
 7. Run Gulp using `gulp watch`
 8. Open the main.js file under `assets/js/src/main.js` and save it to generate the minified JS files.

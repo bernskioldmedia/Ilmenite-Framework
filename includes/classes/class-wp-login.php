@@ -41,6 +41,6 @@ class Theme_Login {
 	 * @return void
 	 */
 	public function stylesheet() {
-		wp_enqueue_style( 'custom-login', theme()->get_theme_assets_uri() . '/css/style-login.css' );
+		wp_enqueue_style( 'custom-login', Ilmenite()->get_theme_assets_uri() . '/css/style-login.css' );
 	}
 }
