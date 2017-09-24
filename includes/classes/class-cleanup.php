@@ -15,7 +15,7 @@ class Cleanup {
 	public function __construct() {
 
 		// Clean up wp_head().
-		add_action( 'init', array( $this, 'wp_head_cleanup' ) );
+		$this->wp_head_cleanup();
 
 		// Make oembed responsive.
 		add_filter( 'embed_oembed_html', array( $this, 'wrap_oembed' ), 10, 4 );
@@ -56,7 +56,24 @@ class Cleanup {
 		remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
 
 		// filter to remove TinyMCE emojis.
-		add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
+		add_filter( 'tiny_mce_plugins', array( $this, 'disable_emojicons_tinymce' ) );
+
+	}
+
+	/**
+	 * Disable Emjois TincyMCE
+	 *
+	 * @param  array $plugins Active Plugins Array.
+	 *
+	 * @return array
+	 */
+	public function disable_emojicons_tinymce( $plugins ) {
+
+		if ( is_array( $plugins ) ) {
+			return array_diff( $plugins, array( 'wpemoji' ) );
+		} else {
+			return array();
+		}
 
 	}
 
