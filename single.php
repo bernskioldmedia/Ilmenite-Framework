@@ -22,7 +22,6 @@ get_header(); ?>
 
 			</article>
 
-
 			<?php comments_template(); ?>
 
 		<?php endwhile; ?>

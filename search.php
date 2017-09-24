@@ -22,7 +22,7 @@ get_header(); ?>
 
 		<?php endwhile; ?>
 
-		<?php theme()->template->pagination(); ?>
+		<?php Template_Functions::pagination(); ?>
 
 	<?php else : ?>
 

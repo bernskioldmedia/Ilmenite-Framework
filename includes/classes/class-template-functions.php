@@ -17,17 +17,18 @@ namespace BernskioldMedia\ClientName\Theme;
 class Template_Functions {
 
 	/**
-	 * Pagination
-	 *
-	 * @param  boolean $arrows Display arrows
-	 * @param  boolean $ends
-	 * @param  integer $pages  How many pages to show
-	 * @return void
-	 */
-	public function pagination( $arrows = true, $ends = true, $pages = 2 ) {
+     * Pagination
+     *
+     * @param  boolean $arrows Display arrows.
+     * @param  boolean $ends   Ends.
+     * @param  integer $pages  How many pages to show.
+     *
+     * @return void
+     */
+    public static function pagination( $arrows = true, $ends = true, $pages = 2 ) {
 
         if ( is_singular() ) {
-        	return;
+            return;
         }
 
         global $wp_query, $paged;
@@ -36,47 +37,46 @@ class Template_Functions {
 
         $max_page = $wp_query->max_num_pages;
 
-        if ( $max_page == 1 ) {
-        	return;
+        if ( 1 === $max_page ) {
+            return;
         }
 
         if ( empty( $paged ) ) {
-        	$paged = 1;
+            $paged = 1;
         }
 
         if ( $arrows ) {
-        	$pagination .= $this->pagination_link( $paged - 1, 'arrow' . ( ( $paged <= 1 ) ? ' unavailable' : '' ), '&laquo;', esc_html__( 'Previous Page', 'THEMETEXTDOMAIN' ) );
+            $pagination .= self::pagination_link( $paged - 1, 'pagination-previous' . ( ( $paged <= 1 ) ? ' disabled' : '' ), esc_html__( 'Previous', 'THEMETEXTDOMAIN' ), esc_html__( 'Previous Page', 'THEMETEXTDOMAIN' ) );
         }
 
         if ( $ends && $paged > $pages + 1 ) {
-        	$pagination .= $this->pagination_link( 1 );
+            $pagination .= self::pagination_link( 1 );
         }
 
         if ( $ends && $paged > $pages + 2 ) {
-        	$pagination .= $this->pagination_link( 1, 'unavailable', '&hellip;' );
+            $pagination .= self::pagination_link( 1, 'disabled', '&nbsp;' );
         }
 
-        for ( $i = $paged - $pages; $i <= $paged + $pages; $i++ ) {
+        for ( $i = $paged - $pages; $i <= $paged + $pages; $i ++ ) {
 
             if ( $i > 0 && $i <= $max_page ) {
-                $pagination .= $this->pagination_link( $i, ( $i == $paged ) ? 'current' : '' );
+                $pagination .= self::pagination_link( $i, ( $i == $paged ) ? 'current' : '' );
             }
-
         }
+
         if ( $ends && $paged < $max_page - $pages - 1 ) {
-        	$pagination .= $this->pagination_link( $max_page, 'unavailable', '&hellip;' );
+            $pagination .= self::pagination_link( $max_page, 'ellipsis', '&nbsp;' );
         }
 
         if ( $ends && $paged < $max_page - $pages ) {
-        	$pagination .= $this->pagination_link( $max_page );
+            $pagination .= self::pagination_link( $max_page );
         }
 
         if ( $arrows ) {
-        	$pagination .= $this->pagination_link( $paged + 1, 'arrow' . ( ( $paged >= $max_page ) ? ' unavailable' : '' ), '&raquo;', esc_html__( 'Next Page', 'THEMETEXTDOMAIN' ) );
+            $pagination .= self::pagination_link( $paged + 1, 'pagination-next' . ( ( $paged >= $max_page ) ? ' disabled' : '' ), esc_html__( 'Next', 'THEMETEXTDOMAIN' ), esc_html__( 'Next Page', 'THEMETEXTDOMAIN' ) );
         }
 
-        $pagination = '<ul class="pagination">' . $pagination . '</ul>';
-        $pagination = '<div class="pagination-centered">' . $pagination . '</div>';
+        $pagination = '<ul class="pagination text-center" role="navigation">' . $pagination . '</ul>';
 
         echo wp_kses_post( $pagination );
     }
@@ -87,17 +87,23 @@ class Template_Functions {
      * Creates the special pagination link that is then used in the
      * main pagination function above.
      */
-    public function pagination_link( $page, $class = '', $content = '', $title = '' ) {
+    public static function pagination_link( $page, $class = '', $content = '', $title = '' ) {
 
         $id = sanitize_title_with_dashes( 'pagination-page-' . $page . ' ' . $class );
 
-        $href = ( strrpos( $class, 'unavailable' ) === false && strrpos( $class, 'current' ) === false ) ? get_pagenum_link( $page ) : "#$id";
+        $href = ( strrpos( $class, 'disabled' ) === false && strrpos( $class, 'current' ) === false ) ? get_pagenum_link( $page ) : '';
 
-        $class = empty( $class ) ? $class : " class=\"$class\"";
+        $class   = empty( $class ) ? $class : " class=\"$class\"";
         $content = ! empty( $content ) ? $content : $page;
+        /* Translators: 1: Page Number */
         $title = ! empty( $title ) ? $title : sprintf( esc_html__( 'Page %s', 'THEMETEXTDOMAIN' ), $page );
 
-        return "<li$class><a id=\"$id\" href=\"$href\" title=\"$title\">$content</a></li>\n";
+        if ( ! empty( $href ) ) {
+            return "<li$class><a id=\"$id\" href=\"$href\" title=\"$title\">$content</a></li>\n";
+        } else {
+            return "<li$class>$content</li>\n";
+        }
+
     }
 
     /**
@@ -110,7 +116,7 @@ class Template_Functions {
      * @param  string  $text  Text to truncate
      * @return void
      */
-    public function get_excerpt( $limit = 50, $text = false ) {
+    public static function get_excerpt( $limit = 50, $text = false ) {
 
         if ( $text ) {
 
