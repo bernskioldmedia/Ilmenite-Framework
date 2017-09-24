@@ -289,9 +289,6 @@ class Ilmenite {
 	 **/
 	public function dashboard_widgets() {
 
-		// Website Welcome Widget.
-		require_once( $this->get_theme_path( 'includes/dashboard-widgets/class-bm-dashboard-welcome.php' ) );
-
 		// RSS Widget Showing Agency Blog Posts.
 		require_once( $this->get_theme_path( 'includes/dashboard-widgets/class-bm-dashboard-rss.php' ) );
 
