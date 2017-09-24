@@ -128,7 +128,7 @@ class Ilmenite {
 		$this->theme_slug = wp_get_theme()->get( 'TextDomain' );
 
 		// Theme Author Name + URL.
-		$this->theme_author = wp_get_theme()->get( 'AUthor' );
+		$this->theme_author = wp_get_theme()->get( 'Author' );
 		$this->theme_author_url = wp_get_theme()->get( 'AuthorURI' );
 
 		// Theme Directory.
