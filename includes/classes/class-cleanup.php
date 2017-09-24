@@ -7,7 +7,10 @@
  */
 namespace BernskioldMedia\ClientName\Theme;
 
-class Theme_Cleanup {
+/**
+ * Class Cleanup
+ */
+class Cleanup {
 
 	public function __construct() {
 

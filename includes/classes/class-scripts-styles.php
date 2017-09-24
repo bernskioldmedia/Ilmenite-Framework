@@ -8,14 +8,14 @@
 namespace BernskioldMedia\ClientName\Theme;
 
 /**
- * Theme_Scripts_Styles Class
+ * Scripts_Styles Class
  *
  * @package BernskioldMedia\ClientName\Theme
  */
-class Theme_Scripts_Styles {
+class Scripts_Styles {
 
 	/**
-	 * Theme_Scripts_Styles Constructor
+	 * Scripts_Styles Constructor
 	 */
 	public function __construct() {
 

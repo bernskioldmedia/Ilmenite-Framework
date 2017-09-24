@@ -260,11 +260,11 @@ class Ilmenite {
 
 		// Cleanup Functions.
 		require_once( $this->get_theme_path( 'includes/classes/class-cleanup.php' ) );
-		new Theme_Cleanup;
+		new Cleanup;
 
 		// Helper functions.
 		require_once( $this->get_theme_path( 'includes/classes/class-helper-functions.php' ) );
-		$this->helper = new Theme_Helpers;
+		$this->helper = new Helpers;
 
 		// Transient Queries.
 		require_once( $this->get_theme_path( 'includes/classes/class-transient-queries.php' ) );
@@ -272,7 +272,7 @@ class Ilmenite {
 
 		// Load scripts, styles etc.
 		require_once( $this->get_theme_path( 'includes/classes/class-scripts-styles.php' ) );
-		new Theme_Scripts_Styles;
+		new Script_Styles;
 
 		// UI Element Functions.
 		require_once( $this->get_theme_path( 'includes/classes/class-template-functions.php' ) );

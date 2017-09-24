@@ -10,11 +10,11 @@
 namespace BernskioldMedia\ClientName\Theme;
 
 /**
- * Theme_Helpers Class
+ * Helpers Class
  *
  * @package BernskioldMedia\ClientName\Theme
  */
-class Theme_Helpers {
+class Helpers {
 
 	/**
 	 * Theme Helpers Constructor
