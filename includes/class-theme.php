@@ -348,7 +348,7 @@ class Ilmenite {
 	 *
 	 * @return string
 	 */
-	public static function get_theme_url( $file_name = '' ) {
+	public function get_theme_url( $file_name = '' ) {
 		return $this->theme_url . '/' . $file_name;
 	}
 
@@ -359,7 +359,7 @@ class Ilmenite {
 	 *
 	 * @return string
 	 */
-	public static function get_theme_path( $file_name = '' ) {
+	public function get_theme_path( $file_name = '' ) {
 		return $this->theme_dir . '/' . $file_name;
 	}
 
@@ -368,7 +368,7 @@ class Ilmenite {
 	 *
 	 * @return string
 	 */
-	public static function get_theme_version() {
+	public function get_theme_version() {
 		return $this->theme_version;
 	}
 
@@ -377,7 +377,7 @@ class Ilmenite {
 	 *
 	 * @return string
 	 */
-	public static function get_theme_author() {
+	public function get_theme_author() {
 		return $this->theme_author;
 	}
 
@@ -386,7 +386,7 @@ class Ilmenite {
 	 *
 	 * @return string
 	 */
-	public static function get_theme_author_url() {
+	public function get_theme_author_url() {
 		return $this->theme_author_url;
 	}
 
@@ -397,7 +397,7 @@ class Ilmenite {
 	 *
 	 * @return string
 	 */
-	public static function get_theme_assets_uri( $asset_file = '' ) {
+	public function get_theme_assets_uri( $asset_file = '' ) {
 		return $this->theme_url . '/assets/' . $asset_file;
 	}
 
@@ -408,7 +408,7 @@ class Ilmenite {
 	 *
 	 * @return string
 	 */
-	public static function get_theme_images_uri( $image_file = '' ) {
+	public function get_theme_images_uri( $image_file = '' ) {
 		return $this->theme_url . '/assets/images/' . $image_file;
 	}
 
