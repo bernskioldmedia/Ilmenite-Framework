@@ -9,5 +9,6 @@
  * This file is just here for WordPress compatibility.
  *
  * @package BernskioldMedia\ClientName\Theme
- */
+ **/
+
 namespace BernskioldMedia\ClientName\Theme;

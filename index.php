@@ -1,22 +1,25 @@
 <?php
 /**
  * Displays Post Index Page
+ *
+ * @package BernskioldMedia\ClientName\Theme
  **/
+
 namespace BernskioldMedia\ClientName\Theme;
 
 get_header(); ?>
 
-<main class="main" role="main">
+<main class="main main-index" role="main" id="content">
 
 	<?php if ( have_posts() ) : ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-	   		<?php get_template_part( 'components/post/content', get_post_format() ); ?>
+			<?php get_template_part( 'components/post/content', get_post_format() ); ?>
 
 		<?php endwhile; ?>
 
-	   <?php Template_Functions::pagination(); ?>
+		<?php Template_Functions::pagination(); ?>
 
 	<?php else : ?>
 

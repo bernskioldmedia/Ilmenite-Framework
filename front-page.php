@@ -1,14 +1,17 @@
 <?php
 /**
  * Template Name: Frontpage
+ *
+ * @package BernskioldMedia\ClientName\Theme
  **/
+
 namespace BernskioldMedia\ClientName\Theme;
 
 _x( 'Frontpage', 'frontpage page template name', 'THEMETEXTDOMAIN' );
 
 get_header(); ?>
 
-<main class="main" role="main">
+<main class="main main-frontpage" role="main" id="content">
 
 	<?php if ( have_posts() ) : ?>
 

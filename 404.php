@@ -1,23 +1,30 @@
 <?php
 /**
- * Template for the 404 page
+ * 404 Page
+ *
+ * This template controls the WordPress 404 page that is
+ * displayed when content cannot be found.
+ *
+ * @package BernskioldMedia\ClientName\Theme
  **/
+
 namespace BernskioldMedia\ClientName\Theme;
 
 get_header(); ?>
 
-<main class="main" role="main">
+<main class="main main-error" role="main" id="content">
 
-	<section id="error-404-page">
+	<section class=section" id="section-error-page">
 
-		<h1 class="page-title"><?php esc_html_e( 'Content Cannot Be Found', 'THEMETEXTDOMAIN' ); ?></h1>
+		<h1 class="page-title error-title"><?php esc_html_e( 'Content Cannot Be Found', 'THEMETEXTDOMAIN' ); ?></h1>
 
-	    <div class="page-content">
+		<div class="page-body error-body">
 
-	    	<p><?php esc_html_e( 'Unfortunately the content you were looking for could not be found. Please check that the URL is correct or do a search using the form below.', 'THEMETEXTDOMAIN' ); ?></p>
-	    	<?php get_search_form(); ?>
+			<p><?php esc_html_e( 'Unfortunately the content you were looking for could not be found. Please check that the URL is correct or do a search using the form below.', 'THEMETEXTDOMAIN' ); ?></p>
 
-	    </div>
+			<?php get_search_form(); ?>
+
+		</div>
 
 	</section>
 

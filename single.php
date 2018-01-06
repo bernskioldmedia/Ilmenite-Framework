@@ -1,12 +1,15 @@
 <?php
 /**
  * Displays Single Post
+ *
+ * @package BernskioldMedia\ClientName\Theme
  **/
+
 namespace BernskioldMedia\ClientName\Theme;
 
 get_header(); ?>
 
-<main class="main" role="main">
+<main class="main main-single-post" role="main" id="content">
 
 	<?php if ( have_posts() ) : ?>
 
@@ -28,8 +31,7 @@ get_header(); ?>
 
 	<?php else : ?>
 
-		<h1><?php esc_html_e( 'Content Not Found', 'THEMETEXTDOMAIN' ); ?></h1>
-		<p class="intro"><?php esc_html_e( 'Unfortunately there is no content to display for this view.', 'THEMETEXTDOMAIN' ); ?></p>
+		<?php get_template_part( 'components/not-found' ); ?>
 
 	<?php endif; ?>
 

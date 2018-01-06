@@ -1,7 +1,10 @@
 <?php
 /**
  * Content Template for Pages
+ *
+ * @package BernskioldMedia\ClientName\Theme
  **/
+
 namespace BernskioldMedia\ClientName\Theme;
 ?>
 <article id="page-<?php the_ID(); ?>" <?php post_class( 'page-item' ); ?>>

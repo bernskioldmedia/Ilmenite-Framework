@@ -1,13 +1,16 @@
 <?php
 /**
  * Main Site Header Template
- */
+ *
+ * @package BernskioldMedia\ClientName\Theme
+ **/
+
 namespace BernskioldMedia\ClientName\Theme;
 ?>
 <!DOCTYPE html>
 <html class="no-js" <?php language_attributes(); ?>>
 <head>
-	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
+	<meta http-equiv="Content-Type" content="<?php bloginfo( 'html_type' ); ?>; charset=<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -16,12 +19,12 @@ namespace BernskioldMedia\ClientName\Theme;
 
 <body <?php body_class(); ?>>
 
-	<div id="page" class="hfeed site">
+<div id="page" class="hfeed site">
 
-		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'THEMETEXTDOMAIN' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'THEMETEXTDOMAIN' ); ?></a>
 
-		<?php wp_nav_menu(array(
-			'theme_location' 	=> 'primary-menu',
-			'container'      	=> 'nav',
-			'container_class'   => 'primary-navigation',
-		)); ?>
+	<?php wp_nav_menu( array(
+		'theme_location'  => 'primary-menu',
+		'container'       => 'nav',
+		'container_class' => 'primary-navigation',
+	) ); ?>

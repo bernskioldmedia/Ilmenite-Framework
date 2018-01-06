@@ -4,7 +4,10 @@
  *
  * Styles the default WordPress search form according
  * to the markup in this file.
- */
+ *
+ * @package BernskioldMedia\ClientName\Theme
+ **/
+
 namespace BernskioldMedia\ClientName\Theme;
 
 if ( get_search_query() ) {

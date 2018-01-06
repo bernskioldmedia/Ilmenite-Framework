@@ -1,12 +1,15 @@
 <?php
 /**
  * Displays Page
+ *
+ * @package BernskioldMedia\ClientName\Theme
  **/
+
 namespace BernskioldMedia\ClientName\Theme;
 
 get_header(); ?>
 
-<main class="main" role="main">
+<main class="main main-page" role="main" id="content">
 
 	<?php if ( have_posts() ) : ?>
 
