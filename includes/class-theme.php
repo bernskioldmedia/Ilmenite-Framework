@@ -23,55 +23,6 @@ namespace BernskioldMedia\ClientName\Theme;
 class Ilmenite {
 
 	/**
-	 * Theme Author Name
-	 *
-	 * @var string
-	 */
-	protected $theme_author = '';
-
-	/**
-	 * Theme Author URL
-	 *
-	 * @var string
-	 */
-	protected $theme_author_url = '';
-
-	/**
-	 * Theme URL
-	 *
-	 * @var string
-	 */
-	protected $theme_url = '';
-
-	/**
-	 * Theme Directory Path
-	 *
-	 * @var string
-	 */
-	protected $theme_dir = '';
-
-	/**
-	 * Theme Version Number
-	 *
-	 * @var string
-	 */
-	protected $theme_version = '';
-
-	/**
-	 * Theme Name
-	 *
-	 * @var string
-	 */
-	protected $theme_name = '';
-
-	/**
-	 * Theme Slug
-	 *
-	 * @var string
-	 */
-	protected $theme_slug = '';
-
-	/**
 	 * Helper Functions Class Instance
 	 *
 	 * @var object
@@ -84,13 +35,6 @@ class Ilmenite {
 	 * @var object
 	 */
 	public $template;
-
-	/**
-	 * Transient Queries Class Instance
-	 *
-	 * @var object
-	 */
-	public $transient;
 
 	/**
 	 * The single instance of the class
@@ -119,30 +63,11 @@ class Ilmenite {
 	 **/
 	public function __construct() {
 
-		// Theme Version.
-		$this->theme_version = wp_get_theme()->get( 'Version' );
-
-		// Theme Name.
-		$this->theme_name = wp_get_theme()->get( 'Name' );
-
-		// Theme Slug.
-		$this->theme_slug = wp_get_theme()->get( 'TextDomain' );
-
-		// Theme Author Name + URL.
-		$this->theme_author     = wp_get_theme()->get( 'Author' );
-		$this->theme_author_url = wp_get_theme()->get( 'AuthorURI' );
-
-		// Theme Directory.
-		$this->theme_dir = get_template_directory();
-
-		// Theme URL.
-		$this->theme_url = get_template_directory_uri();
-
 		// Run the actions.
 		$this->actions();
 
-		// Load Sidebars.
-		require_once( $this->get_theme_path( 'includes/sidebars.php' ) );
+		// Setup the classes.
+		$this->classes();
 
 	}
 
@@ -155,24 +80,11 @@ class Ilmenite {
 		// Add WordPress default add_theme_support.
 		add_action( 'after_setup_theme', array( $this, 'theme_support' ) );
 
-		// Load functions.
-		add_action( 'init', array( $this, 'classes' ) );
-
-		// Load custom dashboard widgets.
-		add_action( 'admin_init', array( $this, 'dashboard_widgets' ) );
-
-		// Remove non-necessary dashboard widgets.
-		add_action( 'wp_dashboard_setup', array( $this, 'remove_dashboard_widgets' ) );
-
 		// Add custom image sizes.
 		add_action( 'after_setup_theme', array( $this, 'custom_image_sizes' ) );
 
 		// Add navigation menus.
 		add_action( 'after_setup_theme', array( $this, 'register_navigation_menus' ) );
-
-		// Customize Admin.
-		add_filter( 'admin_footer_text', array( $this, 'change_admin_footer_text' ) );
-		add_action( 'admin_menu', array( $this, 'admin_no_footer_version' ) );
 
 	}
 
@@ -194,7 +106,7 @@ class Ilmenite {
 			 */
 			add_theme_support( 'post-thumbnails' );
 
-			// Add theme support for custom CSS in the TinyMCE visual editor
+			// Add theme support for custom CSS in the TinyMCE visual editor.
 			add_editor_style( '/assets/css/editor-style.css' );
 
 			/*
@@ -217,7 +129,7 @@ class Ilmenite {
 			 */
 			add_theme_support( 'title-tag' );
 
-		}
+		} // End if().
 
 		/*
 		 * Make the theme available for translation.
@@ -260,81 +172,25 @@ class Ilmenite {
 	public function classes() {
 
 		// Cleanup Functions.
-		require_once( $this->get_theme_path( 'includes/classes/class-cleanup.php' ) );
+		require_once( 'classes/class-cleanup.php' );
 		new Cleanup;
 
 		// Helper functions.
-		require_once( $this->get_theme_path( 'includes/classes/class-helper-functions.php' ) );
+		require_once( 'classes/class-helpers.php' );
 		$this->helper = new Helpers;
 
-		// Transient Queries.
-		require_once( $this->get_theme_path( 'includes/classes/class-transient-queries.php' ) );
-		$this->transient = new Transient_Queries;
-
 		// Load scripts, styles etc.
-		require_once( $this->get_theme_path( 'includes/classes/class-scripts-styles.php' ) );
+		require_once( 'classes/class-scripts-styles.php' );
 		new Scripts_Styles;
 
 		// UI Element Functions.
-		require_once( $this->get_theme_path( 'includes/classes/class-template-functions.php' ) );
+		require_once( 'classes/class-template-functions.php' );
 		$this->template = new Template_Functions;
 
 		// WP Login Customization.
-		require_once( $this->get_theme_path( 'includes/classes/class-wp-login.php' ) );
+		require_once( 'classes/class-login-page.php' );
 		new Login_Page;
 
-	}
-
-	/**
-	 * Loads admin dashboard widgets
-	 **/
-	public function dashboard_widgets() {
-
-		// RSS Widget Showing Agency Blog Posts.
-		require_once( $this->get_theme_path( 'includes/dashboard-widgets/class-bm-dashboard-rss.php' ) );
-
-	}
-
-
-	/**
-	 * Remove Dashboard Widgets
-	 *
-	 * @return void
-	 */
-	public function remove_dashboard_widgets() {
-
-		global $wp_meta_boxes;
-
-		// Hide Some Default Dashboard Widgets.
-		unset( $wp_meta_boxes['dashboard']['normal']['core']['dashboard_plugins'] );
-		unset( $wp_meta_boxes['dashboard']['side']['core']['dashboard_primary'] );
-		unset( $wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary'] );
-		unset( $wp_meta_boxes['dashboard']['normal']['core']['dashboard_incoming_links'] );
-		unset( $wp_meta_boxes['dashboard']['side']['core']['dashboard_quick_press'] );
-		unset( $wp_meta_boxes['dashboard']['side']['core']['dashboard_recent_drafts'] );
-
-	}
-
-	/**
-	 * Change Admin Footer Text
-	 *
-	 * @return void
-	 */
-	public function change_admin_footer_text() {
-
-		$text = sprintf( __( '%1$s Website Admin Panel. Website developed by <a href="%3$s">%2$s</a>.', 'THEMETEXTDOMAIN' ), get_bloginfo( 'name' ), $this->get_theme_author(), $this->get_theme_author_url() );
-
-		echo wp_kses_post( $text );
-
-	}
-
-	/**
-	 * Admin No Footer Version
-	 *
-	 * @return void
-	 */
-	public function admin_no_footer_version() {
-		remove_filter( 'update_footer', 'core_update_footer' );
 	}
 
 	/**
@@ -344,8 +200,8 @@ class Ilmenite {
 	 *
 	 * @return string
 	 */
-	public function get_theme_url( $file_name = '' ) {
-		return $this->theme_url . '/' . $file_name;
+	public static function get_theme_url( $file_name = '' ) {
+		return trailingslashit( get_template_directory_uri() . '/' . $file_name );
 	}
 
 	/**
@@ -355,46 +211,19 @@ class Ilmenite {
 	 *
 	 * @return string
 	 */
-	public function get_theme_path( $file_name = '' ) {
-		return $this->theme_dir . '/' . $file_name;
-	}
-
-	/**
-	 * Get Theme Version
-	 *
-	 * @return string
-	 */
-	public function get_theme_version() {
-		return $this->theme_version;
-	}
-
-	/**
-	 * Get Theme Author
-	 *
-	 * @return string
-	 */
-	public function get_theme_author() {
-		return $this->theme_author;
-	}
-
-	/**
-	 * Get Theme Author URL
-	 *
-	 * @return string
-	 */
-	public function get_theme_author_url() {
-		return $this->theme_author_url;
+	public static function get_theme_path( $file_name = '' ) {
+		return trailingslashit( get_template_directory() . '/' . $file_name );
 	}
 
 	/**
 	 * Get Theme Assets URI
 	 *
-	 * @param string $path Asset File Name.
+	 * @param string $asset_file Asset File Name.
 	 *
 	 * @return string
 	 */
-	public function get_theme_assets_uri( $asset_file = '' ) {
-		return $this->theme_url . '/assets/' . $asset_file;
+	public static function get_theme_assets_url( $asset_file = '' ) {
+		return trailingslashit( self::get_theme_url() . '/assets/' . $asset_file );
 	}
 
 	/**
@@ -405,7 +234,52 @@ class Ilmenite {
 	 * @return string
 	 */
 	public function get_theme_images_uri( $image_file = '' ) {
-		return $this->theme_url . '/assets/images/' . $image_file;
+		return self::get_theme_assets_url() . '/images/' . $image_file;
+	}
+
+	/**
+	 * Get Theme Version
+	 *
+	 * @return false[string
+	 */
+	public static function get_theme_version() {
+		return wp_get_theme()->get( 'Version' );
+	}
+
+	/**
+	 * Get Theme Name
+	 *
+	 * @return false|string
+	 */
+	public static function get_theme_name() {
+		return wp_get_theme()->get( 'Name' );
+	}
+
+	/**
+	 * Get Theme Slug
+	 *
+	 * @return false|string
+	 */
+	public static function get_theme_slug() {
+		return wp_get_theme()->get( 'TextDomain' );
+	}
+
+	/**
+	 * Get Theme Author
+	 *
+	 * @return string
+	 */
+	public static function get_theme_author() {
+		return wp_get_theme()->get( 'Author' );
+	}
+
+	/**
+	 * Get Theme Author URL
+	 *
+	 * @return string
+	 */
+	public function get_theme_author_url() {
+		return wp_get_theme()->get( 'AuthorURI' );
 	}
 
 }

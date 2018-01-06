@@ -35,6 +35,13 @@ class Cleanup {
 		// Blank Search Query Fix.
 		add_filter( 'request', array( $this, 'blank_search_fix' ) );
 
+		// Remove non-necessary dashboard widgets.
+		add_action( 'wp_dashboard_setup', array( $this, 'remove_dashboard_widgets' ) );
+
+		// Customize Admin.
+		add_filter( 'admin_footer_text', array( $this, 'change_admin_footer_text' ) );
+		add_action( 'admin_menu', array( $this, 'admin_no_footer_version' ) );
+
 	}
 
 	/**
@@ -142,4 +149,47 @@ class Cleanup {
 		return $query_vars;
 
 	}
+
+	/**
+	 * Change Admin Footer Text
+	 *
+	 * @return void
+	 */
+	public function change_admin_footer_text() {
+
+		/* translators: 1. Website Name 2. Theme Author Name 3. Theme Author URL */
+		$text = sprintf( __( '%1$s Website Admin Panel. Website developed by <a href="%3$s">%2$s</a>.', 'THEMETEXTDOMAIN' ), get_bloginfo( 'name' ), Ilmenite()->get_theme_author(), Ilmenite()->get_theme_author_url() );
+
+		echo wp_kses_post( $text );
+
+	}
+
+	/**
+	 * Admin No Footer Version
+	 *
+	 * @return void
+	 */
+	public function admin_no_footer_version() {
+		remove_filter( 'update_footer', 'core_update_footer' );
+	}
+
+	/**
+	 * Remove Dashboard Widgets
+	 *
+	 * @return void
+	 */
+	public function remove_dashboard_widgets() {
+
+		global $wp_meta_boxes;
+
+		// Hide Some Default Dashboard Widgets.
+		unset( $wp_meta_boxes['dashboard']['normal']['core']['dashboard_plugins'] );
+		unset( $wp_meta_boxes['dashboard']['side']['core']['dashboard_primary'] );
+		unset( $wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary'] );
+		unset( $wp_meta_boxes['dashboard']['normal']['core']['dashboard_incoming_links'] );
+		unset( $wp_meta_boxes['dashboard']['side']['core']['dashboard_quick_press'] );
+		unset( $wp_meta_boxes['dashboard']['side']['core']['dashboard_recent_drafts'] );
+
+	}
+
 }
