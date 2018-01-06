@@ -187,13 +187,13 @@ class Ilmenite {
 		require_once( 'classes/class-scripts-styles.php' );
 		new Scripts_Styles;
 
-		// Load scripts, styles etc.
-		require_once( 'classes/class-sidebars.php' );
-		new Sidebars;
-
 		// UI Element Functions.
 		require_once( 'classes/class-template-functions.php' );
 		$this->template = new Template_Functions;
+
+		// Load scripts, styles etc.
+		require_once( 'classes/class-widget-areas.php' );
+		new Widget_Areas();
 
 	}
 
