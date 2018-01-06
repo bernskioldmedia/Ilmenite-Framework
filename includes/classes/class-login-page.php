@@ -42,6 +42,6 @@ class Login_Page {
 	 * @return void
 	 */
 	public function stylesheet() {
-		wp_enqueue_style( 'custom-login', Ilmenite()->get_theme_assets_uri() . '/css/style-login.css', array(), Ilmenite()->get_theme_version(), 'all' );
+		wp_enqueue_style( 'custom-login', Ilmenite::get_theme_assets_url( '/css/style-login.css' ), array(), Ilmenite::get_theme_version(), 'all' );
 	}
 }

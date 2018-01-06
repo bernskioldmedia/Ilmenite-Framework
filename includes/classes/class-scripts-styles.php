@@ -37,8 +37,8 @@ class Scripts_Styles {
 	 **/
 	public function styles() {
 
-		// Register.
-		wp_register_style( 'main', Ilmenite()->get_theme_assets_uri() . '/css/main.css', false, Ilmenite()->get_theme_version(), 'all' );
+		// Register Main Stylesheet.
+		wp_register_style( 'main', Ilmenite::get_theme_assets_url( '/css/main.css' ), false, Ilmenite::get_theme_version(), 'all' );
 
 		// Enqueue.
 		wp_enqueue_style( 'main' );
@@ -50,9 +50,11 @@ class Scripts_Styles {
 	 **/
 	public function scripts() {
 
-		// Register.
-		wp_register_script( 'modernizr', Ilmenite()->get_theme_assets_uri() . '/js/src/vendor/modernizr.min.js', false, '2.8.3', false );
-		wp_register_script( 'theme', Ilmenite()->get_theme_assets_uri() . '/js/theme.min.js', array( 'jquery' ), Ilmenite()->get_theme_version(), true );
+		// Register Modernizr.
+		wp_register_script( 'modernizr', Ilmenite::get_theme_assets_url( '/js/src/vendor/modernizr.min.js' ), false, '2.8.3', false );
+
+		// Register Main Theme Scripts.
+		wp_register_script( 'theme', Ilmenite::get_theme_assets_url( '/js/theme.min.js' ), array( 'jquery' ), Ilmenite::get_theme_version(), true );
 
 		// Enqueue.
 		wp_enqueue_script( 'modernizr' );

@@ -158,7 +158,7 @@ class Cleanup {
 	public function change_admin_footer_text() {
 
 		/* translators: 1. Website Name 2. Theme Author Name 3. Theme Author URL */
-		$text = sprintf( __( '%1$s Website Admin Panel. Website developed by <a href="%3$s">%2$s</a>.', 'THEMETEXTDOMAIN' ), get_bloginfo( 'name' ), Ilmenite()->get_theme_author(), Ilmenite()->get_theme_author_url() );
+		$text = sprintf( __( '%1$s Website Admin Panel. Website developed by <a href="%3$s">%2$s</a>.', 'THEMETEXTDOMAIN' ), get_bloginfo( 'name' ), Ilmenite::get_theme_author(), Ilmenite::get_theme_author_url() );
 
 		echo wp_kses_post( $text );
 

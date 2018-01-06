@@ -179,17 +179,21 @@ class Ilmenite {
 		require_once( 'classes/class-helpers.php' );
 		$this->helper = new Helpers;
 
+		// Login Page Customization.
+		require_once( 'classes/class-login-page.php' );
+		new Login_Page;
+
 		// Load scripts, styles etc.
 		require_once( 'classes/class-scripts-styles.php' );
 		new Scripts_Styles;
 
+		// Load scripts, styles etc.
+		require_once( 'classes/class-sidebars.php' );
+		new Sidebars;
+
 		// UI Element Functions.
 		require_once( 'classes/class-template-functions.php' );
 		$this->template = new Template_Functions;
-
-		// WP Login Customization.
-		require_once( 'classes/class-login-page.php' );
-		new Login_Page;
 
 	}
 
@@ -233,7 +237,7 @@ class Ilmenite {
 	 *
 	 * @return string
 	 */
-	public function get_theme_images_uri( $image_file = '' ) {
+	public static function get_theme_images_uri( $image_file = '' ) {
 		return self::get_theme_assets_url() . '/images/' . $image_file;
 	}
 
@@ -278,7 +282,7 @@ class Ilmenite {
 	 *
 	 * @return string
 	 */
-	public function get_theme_author_url() {
+	public static function get_theme_author_url() {
 		return wp_get_theme()->get( 'AuthorURI' );
 	}
 
