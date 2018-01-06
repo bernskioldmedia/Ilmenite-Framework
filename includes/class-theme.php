@@ -9,9 +9,10 @@
  * We do this as opposed to using a functions.php approach because it makes our
  * code more modular and easy to maintain and use.
  *
- * @author Bernskiold Media <info@bernskioldmedia.com>
+ * @author  Bernskiold Media <info@bernskioldmedia.com>
  * @package BernskioldMedia\ClientName\Theme
  */
+
 namespace BernskioldMedia\ClientName\Theme;
 
 /**
@@ -105,9 +106,9 @@ class Ilmenite {
 	 */
 	public static function instance() {
 
-	    if ( is_null( self::$_instance ) ) {
-	    	self::$_instance = new self();
-	    }
+		if ( is_null( self::$_instance ) ) {
+			self::$_instance = new self();
+		}
 
 		return self::$_instance;
 	}
@@ -128,7 +129,7 @@ class Ilmenite {
 		$this->theme_slug = wp_get_theme()->get( 'TextDomain' );
 
 		// Theme Author Name + URL.
-		$this->theme_author = wp_get_theme()->get( 'Author' );
+		$this->theme_author     = wp_get_theme()->get( 'Author' );
 		$this->theme_author_url = wp_get_theme()->get( 'AuthorURI' );
 
 		// Theme Directory.
@@ -321,12 +322,7 @@ class Ilmenite {
 	 */
 	public function change_admin_footer_text() {
 
-		$text = sprintf(
-			__( '%1$s Website Admin Panel. Website developed by <a href="%3$s">%2$s</a>.', 'THEMETEXTDOMAIN' ),
-			get_bloginfo( 'name' ),
-			$this->get_theme_author(),
-			$this->get_theme_author_url()
-		);
+		$text = sprintf( __( '%1$s Website Admin Panel. Website developed by <a href="%3$s">%2$s</a>.', 'THEMETEXTDOMAIN' ), get_bloginfo( 'name' ), $this->get_theme_author(), $this->get_theme_author_url() );
 
 		echo wp_kses_post( $text );
 
@@ -338,7 +334,7 @@ class Ilmenite {
 	 * @return void
 	 */
 	public function admin_no_footer_version() {
-	    remove_filter( 'update_footer', 'core_update_footer' );
+		remove_filter( 'update_footer', 'core_update_footer' );
 	}
 
 	/**
@@ -424,7 +420,7 @@ class Ilmenite {
  * @return object
  */
 function Ilmenite() {
-    return Ilmenite::instance();
+	return Ilmenite::instance();
 }
 
 // Initialize the class instance only once,

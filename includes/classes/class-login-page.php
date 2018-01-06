@@ -3,7 +3,8 @@
  * Customizes the wp-login.php
  *
  * @package BernskioldMedia\ClientName\Theme
- */
+ **/
+
 namespace BernskioldMedia\ClientName\Theme;
 
 /**
@@ -14,15 +15,15 @@ namespace BernskioldMedia\ClientName\Theme;
 class Login_Page {
 
 	/**
-	 * Theme Login Class Constructor
+	 * Login_Page constructor.
 	 */
 	public function __construct() {
 
-		// Customize Logo URL
+		// Customize Logo URL.
 		add_filter( 'login_headerurl', array( $this, 'logo_url' ) );
 
-		// Custom Login Stylesheet
-		add_action( 'login_enqueue_scripts', array ( $this, 'stylesheet' ) );
+		// Custom Login Stylesheet.
+		add_action( 'login_enqueue_scripts', array( $this, 'stylesheet' ) );
 
 	}
 
@@ -41,6 +42,6 @@ class Login_Page {
 	 * @return void
 	 */
 	public function stylesheet() {
-		wp_enqueue_style( 'custom-login', Ilmenite()->get_theme_assets_uri() . '/css/style-login.css' );
+		wp_enqueue_style( 'custom-login', Ilmenite()->get_theme_assets_uri() . '/css/style-login.css', array(), Ilmenite()->get_theme_version(), 'all' );
 	}
 }

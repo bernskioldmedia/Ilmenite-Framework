@@ -4,7 +4,10 @@
  *
  * Handles the loading of scripts and styles for the
  * theme through the proper enqueuing methods.
+ *
+ * @package BernskioldMedia\ClientName\Theme
  **/
+
 namespace BernskioldMedia\ClientName\Theme;
 
 /**
@@ -19,10 +22,10 @@ class Scripts_Styles {
 	 */
 	public function __construct() {
 
-		// Styles
+		// Styles.
 		add_action( 'wp_enqueue_scripts', array( $this, 'styles' ) );
 
-		// Scripts
+		// Scripts.
 		add_action( 'wp_enqueue_scripts', array( $this, 'scripts' ) );
 
 	}
@@ -34,10 +37,10 @@ class Scripts_Styles {
 	 **/
 	public function styles() {
 
-		// Register
+		// Register.
 		wp_register_style( 'main', Ilmenite()->get_theme_assets_uri() . '/css/main.css', false, Ilmenite()->get_theme_version(), 'all' );
 
-		// Enqueue
+		// Enqueue.
 		wp_enqueue_style( 'main' );
 
 	}
@@ -47,11 +50,11 @@ class Scripts_Styles {
 	 **/
 	public function scripts() {
 
-		// Register
+		// Register.
 		wp_register_script( 'modernizr', Ilmenite()->get_theme_assets_uri() . '/js/src/vendor/modernizr.min.js', false, '2.8.3', false );
 		wp_register_script( 'theme', Ilmenite()->get_theme_assets_uri() . '/js/theme.min.js', array( 'jquery' ), Ilmenite()->get_theme_version(), true );
 
-		// Enqueue
+		// Enqueue.
 		wp_enqueue_script( 'modernizr' );
 		wp_enqueue_script( 'theme' );
 

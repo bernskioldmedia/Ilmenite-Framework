@@ -1,10 +1,13 @@
 <?php
 /**
- * Cleanup WordPress stuff
+ * Cleanup WordPress Output
  *
  * Some things added to WordPress are not things we need.
  * These are cleanup and tweaks functions.
+ *
+ * @package BernskioldMedia\ClientName\Theme
  */
+
 namespace BernskioldMedia\ClientName\Theme;
 
 /**
@@ -12,16 +15,19 @@ namespace BernskioldMedia\ClientName\Theme;
  */
 class Cleanup {
 
+	/**
+	 * Cleanup constructor.
+	 */
 	public function __construct() {
 
 		// Clean up wp_head().
 		$this->wp_head_cleanup();
 
-		// Make oembed responsive.
-		add_filter( 'embed_oembed_html', array( $this, 'wrap_oembed' ), 10, 4 );
+		// Make oEmbed responsive.
+		add_filter( 'embed_oembed_html', array( $this, 'wrap_oembed' ), 10, 2 );
 
 		// Remove WordPress Version from RSS Feeds.
-		add_filter('the_generator', '__return_false');
+		add_filter( 'the_generator', '__return_false' );
 
 		// Rewrites the search URL.
 		add_action( 'template_redirect', array( $this, 'nice_search_url' ) );
@@ -32,7 +38,7 @@ class Cleanup {
 	}
 
 	/**
-	 * Clean up wp_head() from uncessecary bloat.
+	 * Clean up wp_head() from unnecessary bloat.
 	 *
 	 * Remove unnecessary <link>'s
 	 */
@@ -42,9 +48,9 @@ class Cleanup {
 		remove_action( 'wp_head', 'feed_links_extra', 3 );
 		remove_action( 'wp_head', 'rsd_link' );
 		remove_action( 'wp_head', 'wlwmanifest_link' );
-		remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );
+		remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10 );
 		remove_action( 'wp_head', 'wp_generator' );
-		remove_action( 'wp_head', 'wp_shortlink_wp_head', 10, 0 );
+		remove_action( 'wp_head', 'wp_shortlink_wp_head', 10 );
 
 		// all actions related to emojis.
 		remove_action( 'admin_print_styles', 'print_emoji_styles' );
@@ -61,7 +67,7 @@ class Cleanup {
 	}
 
 	/**
-	 * Disable Emjois TincyMCE
+	 * Disable Emojis in TincyMCE
 	 *
 	 * @param  array $plugins Active Plugins Array.
 	 *
@@ -82,11 +88,14 @@ class Cleanup {
 	 *
 	 * This can be styled using media queries etc.
 	 *
-	 * @link https://gist.github.com/965956
+	 * @param string $cache Cache.
+	 * @param string $url   Embed URL.
+	 *
+	 * @return string
 	 */
-	public function wrap_oembed( $cache, $url, $attr = '', $post_id = '' ) {
+	public function wrap_oembed( $cache, $url ) {
 
-		return '<div class="responsive-embed widescreen">' . $cache . '</div>';
+		return '<div class="responsive-embed widescreen" data-url="' . esc_attr( $url ) . '">' . $cache . '</div>';
 
 	}
 
@@ -107,7 +116,7 @@ class Cleanup {
 		$search_base = $wp_rewrite->search_base;
 
 		if ( is_search() && ! is_admin() && strpos( $_SERVER['REQUEST_URI'], "/{$search_base}/" ) === false ) {
-			wp_redirect( home_url( "/{$search_base}/" . urlencode( get_query_var('s') ) ) );
+			wp_safe_redirect( home_url( "/{$search_base}/" . rawurlencode( get_query_var( 's' ) ) ) );
 			exit();
 		}
 
@@ -119,10 +128,14 @@ class Cleanup {
 	 * @link http://wordpress.org/support/topic/blank-search-sends-you-to-the-homepage#post-1772565
 	 * @link http://core.trac.wordpress.org/ticket/11330
 	 * @link https://github.com/roots/roots/blob/master/lib/cleanup.php
+	 *
+	 * @param array $query_vars Query Vars.
+	 *
+	 * @return array
 	 */
 	public function blank_search_fix( $query_vars ) {
 
-		if ( isset($_GET['s'] ) && empty( $_GET['s'] ) && ! is_admin() ) {
+		if ( isset( $_GET['s'] ) && empty( $_GET['s'] ) && ! is_admin() ) {
 			$query_vars['s'] = ' ';
 		}
 
