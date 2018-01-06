@@ -272,7 +272,7 @@ class Ilmenite {
 
 		// Load scripts, styles etc.
 		require_once( $this->get_theme_path( 'includes/classes/class-scripts-styles.php' ) );
-		new Script_Styles;
+		new Scripts_Styles;
 
 		// UI Element Functions.
 		require_once( $this->get_theme_path( 'includes/classes/class-template-functions.php' ) );
