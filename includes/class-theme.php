@@ -15,6 +15,11 @@
 
 namespace BernskioldMedia\ClientName\Theme;
 
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 /**
  * Class Ilmenite
  *

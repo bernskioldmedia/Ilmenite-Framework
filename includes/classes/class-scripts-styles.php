@@ -10,6 +10,11 @@
 
 namespace BernskioldMedia\ClientName\Theme;
 
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 /**
  * Scripts_Styles Class
  *
