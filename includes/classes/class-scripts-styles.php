@@ -50,14 +50,10 @@ class Scripts_Styles {
 	 **/
 	public function scripts() {
 
-		// Register Modernizr.
-		wp_register_script( 'modernizr', Ilmenite::get_theme_assets_url( '/js/src/vendor/modernizr.min.js' ), false, '2.8.3', false );
-
 		// Register Main Theme Scripts.
 		wp_register_script( 'theme', Ilmenite::get_theme_assets_url( '/js/theme.min.js' ), array( 'jquery' ), Ilmenite::get_theme_version(), true );
 
 		// Enqueue.
-		wp_enqueue_script( 'modernizr' );
 		wp_enqueue_script( 'theme' );
 
 	}
