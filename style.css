@@ -23,5 +23,5 @@ who created Foundation which this theme is based on.
 
 The stylesheet file is used as a placeholder to keep WordPress happy.
 All styles are written in SASS (see assets/sass directory) and saved and minified in the assets/css folder.
-Styles are included via core/functions/scripts-styles.php
+Styles are included via includes/classes/class-scripts-styles.php
 */

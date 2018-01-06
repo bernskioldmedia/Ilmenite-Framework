@@ -2,7 +2,7 @@
 
 The Ilmenite Framework is a custom theme starter framework for WordPress made by Bernskiold Media used as a base for all our themes. The framework is meant to be customized and turned into a fully customized template, removing all references to "Ilmenite Framework".
 
-All functions that extend WordPress are organized neatly in the includes/ directory through subfolders and the theme set up using a base class in includes/theme.php.
+All functions that extend WordPress are organized neatly in the includes/ directory through subfolders and the theme set up using a base class in includes/class-theme.php.
 
 The framework is currently made to be used with Foundation 6 (CSS Framework) and as such out of the box includes our customization of our workflow based on Foundation 6 by Zurb, however this can be easily changed.
 
@@ -24,6 +24,12 @@ And that's it. You're ready to work!
 
 ## Changelog
 You will not find references to these version numbers within the code as everything will be versioned 1.0 to make theme development faster.
+
+**Version 2.3**
+* Code formatting cleanup
+* Small bug fixes reported on GitHub
+* Refactored sidebar file to Widget Areas class
+* New JavaScript main module base
 
 **Version 2.2**
 * Added tons of new helper CSS classes
