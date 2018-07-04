@@ -1,13 +1,11 @@
 <?php
 /**
- * Template Name: Frontpage
+ * Frontpage Page Template
  *
  * @package BernskioldMedia\ClientName\Theme
  **/
 
 namespace BernskioldMedia\ClientName\Theme;
-
-_x( 'Frontpage', 'frontpage page template name', 'THEMETEXTDOMAIN' );
 
 get_header(); ?>
 
