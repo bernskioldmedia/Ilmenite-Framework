@@ -302,10 +302,10 @@ class Ilmenite {
  *
  * @return object
  */
-function Ilmenite() {
+function ilmenite() {
 	return Ilmenite::instance();
 }
 
 // Initialize the class instance only once,
 // because we need it to run right away.
-Ilmenite();
+ilmenite();
