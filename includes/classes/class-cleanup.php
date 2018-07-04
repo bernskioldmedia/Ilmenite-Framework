@@ -21,31 +21,31 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Cleanup {
 
 	/**
-	 * Cleanup constructor.
+	 * Init.
 	 */
-	public function __construct() {
+	public static function init() {
 
 		// Clean up wp_head().
-		$this->wp_head_cleanup();
+		self::wp_head_cleanup();
 
 		// Make oEmbed responsive.
-		add_filter( 'embed_oembed_html', array( $this, 'wrap_oembed' ), 10, 2 );
+		add_filter( 'embed_oembed_html', array( __CLASS__, 'wrap_oembed' ), 10, 2 );
 
 		// Remove WordPress Version from RSS Feeds.
 		add_filter( 'the_generator', '__return_false' );
 
 		// Rewrites the search URL.
-		add_action( 'template_redirect', array( $this, 'nice_search_url' ) );
+		add_action( 'template_redirect', array( __CLASS__, 'nice_search_url' ) );
 
 		// Blank Search Query Fix.
-		add_filter( 'request', array( $this, 'blank_search_fix' ) );
+		add_filter( 'request', array( __CLASS__, 'blank_search_fix' ) );
 
 		// Remove non-necessary dashboard widgets.
-		add_action( 'wp_dashboard_setup', array( $this, 'remove_dashboard_widgets' ) );
+		add_action( 'wp_dashboard_setup', array( __CLASS__, 'remove_dashboard_widgets' ) );
 
 		// Customize Admin.
-		add_filter( 'admin_footer_text', array( $this, 'change_admin_footer_text' ) );
-		add_action( 'admin_menu', array( $this, 'admin_no_footer_version' ) );
+		add_filter( 'admin_footer_text', array( __CLASS__, 'change_admin_footer_text' ) );
+		add_action( 'admin_menu', array( __CLASS__, 'admin_no_footer_version' ) );
 
 	}
 
@@ -54,7 +54,7 @@ class Cleanup {
 	 *
 	 * Remove unnecessary <link>'s
 	 */
-	public function wp_head_cleanup() {
+	public static function wp_head_cleanup() {
 
 		remove_action( 'wp_head', 'feed_links', 2 );
 		remove_action( 'wp_head', 'feed_links_extra', 3 );
@@ -74,7 +74,7 @@ class Cleanup {
 		remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
 
 		// filter to remove TinyMCE emojis.
-		add_filter( 'tiny_mce_plugins', array( $this, 'disable_emojicons_tinymce' ) );
+		add_filter( 'tiny_mce_plugins', array( __CLASS__, 'disable_emojicons_tinymce' ) );
 
 	}
 
@@ -85,7 +85,7 @@ class Cleanup {
 	 *
 	 * @return array
 	 */
-	public function disable_emojicons_tinymce( $plugins ) {
+	public static function disable_emojicons_tinymce( $plugins ) {
 
 		if ( is_array( $plugins ) ) {
 			return array_diff( $plugins, array( 'wpemoji' ) );
@@ -105,7 +105,7 @@ class Cleanup {
 	 *
 	 * @return string
 	 */
-	public function wrap_oembed( $cache, $url ) {
+	public static function wrap_oembed( $cache, $url ) {
 
 		return '<div class="responsive-embed widescreen" data-url="' . esc_attr( $url ) . '">' . $cache . '</div>';
 
@@ -117,7 +117,7 @@ class Cleanup {
 	 * @link http://txfx.net/wordpress-plugins/nice-search/
 	 * @link https://github.com/roots/roots/blob/master/lib/cleanup.php
 	 */
-	public function nice_search_url() {
+	public static function nice_search_url() {
 
 		global $wp_rewrite;
 
@@ -145,7 +145,7 @@ class Cleanup {
 	 *
 	 * @return array
 	 */
-	public function blank_search_fix( $query_vars ) {
+	public static function blank_search_fix( $query_vars ) {
 
 		if ( isset( $_GET['s'] ) && empty( $_GET['s'] ) && ! is_admin() ) {
 			$query_vars['s'] = ' ';
@@ -160,10 +160,10 @@ class Cleanup {
 	 *
 	 * @return void
 	 */
-	public function change_admin_footer_text() {
+	public static function change_admin_footer_text() {
 
 		/* translators: 1. Website Name 2. Theme Author Name 3. Theme Author URL */
-		$text = sprintf( __( '%1$s Website Admin Panel. Website developed by <a href="%3$s">%2$s</a>.', 'THEMETEXTDOMAIN' ), get_bloginfo( 'name' ), Ilmenite::get_theme_author(), Ilmenite::get_theme_author_url() );
+		$text = sprintf( __( '%1$s Website Admin Panel. Website developed by <a href="%3$s">%2$s</a>.', 'THEMETEXTDOMAIN' ), get_bloginfo( 'name' ), Theme::get_theme_author(), Theme::get_theme_author_url() );
 
 		echo wp_kses_post( $text );
 
@@ -174,7 +174,7 @@ class Cleanup {
 	 *
 	 * @return void
 	 */
-	public function admin_no_footer_version() {
+	public static function admin_no_footer_version() {
 		remove_filter( 'update_footer', 'core_update_footer' );
 	}
 
@@ -183,7 +183,7 @@ class Cleanup {
 	 *
 	 * @return void
 	 */
-	public function remove_dashboard_widgets() {
+	public static function remove_dashboard_widgets() {
 
 		global $wp_meta_boxes;
 
@@ -198,3 +198,5 @@ class Cleanup {
 	}
 
 }
+
+Cleanup::init();

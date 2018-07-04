@@ -105,3 +105,5 @@ class Widget_Areas {
 	}
 
 }
+
+new Widget_Areas();

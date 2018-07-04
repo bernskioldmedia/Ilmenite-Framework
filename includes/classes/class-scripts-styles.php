@@ -25,13 +25,13 @@ class Scripts_Styles {
 	/**
 	 * Scripts_Styles Constructor
 	 */
-	public function __construct() {
+	public static function init() {
 
 		// Styles.
-		add_action( 'wp_enqueue_scripts', array( $this, 'styles' ) );
+		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'styles' ) );
 
 		// Scripts.
-		add_action( 'wp_enqueue_scripts', array( $this, 'scripts' ) );
+		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'scripts' ) );
 
 	}
 
@@ -40,10 +40,10 @@ class Scripts_Styles {
 	 *
 	 * Registers and enqueues theme stylesheets.
 	 **/
-	public function styles() {
+	public static function styles() {
 
 		// Register Main Stylesheet.
-		wp_register_style( 'main', Ilmenite::get_theme_assets_url( '/css/main.css' ), false, Ilmenite::get_theme_version(), 'all' );
+		wp_register_style( 'main', Theme::get_assets_url( 'css/main.css' ), false, Theme::get_version(), 'all' );
 
 		// Enqueue.
 		wp_enqueue_style( 'main' );
@@ -53,13 +53,15 @@ class Scripts_Styles {
 	/**
 	 * Enqueue Scripts on public side
 	 **/
-	public function scripts() {
+	public static function scripts() {
 
 		// Register Main Theme Scripts.
-		wp_register_script( 'theme', Ilmenite::get_theme_assets_url( '/js/theme.min.js' ), array( 'jquery' ), Ilmenite::get_theme_version(), true );
+		wp_register_script( 'theme', Theme::get_assets_url( 'js/theme.min.js' ), array( 'jquery' ), Theme::get_version(), true );
 
 		// Enqueue.
 		wp_enqueue_script( 'theme' );
 
 	}
 }
+
+Scripts_Styles::init();

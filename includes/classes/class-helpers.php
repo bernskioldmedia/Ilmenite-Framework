@@ -22,10 +22,5 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 class Helpers {
 
-	/**
-	 * Theme Helpers Constructor
-	 */
-	public function __construct() {
-	}
 
 }

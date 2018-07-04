@@ -1,6 +1,6 @@
 <?php
 /**
- * Ilmenite Theme Class
+ * Theme Class
  *
  * This file is responsible for setting up the theme class, loading features,
  * functions and extensions which are typically placed in other classes and
@@ -21,25 +21,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Class Ilmenite
+ * Class Theme
  *
  * @package BernskioldMedia\ClientName\Theme
  */
-class Ilmenite {
-
-	/**
-	 * Helper Functions Class Instance
-	 *
-	 * @var object
-	 */
-	public $helper;
-
-	/**
-	 * Template Functions Class Instance
-	 *
-	 * @var object
-	 */
-	public $template;
+class Theme {
 
 	/**
 	 * The single instance of the class
@@ -176,29 +162,12 @@ class Ilmenite {
 	 **/
 	public function classes() {
 
-		// Cleanup Functions.
 		require_once( 'classes/class-cleanup.php' );
-		new Cleanup;
-
-		// Helper functions.
 		require_once( 'classes/class-helpers.php' );
-		$this->helper = new Helpers;
-
-		// Login Page Customization.
 		require_once( 'classes/class-login-page.php' );
-		new Login_Page;
-
-		// Load scripts, styles etc.
 		require_once( 'classes/class-scripts-styles.php' );
-		new Scripts_Styles;
-
-		// UI Element Functions.
 		require_once( 'classes/class-template-functions.php' );
-		$this->template = new Template_Functions;
-
-		// Load scripts, styles etc.
 		require_once( 'classes/class-widget-areas.php' );
-		new Widget_Areas();
 
 	}
 
@@ -220,7 +189,7 @@ class Ilmenite {
 	 *
 	 * @return string
 	 */
-	public static function get_theme_path( $file_name = '' ) {
+	public static function get_path( $file_name = '' ) {
 		return get_template_directory() . '/' . $file_name;
 	}
 
@@ -231,7 +200,7 @@ class Ilmenite {
 	 *
 	 * @return string
 	 */
-	public static function get_theme_assets_url( $asset_file = '' ) {
+	public static function get_assets_url( $asset_file = '' ) {
 		return self::get_theme_url() . '/assets/' . $asset_file;
 	}
 
@@ -242,8 +211,8 @@ class Ilmenite {
 	 *
 	 * @return string
 	 */
-	public static function get_theme_images_uri( $image_file = '' ) {
-		return self::get_theme_assets_url() . 'images/' . $image_file;
+	public static function get_images_uri( $image_file = '' ) {
+		return self::get_assets_url() . 'images/' . $image_file;
 	}
 
 	/**
@@ -251,7 +220,7 @@ class Ilmenite {
 	 *
 	 * @return false[string
 	 */
-	public static function get_theme_version() {
+	public static function get_version() {
 		return wp_get_theme()->get( 'Version' );
 	}
 
@@ -260,7 +229,7 @@ class Ilmenite {
 	 *
 	 * @return false|string
 	 */
-	public static function get_theme_name() {
+	public static function get_name() {
 		return wp_get_theme()->get( 'Name' );
 	}
 
@@ -269,7 +238,7 @@ class Ilmenite {
 	 *
 	 * @return false|string
 	 */
-	public static function get_theme_slug() {
+	public static function get_slug() {
 		return wp_get_theme()->get( 'TextDomain' );
 	}
 
@@ -278,7 +247,7 @@ class Ilmenite {
 	 *
 	 * @return string
 	 */
-	public static function get_theme_author() {
+	public static function get_author() {
 		return wp_get_theme()->get( 'Author' );
 	}
 
@@ -287,7 +256,7 @@ class Ilmenite {
 	 *
 	 * @return string
 	 */
-	public static function get_theme_author_url() {
+	public static function get_author_url() {
 		return wp_get_theme()->get( 'AuthorURI' );
 	}
 
@@ -302,10 +271,10 @@ class Ilmenite {
  *
  * @return object
  */
-function ilmenite() {
-	return Ilmenite::instance();
+function theme() {
+	return Theme::instance();
 }
 
 // Initialize the class instance only once,
 // because we need it to run right away.
-ilmenite();
+theme();
